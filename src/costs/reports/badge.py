@@ -68,6 +68,7 @@ Generated on {datetime.now().strftime("%Y-%m-%d")} using [{model}](https://openr
         # Replace existing section
         pattern = r"## AI Cost Tracking\n.*?\n---\n\n"
         content = re.sub(pattern, badge_section, content, flags=re.DOTALL)
+    else:
         # Add after main badges if possible, else after first heading
         lines = content.split("\n")
         insert_idx = -1
