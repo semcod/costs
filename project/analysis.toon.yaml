@@ -1,23 +1,23 @@
-# code2llm | 9f 1525L | python:6,php:2,shell:1 | 2026-03-29
-# CC̄=5.2 | critical:2/33 | dups:0 | cycles:0
+# code2llm | 9f 1637L | python:6,php:2,shell:1 | 2026-03-29
+# CC̄=5.2 | critical:2/35 | dups:0 | cycles:0
 
 HEALTH[2]:
+  🟡 CC    analyze CC=20 (limit:15)
   🟡 CC    parse_commits CC=16 (limit:15)
-  🟡 CC    analyze CC=19 (limit:15)
 
 REFACTOR[1]:
   1. split 2 high-CC methods  (CC>15)
 
-PIPELINES[11]:
-  [1] Src [extract_ai_tag]: extract_ai_tag
+PIPELINES[12]:
+  [1] Src [version_callback]: version_callback
       PURITY: 100% pure
-  [2] Src [handleApiRequest]: handleApiRequest → generateBadge → determineColor
+  [2] Src [callback]: callback
       PURITY: 100% pure
-  [3] Src [version_callback]: version_callback
+  [3] Src [analyze]: analyze → get_litellm_model_name
       PURITY: 100% pure
-  [4] Src [callback]: callback
+  [4] Src [report]: report → parse_commits → get_commit_diff
       PURITY: 100% pure
-  [5] Src [analyze]: analyze → get_litellm_model_name
+  [5] Src [badge]: badge → parse_commits → get_commit_diff
       PURITY: 100% pure
 
 LAYERS:
@@ -25,16 +25,16 @@ LAYERS:
   │ badge.php                  231L  0C    4m  CC=14     ←0
   │ index.php                   26L  0C    0m  CC=0.0    ←0
   │
-  src/                            CC̄=4.7    ←in:0  →out:0
-  │ reports                    455L  0C    4m  CC=9      ←1
-  │ !! cli                        377L  0C    9m  CC=19     ←0
+  src/                            CC̄=4.8    ←in:0  →out:0
+  │ reports                    469L  0C    4m  CC=9      ←1
+  │ !! cli                        457L  0C   10m  CC=20     ←0
   │ !! git_parser                 183L  0C    8m  CC=16     ←1
   │ calculator                 147L  0C    5m  CC=6      ←1
   │ models                      74L  0C    3m  CC=5      ←2
   │ __init__                     8L  0C    0m  CC=0.0    ←0
   │
   ./                              CC̄=0.0    ←in:0  →out:0
-  │ project.sh                  24L  0C    0m  CC=0.0    ←0
+  │ project.sh                  42L  0C    1m  CC=0.0    ←0
   │
 
 COUPLING: no cross-package imports detected

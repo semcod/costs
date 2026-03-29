@@ -266,6 +266,7 @@ def badge(
         "--model", "-m",
         help="AI model to use"
     ),
+    all_commits: bool = typer.Option(False, "--all", help="Analyze all commits (not just AI-tagged)"),
 ):
     """Generate or update cost badge in README.md."""
     if not repo.exists():
@@ -275,9 +276,12 @@ def badge(
     typer.echo(f"📊 Analyzing repository for badge...")
     
     # Analyze commits
-    commits_data = parse_commits(str(repo), max_count=1000, ai_only=True, full_history=True)
+    commits_data = parse_commits(str(repo), max_count=1000, ai_only=not all_commits, full_history=True)
     if not commits_data:
-        typer.echo("⚠️  No AI commits found")
+        if all_commits:
+            typer.echo("⚠️  No commits found")
+        else:
+            typer.echo("⚠️  No AI commits found. Use --all to analyze all commits.")
         raise typer.Exit(0)
     
     # Calculate costs
@@ -299,6 +303,7 @@ def badge(
 @app.command()
 def auto_badge(
     repo: Path = typer.Option(Path("."), "--repo", "-r", help="Path to git repository"),
+    all_commits: bool = typer.Option(False, "--all", help="Analyze all commits (not just AI-tagged)"),
 ):
     """Auto-generate badge based on pyproject.toml [tool.costs] configuration.
     
@@ -347,12 +352,15 @@ def auto_badge(
     commits_data = parse_commits(
         str(repo),
         max_count=max_commits,
-        ai_only=True,
+        ai_only=not all_commits,
         full_history=full_history
     )
     
     if not commits_data:
-        typer.echo("⚠️  No AI commits found")
+        if all_commits:
+            typer.echo("⚠️  No commits found")
+        else:
+            typer.echo("⚠️  No AI commits found. Use --all to analyze all commits.")
         raise typer.Exit(0)
     
     # Calculate costs

@@ -1,5 +1,17 @@
 # AI Cost Tracker
 
+## AI Cost Tracking
+
+![AI Cost](https://img.shields.io/badge/AI%20Cost-$0.57-brightgreen) ![AI Model](https://img.shields.io/badge/AI%20Model-openrouter%2Fqwen%2Fqwen3-coder-next-lightgrey)
+
+This project uses AI-generated code. Total cost: **$0.5748** with **25** AI commits.
+
+Generated on 2026-03-29 using [openrouter/qwen/qwen3-coder-next](https://openrouter.ai/models/openrouter/qwen/qwen3-coder-next)
+
+---
+
+
+
 [![PyPI version](https://badge.fury.io/py/costs.svg)](https://pypi.org/project/costs/)
 [![AI Cost](https://img.shields.io/badge/AI%20Cost%20Tracker-Tool%20for%20tracking%20AI%20costs-blue)](https://github.com/semcod/cost)
 [![Default Model](https://img.shields.io/badge/Default%20Model-Claude%204%20Sonnet-lightgrey)](https://anthropic.com/claude)
