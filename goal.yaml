@@ -13,7 +13,7 @@
 
 version: '1.0'
 project:
-  name: costofai
+  name: costs
   type:
   - python
   description: Zero-config AI cost calculator per commit/model
