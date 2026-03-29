@@ -81,6 +81,7 @@ Generated on {datetime.now().strftime("%Y-%m-%d")} using [{model}](https://openr
     else:
         # Add after main badges if possible, else after first heading
         lines = content.split("\n")
+        insert_idx = -1
         # Strategy 1: Find the end of a centered badge block (p element)
         for i, line in enumerate(lines):
             if "</p>" in line and i < 50:

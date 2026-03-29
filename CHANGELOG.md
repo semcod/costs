@@ -76,6 +76,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.44] - 2026-03-29
+
+### Docs
+- Update README.md
+- Update examples/01_basic_usage/README.md
+- Update examples/01_custom_pricing/README.md
+- Update examples/01_tokenizer_basic/README.md
+- Update examples/02_badge_generation/README.md
+- Update examples/02_custom_roi/README.md
+- Update examples/02_multi_model_cost/README.md
+- Update examples/03_batch_processing/README.md
+- Update examples/03_diff_estimation/README.md
+- Update examples/03_multi_repo/README.md
+- ... and 5 more files
+
+### Other
+- Update examples/01_basic_usage/run.sh
+- Update examples/01_custom_pricing/main.py
+- Update examples/01_custom_pricing/run.sh
+- Update examples/01_tokenizer_basic/main.py
+- Update examples/01_tokenizer_basic/run.sh
+- Update examples/02_badge_generation/run.sh
+- Update examples/02_custom_roi/main.py
+- Update examples/02_custom_roi/run.sh
+- Update examples/02_multi_model_cost/main.py
+- Update examples/02_multi_model_cost/run.sh
+- ... and 14 more files
+
 ## [0.1.43] - 2026-03-29
 
 ### Other

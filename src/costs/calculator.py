@@ -3,6 +3,10 @@
 from typing import Dict, Optional, Any, List, Tuple
 import httpx
 from .models import get_model_price
+from .tokenizers import Tokenizer, GitDiffParser
+
+# Initialize tokenizer
+_tokenizer = Tokenizer()
 
 
 # Advanced metrics configuration
@@ -36,54 +40,49 @@ def get_file_type_multiplier(filename: str) -> float:
     return 1.0
 
 
-def _estimate_single_file_tokens(diff: str, filename: Optional[str] = None) -> Dict[str, int]:
-    """Heuristic for a single file's tokens."""
-    chars = len(diff)
-    multiplier = get_file_type_multiplier(filename) if filename else 1.0
-    base_tokens = max(int((chars // 4) * multiplier), 1)
+def estimate_tokens(diff: str, model: Optional[str] = None) -> Dict[str, int]:
+    """
+    Estimate tokens using proper tokenization.
     
-    return {
-        "input": int(base_tokens * 2.5),
-        "output": int(base_tokens * 4.5),
-        "total": int(base_tokens * 7)
-    }
-
-
-def estimate_tokens(diff: str) -> Dict[str, int]:
-    """Estimate tokens by parsing diff headers for file-type multipliers."""
+    Args:
+        diff: Git diff content
+        model: Model name for accurate token counting
+        
+    Returns:
+        Dict with input, output, and total token counts
+    """
     if not diff:
         return {"input": 0, "output": 0, "total": 0}
-        
-    # Split diff by "diff --git"
-    parts = diff.split("diff --git")
     
-    # If no headers found, estimate as single block
-    if len(parts) <= 1 and not diff.strip().startswith("diff --git"):
-        return _estimate_single_file_tokens(diff)
-        
-    total_input = 0
-    total_output = 0
+    # Parse diff stats for accurate line counting
+    diff_stats = GitDiffParser.parse_diff_stats(diff)
     
-    for part in parts:
-        if not part.strip():
-            continue
-            
-        # Parse filename from +++ b/path
-        filename = None
-        for line in part.splitlines():
-            if line.startswith("+++ b/"):
-                filename = line[6:]
-                break
-        
-        tokens = _estimate_single_file_tokens(part, filename)
-        total_input += tokens["input"]
-        total_output += tokens["output"]
-        
+    # Create realistic prompt that would be sent to LLM
+    prompt = f"Review this code change:\n```diff\n{diff}\n```"
+    
+    # Count input tokens accurately
+    input_tokens = _tokenizer.count_tokens(prompt, model)
+    
+    # Estimate output tokens based on actual added lines
+    # Industry heuristic: code review output ~30 tokens per added line
+    # Minimum fallback: 25% of input for simple reviews
+    added_lines = diff_stats["added_lines"]
+    output_from_lines = added_lines * 30
+    output_from_ratio = int(input_tokens * 0.25)
+    
+    output_tokens = max(output_from_lines, output_from_ratio, 1)
+    
     return {
-        "input": total_input,
-        "output": total_output,
-        "total": total_input + total_output
+        "input": input_tokens,
+        "output": output_tokens,
+        "total": input_tokens + output_tokens
     }
+
+
+# Legacy function for backward compatibility
+def _estimate_single_file_tokens(diff: str, filename: Optional[str] = None) -> Dict[str, int]:
+    """Legacy heuristic - kept for backward compatibility."""
+    return estimate_tokens(diff)
 
 
 def calculate_cost(tokens: Dict[str, int], model: str) -> float:
@@ -128,9 +127,12 @@ def ai_cost(
     saas_token: Optional[str] = None,
     saas_url: str = "https://your-saas.com/api/cost"
 ) -> Dict[str, Any]:
-    """Calculate AI cost for a commit with file-type awareness."""
-    tokens = estimate_tokens(commit_diff)
-    lines_changed = len([l for l in commit_diff.splitlines() if l.strip()])
+    """Calculate AI cost for a commit with proper tokenization."""
+    tokens = estimate_tokens(commit_diff, model)
+    
+    # Use accurate line stats from diff parser
+    diff_stats = GitDiffParser.parse_diff_stats(commit_diff)
+    lines_changed = diff_stats["total_changed"]
     
     # SaaS Mode
     if saas_token:

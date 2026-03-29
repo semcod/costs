@@ -3,10 +3,10 @@
 ## AI Cost Tracking
 
 ![PyPI](https://img.shields.io/badge/pypi-costs-blue) ![Version](https://img.shields.io/badge/version-0.1.31-blue) ![Python](https://img.shields.io/badge/python-3.9+-blue) ![License](https://img.shields.io/badge/license-Apache--2.0-green)
-![AI Cost](https://img.shields.io/badge/AI%20Cost-$2.44-orange) ![Human Time](https://img.shields.io/badge/Human%20Time-7.2h-blue) ![Model](https://img.shields.io/badge/Model-openrouter%2Fqwen%2Fqwen3--coder--next-lightgrey)
+![AI Cost](https://img.shields.io/badge/AI%20Cost-$0.65-orange) ![Human Time](https://img.shields.io/badge/Human%20Time-4.2h-blue) ![Model](https://img.shields.io/badge/Model-openrouter%2Fqwen%2Fqwen3--coder--next-lightgrey)
 
-- 🤖 **LLM usage:** $2.4376 (42 commits)
-- 👤 **Human dev:** ~$722 (7.2h @ $100/h, 30min dedup)
+- 🤖 **LLM usage:** $0.6503 (43 commits)
+- 👤 **Human dev:** ~$422 (4.2h @ $100/h, 30min dedup)
 
 Generated on 2026-03-29 using [openrouter/qwen/qwen3-coder-next](https://openrouter.ai/qwen/qwen3-coder-next)
 
@@ -19,12 +19,37 @@ Track AI usage costs across your git commits with three flexible usage modes - n
 - **liteLLM Integration** - Support for 100+ AI providers via liteLLM
 - **Default: Qwen3 Coder Next** - Pre-configured with openrouter/qwen/qwen3-coder-next
 - **Zero Config** - Works out of the box, reads from `.env` file
-- **Smart Token Estimation** - Accurate cost calculation using liteLLM tokenizers
+- **Smart Token Estimation** - Accurate cost calculation using tiktoken (OpenAI) and Anthropic tokenizer
 - **ROI Calculation** - Track value generated vs AI costs
 - **Date Filtering** - Analyze specific days, date ranges, or full history
 - **Auto Badges** - Automatically generate and update cost badges in README
 - **Rich Reports** - Markdown and HTML reports with visualizations
 - **All Commits Support** - Analyze all commits with `--all` flag (not just AI-tagged)
+
+## Tokenization
+
+The tool uses accurate tokenization for precise cost estimation:
+
+| Model | Tokenizer | Accuracy |
+|-------|-----------|----------|
+| OpenAI GPT-4/4o | tiktoken (cl100k_base) | ~99% |
+| Anthropic Claude | Anthropic SDK (local) | 100% |
+| OpenRouter/Other | tiktoken fallback | ~95% |
+
+### Token Counting Examples
+
+```python
+from costs.tokenizers import count_tokens, Tokenizer
+
+# Count tokens for any model
+text = "def hello(): print('world')"
+tokens = count_tokens(text, "claude-3.5-sonnet")  # 10 tokens
+tokens = count_tokens(text, "gpt-4o")             # 10 tokens
+
+# Use tokenizer directly
+tokenizer = Tokenizer()
+input_tokens = tokenizer.count_tokens(prompt, model)
+```
 
 ## Installation
 
@@ -158,10 +183,33 @@ costs report --repo . --format html
 costs report --repo . --format both --update-readme
 ```
 
+## Python API
+
+Use the calculator directly in your code:
+
+```python
+from costs.calculator import ai_cost, estimate_tokens, calculate_cost
+
+# Calculate complete cost with ROI
+result = ai_cost(commit_diff, model="claude-3.5-sonnet")
+print(f"Cost: {result['cost_formatted']}")
+print(f"Tokens: {result['tokens']['total']}")
+print(f"ROI: {result['roi_formatted']}")
+
+# Estimate tokens only
+tokens = estimate_tokens(diff, model="gpt-4o")
+print(f"Input: {tokens['input']}, Output: {tokens['output']}")
+
+# Calculate cost from tokens
+cost = calculate_cost(tokens, "openrouter/qwen/qwen3-coder-next")
+```
+
+See `examples/` directory for more usage patterns.
+
 ## How It Works
 
 1. **Parse git history** - Analyzes commits with optional `[ai:model]` tags
-2. **Estimate tokens** - Uses liteLLM or heuristics for token counting
+2. **Estimate tokens** - Uses tiktoken for OpenAI models, Anthropic tokenizer for Claude, with accurate diff parsing
 3. **Calculate cost** - Multiplies tokens × model price
 4. **Generate ROI** - Estimates time saved (100 LOC/h × $100/h)
 
@@ -272,15 +320,15 @@ git commit -m "[ai:anthropic/claude-3.5-sonnet] Add payment integration"
 
 ## Pricing Reference
 
-| Model | Input | Output |
-|-------|-------|--------|
-| anthropic/claude-4-sonnet | $3/M | $15/M |
-| anthropic/claude-3.5-sonnet | $3/M | $15/M |
-| anthropic/claude-3.5-haiku | $0.8/M | $4/M |
-| openai/gpt-4o | $5/M | $15/M |
-| openai/gpt-4o-mini | $0.15/M | $0.6/M |
-| openrouter/qwen/qwen3-coder-next | $0.50/M | $1.50/M |
-| ollama/* | ~$0.0001/M | ~$0.0001/M |
+| Model | Input | Output | Tokenizer |
+|-------|-------|--------|-----------|
+| anthropic/claude-4-sonnet | $3/M | $15/M | Anthropic |
+| anthropic/claude-3.5-sonnet | $3/M | $15/M | Anthropic |
+| anthropic/claude-3.5-haiku | $0.8/M | $4/M | Anthropic |
+| openai/gpt-4o | $5/M | $15/M | tiktoken |
+| openai/gpt-4o-mini | $0.15/M | $0.6/M | tiktoken |
+| openrouter/qwen/qwen3-coder-next | $0.50/M | $1.50/M | tiktoken |
+| ollama/* | ~$0.0001/M | ~$0.0001/M | tiktoken |
 
 ## Business Model
 

@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# Pre-commit hook - Automatically update cost badge
+#
+
+set -e
+
+echo "🔍 Running AI cost tracker pre-commit hook..."
+
+# Check if costs is installed
+if ! command -v costs &> /dev/null; then
+    echo "⚠️  'costs' command not found in PATH"
+    echo "   Install with: pip install costs"
+    exit 0  # Don't block commit, just warn
+fi
+
+# Check if pyproject.toml has [tool.costs] config
+if [ ! -f "pyproject.toml" ]; then
+    echo "⚠️  No pyproject.toml found, skipping badge update"
+    exit 0
+fi
+
+# Run auto-badge (only if configured)
+echo "📊 Updating AI cost badge..."
+if costs auto-badge --repo . 2>/dev/null; then
+    echo "✅ Badge updated successfully"
+    
+    # Stage README if it was modified
+    if git diff --name-only | grep -q "^README.md$"; then
+        echo "📄 Staging updated README.md"
+        git add README.md
+    fi
+else
+    echo "⚠️  Badge update failed (costs may not be configured)"
+fi
+
+echo "✅ Pre-commit hook complete"

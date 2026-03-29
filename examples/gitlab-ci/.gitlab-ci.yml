@@ -1,0 +1,58 @@
+# GitLab CI configuration for AI cost tracking
+# Copy this file to your repository as .gitlab-ci.yml
+
+stages:
+  - analyze
+  - report
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+before_script:
+  - python -m venv venv
+  - source venv/bin/activate
+  - pip install costs
+
+# Job: Update cost badge on every commit to main
+ai-cost-badge:
+  stage: analyze
+  script:
+    - costs auto-badge --repo . --all
+    # Commit updated badge (optional, requires push access)
+    - |
+      if [ "$CI_COMMIT_BRANCH" = "main" ]; then
+        git config user.email "ci@gitlab.com"
+        git config user.name "GitLab CI"
+        git add README.md
+        git diff --cached --quiet || git commit -m "Update AI cost badge [ci skip]"
+        git push https://CI_TOKEN:$CI_TOKEN@$CI_SERVER_HOST/$CI_PROJECT_PATH.git HEAD:$CI_COMMIT_BRANCH || true
+      fi
+  only:
+    - main
+    - master
+
+# Job: Generate cost report for merge requests
+ai-cost-report:
+  stage: report
+  script:
+    # Generate report for commits in this MR
+    - costs analyze --repo . --since $CI_MERGE_REQUEST_DIFF_BASE_SHA --output costs_mr.csv
+    - costs report --repo . --format markdown --output costs_report.md
+    # Post as MR comment (requires API token)
+    - |
+      if [ -f costs_report.md ]; then
+        echo "Cost report generated"
+        cat costs_report.md
+      fi
+  artifacts:
+    paths:
+      - costs_mr.csv
+      - costs_report.md
+    expire_in: 1 week
+  only:
+    - merge_requests

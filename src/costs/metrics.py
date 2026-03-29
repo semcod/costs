@@ -6,9 +6,9 @@ from datetime import datetime, timedelta
 
 # Advanced estimation constants
 SESSION_GAP_THRESHOLD = timedelta(hours=2)    # Gaps > 2h define a new session
-CONTEXT_SWITCH_PENALTY = timedelta(minutes=15) # Penalty for gaps between 30m and 2h
-MIN_SESSION_DURATION = timedelta(hours=1.0)   # Minimum work block (1h)
-DAILY_PREP_BUFFER = timedelta(hours=1.5)      # Setup/Research overhead per author/day
+CONTEXT_SWITCH_PENALTY = timedelta(minutes=5)  # Penalty for significant interruptions (5m)
+MIN_SESSION_DURATION = timedelta(minutes=30) # Minimum work block (30 min)
+DAILY_PREP_BUFFER = timedelta(minutes=30)     # Setup/Research overhead per author/day
 
 
 def _group_commits_by_author(commits: List[Dict[str, Any]]) -> Dict[str, List[datetime]]:
