@@ -101,7 +101,7 @@ def generate_markdown_report(results: Dict[str, Any], output_path: Path) -> str:
 
 ```bash
 # To reproduce this analysis
-aicost analyze --repo . --model {model} --full-history
+costs analyze --repo . --model {model} --full-history
 ```
 
 ---

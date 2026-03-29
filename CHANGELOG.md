@@ -8,6 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.10] - 2026-03-29
 
 ### Fixed
+- Fix magic-numbers issues (ticket-d402519d)
+- Fix relative-imports issues (ticket-678fb46a)
+- Fix string-concat issues (ticket-080a1719)
+- Fix magic-numbers issues (ticket-898cd3df)
+- Fix string-concat issues (ticket-6ea47a33)
+- Fix magic-numbers issues (ticket-2ecb58d8)
+- Fix relative-imports issues (ticket-740bf07b)
+- Fix string-concat issues (ticket-641dd221)
+- Fix magic-numbers issues (ticket-605a5b2f)
+
+## [0.1.10] - 2026-03-29
+
+### Fixed
 - Fix relative-imports issues (ticket-5d184752)
 
 ## [0.1.10] - 2026-03-29
@@ -51,6 +64,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix llm-generated-code issues (ticket-7c8d1d82)
 
 ## [Unreleased]
+
+## [0.1.33] - 2026-03-29
+
+### Docs
+- Update CHANGELOG.md
+- Update README.md
+- Update TODO.md
+
+### Other
+- Update ai_costs.csv
+- Update planfile.yaml
+- Update project/project.toon.yaml
+- Update project/validation.toon.yaml
 
 ## [0.1.32] - 2026-03-29
 

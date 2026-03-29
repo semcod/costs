@@ -446,3 +446,120 @@ sprints:
     model_hints:
       planning: balanced
       implementation: balanced
+  - id: ticket-d402519d
+    name: Fix magic-numbers issues
+    description: Resolve 2 magic-numbers issues in src/costs/metrics.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/costs/metrics.py
+    rule_id: magic-numbers
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-678fb46a
+    name: Fix relative-imports issues
+    description: Resolve 4 relative-imports issues in src/costs/reports/badge.py
+    task_type: prefactor
+    priority: medium
+    estimate: 2d
+    files:
+    - src/costs/reports/badge.py
+    rule_id: relative-imports
+    count: 4
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-080a1719
+    name: Fix string-concat issues
+    description: Resolve 2 string-concat issues in src/costs/reports/badge.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/costs/reports/badge.py
+    rule_id: string-concat
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-898cd3df
+    name: Fix magic-numbers issues
+    description: Resolve 2 magic-numbers issues in src/costs/reports/base.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/costs/reports/base.py
+    rule_id: magic-numbers
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-6ea47a33
+    name: Fix string-concat issues
+    description: Resolve 2 string-concat issues in src/costs/reports/html.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/costs/reports/html.py
+    rule_id: string-concat
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-2ecb58d8
+    name: Fix magic-numbers issues
+    description: Resolve 3 magic-numbers issues in src/costs/reports/html.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/costs/reports/html.py
+    rule_id: magic-numbers
+    count: 3
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-740bf07b
+    name: Fix relative-imports issues
+    description: Resolve 2 relative-imports issues in src/costs/reports/markdown.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/costs/reports/markdown.py
+    rule_id: relative-imports
+    count: 2
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-641dd221
+    name: Fix string-concat issues
+    description: Resolve 1 string-concat issues in src/costs/reports/markdown.py
+    task_type: prefactor
+    priority: medium
+    estimate: 1d
+    files:
+    - src/costs/reports/markdown.py
+    rule_id: string-concat
+    count: 1
+    model_hints:
+      planning: balanced
+      implementation: balanced
+  - id: ticket-605a5b2f
+    name: Fix magic-numbers issues
+    description: Resolve 4 magic-numbers issues in src/costs/reports/markdown.py
+    task_type: prefactor
+    priority: medium
+    estimate: 2d
+    files:
+    - src/costs/reports/markdown.py
+    rule_id: magic-numbers
+    count: 4
+    model_hints:
+      planning: balanced
+      implementation: balanced
