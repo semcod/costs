@@ -70,7 +70,7 @@ examples/
 
 ```bash
 # Run basic tokenizer example
-cd examples/api/01_tokenizer_basic
+cd examples/01_tokenizer_basic
 ./run.sh
 
 # Or run directly
@@ -80,7 +80,7 @@ python3 main.py
 ### CLI Examples
 
 ```bash
-cd examples/cli/01_basic_usage
+cd examples/04_basic_usage
 ./run.sh
 ```
 
@@ -88,65 +88,48 @@ cd examples/cli/01_basic_usage
 
 ```bash
 # Install pre-commit hook
-cd examples/integration/pre-commit-hook
+cd examples/07_pre-commit-hook
 ./install.sh
 ```
 
 ### Advanced Examples
 
 ```bash
-cd examples/advanced/01_custom_pricing
+cd examples/10_custom_pricing
 ./run.sh
 ```
 
 ## Examples by Category
 
-### API Usage (Python)
-
-| Example | Description |
-|---------|-------------|
-| `01_tokenizer_basic/` | Basic token counting with different models |
-| `02_multi_model_cost/` | Compare costs across providers |
-| `03_batch_processing/` | Process multiple commits in batch |
-
-### CLI Usage (Shell)
-
-| Example | Description |
-|---------|-------------|
-| `01_basic_usage/` | Common CLI commands |
-| `02_badge_generation/` | Badge and report generation |
-| `03_diff_estimation/` | Single diff estimation |
-
-### Integration
-
-| Example | Description |
-|---------|-------------|
-| `pre-commit-hook/` | Auto-update badge on commit |
-| `github-actions/` | GitHub Actions workflow |
-| `gitlab-ci/` | GitLab CI configuration |
-
-### Advanced
-
-| Example | Description |
-|---------|-------------|
-| `01_custom_pricing/` | Add custom model pricing |
-| `02_custom_roi/` | Custom ROI calculations |
-| `03_multi_repo/` | Analyze multiple repositories |
-| `04_cost_trends/` | Cost analytics and projections |
+| Example | Category | Description |
+|---------|----------|-------------|
+| `01_tokenizer_basic/` | API | Basic token counting with different models |
+| `02_multi_model_cost/` | API | Compare costs across providers |
+| `03_batch_processing/` | API | Process multiple commits in batch |
+| `04_basic_usage/` | CLI | Common CLI commands |
+| `05_badge_generation/` | CLI | Badge and report generation |
+| `06_diff_estimation/` | CLI | Single diff estimation |
+| `07_pre-commit-hook/` | Integration | Auto-update badge on commit |
+| `08_github-actions/` | Integration | GitHub Actions workflow |
+| `09_gitlab-ci/` | Integration | GitLab CI configuration |
+| `10_custom_pricing/` | Advanced | Add custom model pricing |
+| `11_custom_roi/` | Advanced | Custom ROI calculations |
+| `12_multi_repo/` | Advanced | Analyze multiple repositories |
+| `13_cost_trends/` | Advanced | Cost analytics and projections |
 
 ## Running Examples
 
 All examples can be run using the provided `run.sh` script:
 
 ```bash
-cd examples/<category>/<example>
+cd examples/<example>
 ./run.sh
 ```
 
 Or run Python examples directly:
 
 ```bash
-cd examples/api/01_tokenizer_basic
+cd examples/01_tokenizer_basic
 python3 main.py
 ```
 
