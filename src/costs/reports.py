@@ -2,8 +2,51 @@
 
 from pathlib import Path
 from typing import Dict, Any, List
-from datetime import datetime
+from datetime import datetime, timedelta
 import json
+
+
+def calculate_human_time(commits: List[Dict[str, Any]]) -> float:
+    """Calculate human development time with 30-min deduplication.
+    
+    Each commit block (within 30 min of previous) counts as 30 min minimum.
+    Commits within 30 min of each other are grouped and count as one block.
+    """
+    if not commits:
+        return 0.0
+    
+    # Parse dates and sort
+    dates = []
+    for commit in commits:
+        try:
+            date_str = commit.get("date", "")
+            if date_str:
+                dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+                dates.append(dt)
+        except:
+            continue
+    
+    if not dates:
+        return 0.0
+    
+    dates.sort()
+    
+    # Group commits into 30-minute blocks
+    blocks = []
+    current_block_start = dates[0]
+    
+    for dt in dates[1:]:
+        if dt - current_block_start > timedelta(minutes=30):
+            # Start new block
+            blocks.append(current_block_start)
+            current_block_start = dt
+    
+    # Add last block
+    blocks.append(current_block_start)
+    
+    # Each block is minimum 30 minutes
+    total_minutes = len(blocks) * 30
+    return total_minutes / 60.0  # Convert to hours
 
 
 def generate_markdown_report(results: Dict[str, Any], output_path: Path) -> str:
@@ -420,7 +463,7 @@ def get_cost_color(cost: float) -> str:
 
 
 def update_readme_badge(repo_path: Path, results: Dict[str, Any]) -> bool:
-    """Update README.md with cost badge."""
+    """Update README.md with cost badge including human time calculation."""
     readme_path = repo_path / "README.md"
     if not readme_path.exists():
         return False
@@ -428,16 +471,42 @@ def update_readme_badge(repo_path: Path, results: Dict[str, Any]) -> bool:
     summary = results["summary"]
     model = summary["model"]
     total_cost = summary["total_cost"]
+    commits = results.get("commits", [])
     
-    # Create badge line
-    cost_badge = f"![AI Cost](https://img.shields.io/badge/AI%20Cost-${total_cost:.2f}-{get_cost_color(total_cost)})"
-    model_badge = f"![AI Model](https://img.shields.io/badge/AI%20Model-{model.replace('/', '%2F')}-lightgrey)"
+    # Get all commits (not just AI) for accurate human time calculation
+    from .git_parser import parse_commits
+    all_commits_data = parse_commits(
+        str(repo_path),
+        max_count=1000,
+        ai_only=False,
+        full_history=True
+    )
+    # Convert to dict format expected by calculate_human_time
+    all_commits = [{"date": c[0].committed_datetime.isoformat()} for c in all_commits_data]
+    
+    # Calculate human time with 30-min deduplication using ALL commits
+    human_hours = calculate_human_time(all_commits)
+    human_cost = human_hours * 100  # $100/hour rate
+    
+    # Calculate ROI
+    roi = (human_cost / total_cost) if total_cost > 0 else 0
+    
+    # Create badge lines with standout colors
+    cost_badge = f"![AI Cost](https://img.shields.io/badge/AI%20Cost-${total_cost:.2f}-orange)"
+    human_time_badge = f"![Human Time](https://img.shields.io/badge/Human%20Time-{human_hours:.1f}h-blue)"
+    llm_cost_badge = f"![LLM Cost](https://img.shields.io/badge/LLM%20Cost-${total_cost:.2f}-red)"
+    model_badge = f"![Model](https://img.shields.io/badge/Model-{model.replace('/', '%2F').replace('-', '--')}-lightgrey)"
     
     badge_section = f"""## AI Cost Tracking
 
-{cost_badge} {model_badge}
+{cost_badge} {human_time_badge} {llm_cost_badge} {model_badge}
 
-This project uses AI-generated code. Total cost: **{summary['total_cost_formatted']}** with **{summary['total_commits']}** AI commits.
+This project uses AI-generated code.
+
+**Costs:**
+- 🤖 **LLM usage:** {summary['total_cost_formatted']} ({summary['total_commits']} commits)
+- 👤 **Human dev:** ~${human_cost:.0f} ({human_hours:.1f}h @ $100/h, 30min dedup)
+- 📊 **ROI:** {roi:.0f}x savings vs full manual
 
 Generated on {datetime.now().strftime("%Y-%m-%d")} using [{model}](https://openrouter.ai/models/{model})
 

@@ -1,23 +1,49 @@
 # AI Cost Tracker
 
-[![PyPI version](https://badge.fury.io/py/costs.svg)](https://pypi.org/project/costs/)
-[![AI Cost](https://img.shields.io/badge/AI%20Cost-$0.57-brightgreen)](https://github.com/semcod/cost)
-[![AI Model](https://img.shields.io/badge/AI%20Model-openrouter%2Fqwen%2Fqwen3--coder--next-lightgrey)](https://openrouter.ai/models/openrouter/qwen/qwen3-coder-next)
+## AI Cost Tracking
 
-💰 **Track AI costs for your projects** - This tool helps developers monitor AI usage costs across git commits.
+![AI Cost](https://img.shields.io/badge/AI%20Cost-$0.84-orange) ![Human Time](https://img.shields.io/badge/Human%20Time-1.5h-blue) ![LLM Cost](https://img.shields.io/badge/LLM%20Cost-$0.84-red) ![Model](https://img.shields.io/badge/Model-openrouter%2Fqwen%2Fqwen3--coder--next-lightgrey)
 
-**Zero-config AI cost calculator per commit/model with liteLLM integration.**
+This project uses AI-generated code.
+
+**Costs:**
+- 🤖 **LLM usage:** $0.8403 (27 commits)
+- 👤 **Human dev:** ~$150 (1.5h @ $100/h, 30min dedup)
+- 📊 **ROI:** 179x savings vs full manual
+
+Generated on 2026-03-29 using [openrouter/qwen/qwen3-coder-next](https://openrouter.ai/models/openrouter/qwen/qwen3-coder-next)
 
 ---
+
+
+
 
 ## 📊 AI Cost Tracking for This Project
 
 This project tracks its own AI development costs.
 
-**Development Stats:**
-- 📝 **18 commits** across **1 day** of active development
-- ⏱️ **~6 hours** estimated development time (accounting for overlapping work)
-- 💰 **AI Cost:** Analyze with `costs auto-badge --repo .`
+**Current Costs:**
+- 💰 **Total AI Cost:** $0.8403
+- 📝 **27 commits** analyzed  
+- 🤖 **Model:** openrouter/qwen/qwen3-coder-next
+- 📅 **Last updated:** 2026-03-29
+
+**Human Development Time:**
+- ⏱️ **1.5 hours** estimated (30-min deduplicated blocks)
+- 🧮 Calculation: min 30 min per commit block (commits within 30 min window count as one block)
+- 💵 **Human cost:** ~$150 (@ $100/h)
+
+**Cost Comparison:**
+| Type | Cost | Ratio |
+|------|------|-------|
+| 🤖 LLM usage | $0.84 | 0.56% |
+| 👤 Human dev | ~$150 | 99.44% |
+| **ROI** | **179x** | savings vs full manual |
+
+To update these numbers:
+```bash
+costs auto-badge --repo . --all
+```
 
 ```bash
 pip install costs
@@ -176,10 +202,12 @@ costs report --repo . --format both --update-readme
 
 ## How It Works
 
-1. **Parse git history** - Analyzuje commity z tagami `[ai:model]`
-2. **Estimate tokens** - Używa heurystyki lub liteLLM do liczenia tokenów
-3. **Calculate cost** - Mnoży tokeny × cena za model
-4. **Generate ROI** - Szacuje oszczędność czasu (100 LOC/h × $100/h)
+1. **Parse git history** - Analyzes commits with optional `[ai:model]` tags
+2. **Estimate tokens** - Uses liteLLM or heuristics for token counting
+3. **Calculate cost** - Multiplies tokens × model price
+4. **Generate ROI** - Estimates time saved (100 LOC/h × $100/h)
+
+By default, only commits with `[ai:]` tags are analyzed. Use `--all` to analyze all commits.
 
 ## Why liteLLM?
 
@@ -211,8 +239,23 @@ costs analyze --repo . --model anthropic/claude-3.5-sonnet
 # Analyze all commits (not just AI-tagged)
 costs analyze --repo . --all
 
+# Analyze with date filtering
+costs analyze --repo . --since 2024-01-01 --until 2024-03-31
+
 # Export to custom file
 costs analyze --repo . --output my_costs.csv
+
+# Show repository statistics
+costs stats --repo .
+
+# Generate reports
+costs report --repo . --format both --update-readme
+
+# Generate badge for all commits
+costs badge --repo . --all
+
+# Auto-badge with pyproject.toml config
+costs auto-badge --repo . --all
 
 # Estimate single diff
 costs estimate my_changes.patch

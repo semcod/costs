@@ -35,6 +35,93 @@ def callback(
     pass
 
 
+def _get_repo(repo_path: Path) -> git.Repo:
+    """Validate repository existence and return git.Repo object."""
+    if not repo_path.exists():
+        typer.echo(f"❌ Repository not found: {repo_path}", err=True)
+        raise typer.Exit(1)
+    
+    try:
+        return git.Repo(repo_path)
+    except git.InvalidGitRepositoryError:
+        typer.echo(f"❌ Not a git repository: {repo_path}", err=True)
+        raise typer.Exit(1)
+
+
+def _get_execution_context(
+    mode: str, 
+    api_key: str, 
+    saas_token: str
+) -> tuple[str, Optional[str], Optional[str]]:
+    """Determine calculation mode and credentials."""
+    effective_mode = mode
+    if mode == "auto":
+        if saas_token:
+            effective_mode = "saas"
+        elif api_key:
+            effective_mode = "byok"
+        else:
+            effective_mode = "local"
+
+    use_saas = effective_mode == "saas"
+    effective_api_key = api_key if not use_saas else None
+    effective_saas_token = saas_token if use_saas else None
+    
+    return effective_mode, effective_api_key, effective_saas_token
+
+
+def _get_filter_str(
+    specific_date: Optional[str],
+    since: Optional[str],
+    until: Optional[str],
+    full_history: bool
+) -> str:
+    """Build human-friendly filter description."""
+    filter_desc = []
+    if specific_date:
+        filter_desc.append(f"date={specific_date}")
+    elif since or until or full_history:
+        if full_history:
+            filter_desc.append("full history")
+        else:
+            if since:
+                filter_desc.append(f"since={since}")
+            if until:
+                filter_desc.append(f"until={until}")
+    
+    return " | ".join(filter_desc) if filter_desc else "last commits"
+
+
+def _display_results(results: dict, output: Path, model_name: str):
+    """Summarize and export analysis results."""
+    summary = results["summary"]
+    
+    # Output results
+    typer.echo()
+    typer.echo("=" * 50)
+    typer.echo(f"📊 AI COST ANALYSIS - {model_name}")
+    typer.echo("=" * 50)
+    typer.echo(f"   Commits analyzed: {summary['total_commits']}")
+    typer.echo(f"   Total cost:       {summary['total_cost_formatted']}")
+    typer.echo(f"   Hours saved:      {summary['total_hours_saved']:.1f}h")
+    typer.echo(f"   Value generated:  ${summary['total_value_generated']:.2f}")
+    typer.echo(f"   ROI:              {summary['average_roi']}")
+    typer.echo("=" * 50)
+    
+    # Export to CSV
+    df = pd.DataFrame(results["commits"])
+    df.to_csv(output, index=False)
+    typer.echo(f"📁 Results saved to: {output}")
+    
+    # Show sample
+    if len(results["commits"]) > 0:
+        typer.echo()
+        typer.echo("💡 Recent AI commits:")
+        for c in results["commits"][:5]:
+            msg = c["commit_message"][:40].replace("\n", " ")
+            typer.echo(f"   {c['commit_hash']} | {c['cost_formatted']} | {msg}")
+
+
 @app.command()
 def analyze(
     repo: Path = typer.Argument(..., help="Path to git repository"),
@@ -60,74 +147,17 @@ def analyze(
     specific_date: Optional[str] = typer.Option(None, "--date", help="Specific date (YYYY-MM-DD) - analyze only this day"),
     full_history: bool = typer.Option(False, "--full-history", help="Analyze all commits since repository creation"),
 ):
-    """Analyze AI costs for git commits with liteLLM support.
-
-    **Three usage modes (zero config required):**
-
-    1. **BYOK** (Bring Your Own Key) - `aicost --repo . --api-key sk-or-v1-...`
-       Use your own OpenRouter API key, calculate real costs with liteLLM
-
-    2. **Local** - `aicost --repo . --mode local`
-       No API key needed, estimate based on diff size
-
-    3. **SaaS** - `aicost --repo . --saas-token your-token`
-       Managed via subscription, billing tracked externally
-
-    **Configuration via .env file:**
-    ```
-    OPENROUTER_API_KEY=sk-or-v1-...
-    LLM_MODEL=openrouter/qwen/qwen3-coder-next
-    ```
-
-    **Date filtering options:**
-    - `--date 2024-01-15` - Analyze specific day only
-    - `--since 2024-01-01` - Analyze from date (inclusive)
-    - `--until 2024-01-31` - Analyze until date (inclusive)
-    - `--since 2024-01-01 --until 2024-01-31` - Date range
-    - `--full-history` - Analyze all commits since repo creation
-    """
-    if not repo.exists():
-        typer.echo(f"❌ Repository not found: {repo}", err=True)
-        raise typer.Exit(1)
+    """Analyze AI costs for git commits with liteLLM support."""
+    git_repo = _get_repo(repo)
     
-    try:
-        git_repo = git.Repo(repo)
-    except git.InvalidGitRepositoryError:
-        typer.echo(f"❌ Not a git repository: {repo}", err=True)
-        raise typer.Exit(1)
-    
-    # Determine mode
-    effective_mode = mode
-    if mode == "auto":
-        if saas_token:
-            effective_mode = "saas"
-        elif api_key:
-            effective_mode = "byok"
-        else:
-            effective_mode = "local"
+    # Determine mode and credentials
+    effective_mode, effective_api_key, effective_saas_token = _get_execution_context(
+        mode, api_key, saas_token
+    )
 
     # Convert to liteLLM format
     litellm_model = get_litellm_model_name(model)
-
-    # Pass appropriate credentials
-    use_saas = effective_mode == "saas"
-    effective_api_key = api_key if not use_saas else None
-    effective_saas_token = saas_token if use_saas else None
-    
-    # Build filter description
-    filter_desc = []
-    if specific_date:
-        filter_desc.append(f"date={specific_date}")
-    elif since or until or full_history:
-        if full_history:
-            filter_desc.append("full history")
-        else:
-            if since:
-                filter_desc.append(f"since={since}")
-            if until:
-                filter_desc.append(f"until={until}")
-    
-    filter_str = " | ".join(filter_desc) if filter_desc else "last commits"
+    filter_str = _get_filter_str(specific_date, since, until, full_history)
     
     # Handle ai_only vs all_commits logic
     effective_ai_only = ai_only and not all_commits
@@ -158,32 +188,8 @@ def analyze(
         saas_token=effective_saas_token
     )
     
-    summary = results["summary"]
-    
-    # Output results
-    typer.echo()
-    typer.echo("=" * 50)
-    typer.echo(f"📊 AI COST ANALYSIS - {litellm_model}")
-    typer.echo("=" * 50)
-    typer.echo(f"   Commits analyzed: {summary['total_commits']}")
-    typer.echo(f"   Total cost:       {summary['total_cost_formatted']}")
-    typer.echo(f"   Hours saved:      {summary['total_hours_saved']:.1f}h")
-    typer.echo(f"   Value generated:  ${summary['total_value_generated']:.2f}")
-    typer.echo(f"   ROI:              {summary['average_roi']}")
-    typer.echo("=" * 50)
-    
-    # Export to CSV
-    df = pd.DataFrame(results["commits"])
-    df.to_csv(output, index=False)
-    typer.echo(f"📁 Results saved to: {output}")
-    
-    # Show sample
-    if len(results["commits"]) > 0:
-        typer.echo()
-        typer.echo("💡 Recent AI commits:")
-        for c in results["commits"][:5]:
-            msg = c["commit_message"][:40].replace("\n", " ")
-            typer.echo(f"   {c['commit_hash']} | {c['cost_formatted']} | {msg}")
+    _display_results(results, output, litellm_model)
+
 
 
 @app.command()

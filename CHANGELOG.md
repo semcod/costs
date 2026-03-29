@@ -8,6 +8,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.10] - 2026-03-29
 
 ### Fixed
+- Fix relative-imports issues (ticket-f7e7aa3f)
+- Fix relative-imports issues (ticket-a7c82e86)
+- Fix string-concat issues (ticket-c2bd9822)
+- Fix unused-imports issues (ticket-402c41c0)
+- Fix relative-imports issues (ticket-b071236e)
+- Fix smart-return-type issues (ticket-d6db1c96)
+- Fix unused-imports issues (ticket-4f6464d2)
+- Fix duplicate-imports issues (ticket-61598616)
+- Fix magic-numbers issues (ticket-197df09a)
+- Fix ai-boilerplate issues (ticket-74b3cb5d)
+- Fix unused-imports issues (ticket-9822ce44)
+- Fix unused-imports issues (ticket-658a9323)
+- Fix llm-generated-code issues (ticket-8e89a195)
+- Fix string-concat issues (ticket-32509e95)
+- Fix unused-imports issues (ticket-eaccc31f)
+- Fix magic-numbers issues (ticket-2f97726c)
+
+## [0.1.10] - 2026-03-29
+
+### Fixed
 - Fix relative-imports issues (ticket-29184732)
 - Fix string-concat issues (ticket-7532dd33)
 - Fix unused-imports issues (ticket-297efbf1)
@@ -26,6 +46,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix llm-generated-code issues (ticket-7c8d1d82)
 
 ## [Unreleased]
+
+## [0.1.27] - 2026-03-29
+
+### Docs
+- Update CHANGELOG.md
+- Update README.md
+- Update TODO.md
+
+### Other
+- Update ai_costs.csv
+- Update planfile.yaml
+- Update project/evolution.toon.yaml
+- Update project/project.toon.yaml
+- Update project/validation.toon.yaml
 
 ## [0.1.26] - 2026-03-29
 

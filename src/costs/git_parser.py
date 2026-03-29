@@ -80,33 +80,14 @@ def get_first_commit_date(repo: git.Repo) -> date:
         return date.today()
 
 
-def parse_commits(
-    repo_path: str,
-    max_count: int = 100,
-    ai_only: bool = True,
+def _parse_date_args(
+    repo: git.Repo,
     since: Optional[Union[date, datetime, str]] = None,
     until: Optional[Union[date, datetime, str]] = None,
     specific_date: Optional[Union[date, str]] = None,
     full_history: bool = False
-) -> List[Tuple[git.Commit, str]]:
-    """Parse commits from repository with date filtering.
-    
-    Args:
-        repo_path: Path to git repository
-        max_count: Maximum number of commits to analyze
-        ai_only: Only return commits with AI tags
-        since: Start date (inclusive) - can be date, datetime, or ISO string (YYYY-MM-DD)
-        until: End date (inclusive) - can be date, datetime, or ISO string (YYYY-MM-DD)
-        specific_date: Exact date to match - overrides since/until
-        full_history: If True, analyze all commits since repo creation (overrides since)
-    
-    Returns:
-        List of (commit, diff) tuples matching the criteria
-    """
-    repo = git.Repo(repo_path)
-    commits = []
-    
-    # Parse date arguments
+) -> Tuple[Optional[date], Optional[date], Optional[date]]:
+    """Parse various date argument formats into standard date objects."""
     parsed_since = None
     parsed_until = None
     parsed_specific = None
@@ -135,6 +116,27 @@ def parse_commits(
         
         if full_history and not parsed_since:
             parsed_since = get_first_commit_date(repo)
+            
+    return parsed_since, parsed_until, parsed_specific
+
+
+def parse_commits(
+    repo_path: str,
+    max_count: int = 100,
+    ai_only: bool = True,
+    since: Optional[Union[date, datetime, str]] = None,
+    until: Optional[Union[date, datetime, str]] = None,
+    specific_date: Optional[Union[date, str]] = None,
+    full_history: bool = False
+) -> List[Tuple[git.Commit, str]]:
+    """Parse commits from repository with date filtering."""
+    repo = git.Repo(repo_path)
+    commits = []
+    
+    # Parse date arguments
+    parsed_since, parsed_until, parsed_specific = _parse_date_args(
+        repo, since, until, specific_date, full_history
+    )
     
     # Determine max_count for full history
     iter_count = max_count if not full_history else None
@@ -152,6 +154,7 @@ def parse_commits(
         commits.append((commit, diff))
     
     return commits
+
 
 
 def get_repo_name(repo: git.Repo) -> str:

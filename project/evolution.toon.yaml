@@ -1,13 +1,7 @@
 # code2llm/evolution | 35 func | 7f | 2026-03-29
 
-NEXT[2] (ranked by impact):
-  [1] !  SPLIT-FUNC      analyze  CC=20  fan=20
-      WHY: CC=20 exceeds 15
-      EFFORT: ~1h  IMPACT: 400
-
-  [2] !  SPLIT-FUNC      parse_commits  CC=16  fan=12
-      WHY: CC=16 exceeds 15
-      EFFORT: ~1h  IMPACT: 192
+NEXT[0] (ranked by impact):
+  (All high-priority splits complete)
 
 
 RISKS[0]: none
