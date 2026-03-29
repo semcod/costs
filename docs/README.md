@@ -1,7 +1,7 @@
 <!-- code2docs:start --># cost
 
-![version](https://img.shields.io/badge/version-0.1.0-blue) ![python](https://img.shields.io/badge/python-%3E%3D3.9-blue) ![coverage](https://img.shields.io/badge/coverage-unknown-lightgrey) ![functions](https://img.shields.io/badge/functions-43-green)
-> **43** functions | **0** classes | **14** files | CC̄ = 5.3
+![version](https://img.shields.io/badge/version-0.1.0-blue) ![python](https://img.shields.io/badge/python-%3E%3D3.9-blue) ![coverage](https://img.shields.io/badge/coverage-unknown-lightgrey) ![functions](https://img.shields.io/badge/functions-67-green)
+> **67** functions | **2** classes | **41** files | CC̄ = 4.3
 
 > Auto-generated project documentation from source code analysis.
 
@@ -141,39 +141,17 @@ Content outside the markers is preserved when regenerating. Enable this with `sy
 
 ```
 cost/
-    ├── costs/        ├── models        ├── metrics            ├── base        ├── git_parser        ├── reports/            ├── markdown        ├── calculator            ├── html            ├── badge        ├── index├── project        ├── badge        ├── cli```
+        ├── cli        ├── models    ├── costs/        ├── tokenizers        ├── metrics        ├── commands/        ├── calculator            ├── badge            ├── analyze            ├── report            ├── base        ├── reports/            ├── markdown            ├── utils            ├── badge            ├── html        ├── main        ├── main        ├── main        ├── main        ├── main        ├── main        ├── index├── project        ├── run        ├── run        ├── run        ├── run        ├── badge        ├── run        ├── run        ├── run        ├── run        ├── run        ├── install        ├── run        ├── run        ├── run        ├── run        ├── main        ├── git_parser```
 
 ## API Overview
 
+### Classes
+
+- **`Tokenizer`** — Unified tokenizer supporting multiple providers with proper token counting.
+- **`GitDiffParser`** — Parse git diff for accurate change statistics.
+
 ### Functions
 
-- `get_model_price(model)` — Get pricing for a model, fallback to local if unknown.
-- `get_openrouter_headers()` — Get headers for OpenRouter API calls.
-- `get_litellm_model_name(model)` — Convert model name to liteLLM format.
-- `calculate_human_time(commits)` — Calculate human development time with realistic overhead.
-- `get_cost_color(cost)` — Get badge color based on cost level.
-- `get_commit_diff(repo, commit)` — Get diff for a commit.
-- `is_ai_commit(commit, tag_pattern)` — Check if commit message contains AI tag.
-- `extract_ai_tag(commit)` — Extract AI tag from commit message.
-- `is_commit_in_date_range(commit, since, until, specific_date)` — Check if commit falls within date range.
-- `get_first_commit_date(repo)` — Get the date of the first commit in the repository.
-- `parse_commits(repo_path, max_count, ai_only, since)` — Parse commits from repository with date filtering.
-- `get_repo_name(repo)` — Get repository name from git remote or directory.
-- `get_repo_stats(repo_path)` — Get repository statistics including first commit date.
-- `generate_markdown_report(results, output_path)` — Generate markdown report with cost visualizations.
-- `get_file_type_multiplier(filename)` — Get multiplier based on file extension.
-- `estimate_tokens(diff)` — Estimate tokens by parsing diff headers for file-type multipliers.
-- `calculate_cost(tokens, model)` — Calculate cost from tokens using model prices.
-- `calculate_roi(cost, lines_changed, hourly_rate, review_factor)` — Calculate ROI metrics with human review overhead.
-- `ai_cost(commit_diff, model, api_key, saas_token)` — Calculate AI cost for a commit with file-type awareness.
-- `batch_calculate_costs(commits_data, model, api_key, saas_token)` — Calculate costs for multiple commits.
-- `generate_html_report(results, output_path)` — Generate interactive HTML report with visualizations.
-- `update_readme_badge(repo_path, results)` — Update README.md with cost badge including human time calculation.
-- `install_hook()` — —
-- `generateBadge()` — —
-- `determineColor()` — —
-- `analyzeRepository()` — —
-- `handleApiRequest()` — —
 - `version_callback(value)` — —
 - `callback(version)` — —
 - `analyze(repo, model, api_key, saas_token)` — Analyze AI costs for git commits with liteLLM support.
@@ -184,29 +162,96 @@ cost/
 - `stats(repo)` — Show repository statistics including commit history.
 - `init(force, auto)` — Initialize AI cost tracking for current project.
 - `main()` — —
+- `get_model_price(model)` — Get pricing for a model, fallback to local if unknown.
+- `get_openrouter_headers()` — Get headers for OpenRouter API calls.
+- `get_litellm_model_name(model)` — Convert model name to liteLLM format.
+- `get_tokenizer()` — Get default tokenizer instance.
+- `count_tokens(text, model)` — Convenience function to count tokens.
+- `calculate_human_time(commits)` — Calculate human development time with realistic overhead.
+- `get_file_type_multiplier(filename)` — Get multiplier based on file extension.
+- `estimate_tokens(diff, model)` — Estimate tokens using proper tokenization.
+- `calculate_cost(tokens, model)` — Calculate cost from tokens using model prices.
+- `calculate_roi(cost, lines_changed, hourly_rate, review_factor)` — Calculate ROI metrics with human review overhead.
+- `ai_cost(commit_diff, model, api_key, saas_token)` — Calculate AI cost for a commit with proper tokenization.
+- `batch_calculate_costs(commits_data, model, api_key, saas_token)` — Calculate costs for multiple commits.
+- `badge_logic(repo, model, all_commits)` — Logic for badge command.
+- `auto_badge_logic(repo, all_commits)` — Logic for auto-badge command.
+- `analyze_logic(repo, model, api_key, saas_token)` — Logic for analyze command.
+- `report_logic(repo, model, format, output_dir)` — Logic for report command.
+- `get_cost_color(cost)` — Get badge color based on cost level.
+- `generate_markdown_report(results, output_path)` — Generate markdown report with cost visualizations.
+- `estimate_logic(diff_file, model)` — Logic for estimate command.
+- `stats_logic(repo)` — Logic for stats command.
+- `init_logic(force, auto)` — Logic for init command.
+- `update_readme_badge(repo_path, results)` — Update README.md with cost badge including human time calculation.
+- `generate_html_report(results, output_path)` — Generate interactive HTML report with visualizations.
+- `generate_sample_data(days)` — Generate sample daily cost data.
+- `moving_average(data, window)` — —
+- `update_prices_from_api()` — Simulate fetching current prices from provider API.
+- `install_hook()` — —
+- `generateBadge()` — —
+- `determineColor()` — —
+- `analyzeRepository()` — —
+- `handleApiRequest()` — —
+- `analyze_repository(repo_path)` — Analyze a single repository.
+- `get_commit_diff(repo, commit)` — Get diff for a commit.
+- `is_ai_commit(commit, tag_pattern)` — Check if commit message contains AI tag.
+- `extract_ai_tag(commit)` — Extract AI tag from commit message.
+- `is_commit_in_date_range(commit, since, until, specific_date)` — Check if commit falls within date range.
+- `get_first_commit_date(repo)` — Get the date of the first commit in the repository.
+- `parse_commits(repo_path, max_count, ai_only, since)` — Parse commits from repository with date filtering.
+- `get_repo_name(repo)` — Get repository name from git remote or directory.
+- `get_repo_stats(repo_path)` — Get repository statistics including first commit date.
 
 
 ## Project Structure
 
+📄 `examples.01_basic_usage.run`
+📄 `examples.01_custom_pricing.main` (1 functions)
+📄 `examples.01_custom_pricing.run`
+📄 `examples.01_tokenizer_basic.main`
+📄 `examples.01_tokenizer_basic.run`
+📄 `examples.02_badge_generation.run`
+📄 `examples.02_custom_roi.main`
+📄 `examples.02_custom_roi.run`
+📄 `examples.02_multi_model_cost.main`
+📄 `examples.02_multi_model_cost.run`
+📄 `examples.03_batch_processing.main`
+📄 `examples.03_batch_processing.run`
+📄 `examples.03_diff_estimation.run`
+📄 `examples.03_multi_repo.main` (1 functions)
+📄 `examples.03_multi_repo.run`
+📄 `examples.04_cost_trends.main` (2 functions)
+📄 `examples.04_cost_trends.run`
+📄 `examples.github-actions.run`
+📄 `examples.gitlab-ci.run`
+📄 `examples.pre-commit-hook.install`
+📄 `examples.pre-commit-hook.run`
 📄 `project` (1 functions)
 📄 `services.badge-service.badge` (4 functions)
 📄 `services.badge-service.index`
 📦 `src.costs`
 📄 `src.costs.calculator` (7 functions)
-📄 `src.costs.cli` (14 functions)
-📄 `src.costs.git_parser` (9 functions)
-📄 `src.costs.metrics` (1 functions)
+📄 `src.costs.cli` (10 functions)
+📦 `src.costs.commands`
+📄 `src.costs.commands.analyze` (5 functions)
+📄 `src.costs.commands.badge` (2 functions)
+📄 `src.costs.commands.report` (1 functions)
+📄 `src.costs.commands.utils` (3 functions)
+📄 `src.costs.git_parser` (10 functions)
+📄 `src.costs.metrics` (4 functions)
 📄 `src.costs.models` (3 functions)
 📦 `src.costs.reports`
 📄 `src.costs.reports.badge` (1 functions)
 📄 `src.costs.reports.base` (1 functions)
 📄 `src.costs.reports.html` (1 functions)
 📄 `src.costs.reports.markdown` (1 functions)
+📄 `src.costs.tokenizers` (9 functions, 2 classes)
 
 ## Requirements
 
 - Python >= >=3.9
-- gitpython >=3.1- pandas >=2.0- typer >=0.12- click <8.1.0- httpx >=0.27- litellm >=1.0- python-dotenv >=1.0
+- gitpython >=3.1- pandas >=2.0- typer >=0.12- click <8.1.0- httpx >=0.27- litellm >=1.0- python-dotenv >=1.0- tiktoken >=0.7- anthropic >=0.30
 
 ## Contributing
 

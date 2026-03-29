@@ -1,52 +1,76 @@
-# vallm batch | 36f | 13✓ 1⚠ 7✗ | 2026-03-29
+# vallm batch | 80f | 36✓ 1⚠ 11✗ | 2026-03-29
 
 SUMMARY:
-  scanned: 36  passed: 13 (36.1%)  warnings: 1  errors: 7  unsupported: 16
+  scanned: 80  passed: 36 (45.0%)  warnings: 1  errors: 11  unsupported: 33
 
 WARNINGS[1]{path,score}:
   services/badge-service/badge.php,0.97
     issues[1]{rule,severity,message,line}:
       complexity.lizard_cc,warning,handleApiRequest: CC=20 exceeds limit 15,160
 
-ERRORS[7]{path,score}:
+ERRORS[11]{path,score}:
   src/costs/__init__.py,0.57
-    issues[2]{rule,severity,message,line}:
-      python.import.resolvable,error,Module 'calculator' not found,4
-      python.import.resolvable,error,Module 'models' not found,5
+    issues[4]{rule,severity,message,line}:
+      python.import.resolvable,error,Module 'calculator' not found,3
+      python.import.resolvable,error,Module 'models' not found,4
+      python.import.resolvable,error,Module 'metrics' not found,5
+      python.import.resolvable,error,Module 'reports.badge' not found,6
   src/costs/reports/__init__.py,0.66
     issues[4]{rule,severity,message,line}:
       python.import.resolvable,error,Module 'base' not found,4
       python.import.resolvable,error,Module 'markdown' not found,5
       python.import.resolvable,error,Module 'badge' not found,7
       python.import.resolvable,error,Module 'metrics' not found,8
+  src/costs/commands/badge.py,0.76
+    issues[5]{rule,severity,message,line}:
+      python.import.resolvable,error,Module 'calculator' not found,4
+      python.import.resolvable,error,Module 'git_parser' not found,5
+      python.import.resolvable,error,Module 'models' not found,6
+      python.import.resolvable,error,Module 'reports' not found,33
+      python.import.resolvable,error,Module 'reports' not found,107
+  src/costs/commands/report.py,0.76
+    issues[5]{rule,severity,message,line}:
+      python.import.resolvable,error,Module 'calculator' not found,5
+      python.import.resolvable,error,Module 'git_parser' not found,6
+      python.import.resolvable,error,Module 'reports' not found,44
+      python.import.resolvable,error,Module 'reports' not found,50
+      python.import.resolvable,error,Module 'reports' not found,56
   tests/test_cost.py,0.76
     issues[4]{rule,severity,message,line}:
       python.import.resolvable,error,Module 'src.costs' not found,15
       python.import.resolvable,error,Module 'src.costs.calculator' not found,78
       python.import.resolvable,error,Module 'src.costs.git_parser' not found,79
       python.import.resolvable,error,Module 'src.costs.reports' not found,89
-  src/costs/cli.py,0.80
-    issues[8]{rule,severity,message,line}:
-      python.import.resolvable,error,Module 'calculator' not found,12
-      python.import.resolvable,error,Module 'git_parser' not found,13
-      python.import.resolvable,error,Module 'models' not found,14
-      python.import.resolvable,error,Module 'reports' not found,297
-      python.import.resolvable,error,Module 'reports' not found,376
-      python.import.resolvable,error,Module 'reports' not found,236
-      python.import.resolvable,error,Module 'reports' not found,242
-      python.import.resolvable,error,Module 'reports' not found,248
-  src/costs/calculator.py,0.86
-    issues[1]{rule,severity,message,line}:
-      python.import.resolvable,error,Module 'models' not found,5
+  src/costs/cli.py,0.79
+    issues[5]{rule,severity,message,line}:
+      python.import.resolvable,error,Module 'models' not found,10
+      python.import.resolvable,error,Module 'commands.analyze' not found,11
+      python.import.resolvable,error,Module 'commands.report' not found,12
+      python.import.resolvable,error,Module 'commands.badge' not found,13
+      python.import.resolvable,error,Module 'commands.utils' not found,14
+  src/costs/commands/utils.py,0.82
+    issues[3]{rule,severity,message,line}:
+      python.import.resolvable,error,Module 'calculator' not found,5
+      python.import.resolvable,error,Module 'git_parser' not found,6
+      python.import.resolvable,error,Module 'models' not found,7
+  src/costs/commands/analyze.py,0.86
+    issues[3]{rule,severity,message,line}:
+      python.import.resolvable,error,Module 'calculator' not found,7
+      python.import.resolvable,error,Module 'git_parser' not found,8
+      python.import.resolvable,error,Module 'models' not found,9
   src/costs/reports/badge.py,0.86
     issues[2]{rule,severity,message,line}:
       python.import.resolvable,error,Module 'metrics' not found,7
       python.import.resolvable,error,Module 'git_parser' not found,22
+  src/costs/calculator.py,0.89
+    issues[1]{rule,severity,message,line}:
+      python.import.resolvable,error,Module 'models' not found,5
   src/costs/reports/markdown.py,0.89
     issues[1]{rule,severity,message,line}:
       python.import.resolvable,error,Module 'base' not found,6
 
-UNSUPPORTED[3]{bucket,count}:
-  *.md,8
+UNSUPPORTED[4]{bucket,count}:
+  *.md,22
   *.txt,1
-  other,7
+  *.yml,2
+  other,8

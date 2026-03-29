@@ -1,28 +1,48 @@
-# cost | 18f 1950L | python:15,php:2,shell:1 | 2026-03-29
-# stats: 50 func | 0 cls | 18 mod | CC̄=3.5 | critical:0 | cycles:0
+# cost | 63 func | 16f | 2285L | python | 2026-03-29
 
 HEALTH:
-  CC̄=3.5  critical=0 (limit:10)  dup=0  cycles=0
+  CC̄=4.3  critical=4 (limit:10)  dup=0  cycles=0
 
-ALERTS[0]: none
+ALERTS[9]:
+  !!! high_fan_out     update_readme_badge = 24 (limit:10)
+  !!  cc_exceeded      update_readme_badge = 23 (limit:15)
+  !!  high_fan_out     auto_badge_logic = 15 (limit:10)
+  !   high_fan_out     handleApiRequest = 14 (limit:10)
+  !   high_fan_out     generate_markdown_report = 13 (limit:10)
+  !   high_fan_out     report_logic = 12 (limit:10)
+  !   high_fan_out     init_logic = 12 (limit:10)
+  !   high_fan_out     analyze_logic = 11 (limit:10)
+  !   high_fan_out     generate_html_report = 11 (limit:10)
 
-MODULES[18] (top by size):
-  M[src/costs/calculator.py] 210L C:0 F:7 CC↑5 D:1 (python)
-  M[src/costs/git_parser.py] 180L C:0 F:10 CC↑5 D:2 (python)
-  M[src/costs/cli.py] 120L C:0 F:10 CC↑3 D:0 (python)
-  M[src/costs/commands/utils.py] 120L C:0 F:3 CC↑4 D:0 (python)
-  M[src/costs/commands/analyze.py] 110L C:0 F:5 CC↑5 D:0 (python)
-  M[src/costs/commands/badge.py] 100L C:0 F:2 CC↑4 D:0 (python)
-  M[src/costs/metrics.py] 85L C:0 F:4 CC↑4 D:1 (python)
-  M[src/costs/commands/report.py] 70L C:0 F:1 CC↑4 D:0 (python)
-  M[src/costs/models.py] 74L C:0 F:3 CC↑3 D:2 (python)
+MODULES[20] (top by size):
+  M[src/costs/reports/html.py] 284L C:0 F:1 CC↑5 D:1 (python)
+  M[services/badge-service/badge.php] 231L C:0 F:4 CC↑14 D:0 (php)
+  M[src/costs/calculator.py] 212L C:0 F:7 CC↑5 D:5 (python)
+  M[src/costs/git_parser.py] 177L C:0 F:10 CC↑6 D:5 (python)
+  M[src/costs/tokenizers.py] 158L C:2 F:9 CC↑11 D:0 (python)
+  M[src/costs/commands/analyze.py] 155L C:0 F:5 CC↑9 D:1 (python)
+  M[src/costs/cli.py] 143L C:0 F:10 CC↑2 D:0 (python)
+  M[src/costs/commands/utils.py] 131L C:0 F:3 CC↑8 D:1 (python)
+  M[src/costs/reports/badge.py] 122L C:0 F:1 CC↑23 D:2 (python)
+  M[src/costs/commands/badge.py] 117L C:0 F:2 CC↑9 D:1 (python)
+  M[src/costs/reports/markdown.py] 112L C:0 F:1 CC↑9 D:1 (python)
+  M[src/costs/metrics.py] 87L C:0 F:4 CC↑6 D:1 (python)
+  M[src/costs/models.py] 74L C:0 F:3 CC↑5 D:3 (python)
+  M[src/costs/commands/report.py] 72L C:0 F:1 CC↑8 D:1 (python)
   M[project.sh] 44L C:0 F:1 CC↑0 D:0 (shell)
-  M[src/costs/__init__.py] 16L C:0 F:0 CC↑0 D:0 (python)
-  LANGS: python:15/php:2/shell:1
+  LANGS: python:17/php:2/shell:1
 
-HOTSPOTS[0]: none
+HOTSPOTS[8]:
+  ★ update_readme_badge fan=24  // Update README.md with cost badge including human time calculation.
+  ★ auto_badge_logic fan=15  // Logic for auto-badge command.
+  ★ handleApiRequest fan=14  // Orchestrates 14 calls
+  ★ generate_markdown_report fan=13  // Generate markdown report with cost visualizations.
+  ★ report_logic fan=12  // Logic for report command.
 
-REFACTOR[0]: none needed
+REFACTOR[3]:
+  [1] M/L Split update_readme_badge (CC=23 → target CC<10)
+  [2] M/M Reduce update_readme_badge fan-out (currently 24)
+  [3] M/M Reduce auto_badge_logic fan-out (currently 15)
 
 EVOLUTION:
-  2026-03-29 CC̄=3.5 crit=0 1950L // Successfully refactored: split god module cli.py, simplified metrics.py and git_parser.py.
+  2026-03-29 CC̄=4.3 crit=4 2285L // Automated analysis
