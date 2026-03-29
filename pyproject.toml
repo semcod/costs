@@ -4,13 +4,12 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "ai-cost-tracker"
-version = "0.1.1"
+version = "0.1.2"
 description = "Zero-config AI cost calculator per commit/model with liteLLM"
 readme = "README.md"
 license = "Apache-2.0"
 authors = [
-    {name = "Your Name", email = "you@example.com"},
-    {name = "Tom Sapletta", email = "tom@sapletta.com"},
+    "Tom Sapletta <tom@sapletta.com>"
 ]
 packages = [{include = "ai_cost_tracker", from = "src"}]
 
