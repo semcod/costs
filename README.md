@@ -27,7 +27,7 @@ pip install ai-cost-tracker
 ```bash
 aicost init
 # Edit .env file to add your OpenRouter API key
-echo "OPENROUTER_API_KEY=sk-or-v1-..." >> .env
+echo "OPENROUTER_API_KEY=YOUR_KEY" >> .env
 ```
 
 ### 2. Run Analysis
@@ -37,7 +37,7 @@ echo "OPENROUTER_API_KEY=sk-or-v1-..." >> .env
 aicost analyze --repo .
 
 # Or specify directly
-aicost analyze --repo . --model openrouter/qwen/qwen3-coder-next --api-key your_key_here
+aicost analyze --repo . --model openrouter/qwen/qwen3-coder-next --api-key YOUR_KEY
 ```
 
 ## Configuration
@@ -46,7 +46,7 @@ Create a `.env` file in your project root:
 
 ```bash
 # Required: OpenRouter API key (https://openrouter.ai/keys)
-OPENROUTER_API_KEY=your_key_here
+OPENROUTER_API_KEY=YOUR_KEY
 PFIX_MODEL=openrouter/qwen/qwen3-coder-next
 ```
 
@@ -67,7 +67,7 @@ Use your own API key via OpenRouter. Costs calculated locally with real provider
 aicost analyze --repo .
 
 # Explicit key
-aicost analyze --repo . --api-key sk-or-v1-...
+aicost analyze --repo . --api-key YOUR_KEY
 ```
 
 **Supported models via liteLLM:**
@@ -87,6 +87,20 @@ aicost --repo . --mode local
 ```
 
 **Estimation formula:** `diff_chars / 4 * 0.0001$/M tokens`
+
+## How It Works
+
+1. **Parse git history** - Analyzuje commity z tagami `[ai:model]`
+2. **Estimate tokens** - Używa heurystyki lub liteLLM do liczenia tokenów
+3. **Calculate cost** - Mnoży tokeny × cena za model
+4. **Generate ROI** - Szacuje oszczędność czasu (100 LOC/h × $100/h)
+
+## Why liteLLM?
+
+- **Universal API** - Jedna składnia dla 100+ providerów
+- **Automatic routing** - Fallback między providerami
+- **Cost tracking** - Wbudowane liczenie tokenów
+- **OpenRouter** - Dostęp do najnowszych modeli bez kont premium
 
 ### Option 3: SaaS Subscription - Managed
 
@@ -214,6 +228,3 @@ Licensed under Apache-2.0.
 
 
 Licensed under Apache-2.0.
-
-
-MIT License
