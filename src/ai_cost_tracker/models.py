@@ -9,11 +9,13 @@ load_dotenv()
 
 # Default configuration from .env
 DEFAULT_OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
-DEFAULT_MODEL = os.getenv("PFIX_MODEL", "openrouter/qwen/qwen3-coder-next")
+DEFAULT_MODEL = os.getenv("PFIX_MODEL", "anthropic/claude-4-sonnet")
 
 # Model pricing ($/token) - includes liteLLM supported providers
 PRICES: Dict[str, Dict[str, float]] = {
     # Anthropic
+    "claude-4-sonnet": {"input": 3e-6, "output": 15e-6},
+    "anthropic/claude-4-sonnet": {"input": 3e-6, "output": 15e-6},
     "claude-3.5-sonnet": {"input": 3e-6, "output": 15e-6},
     "claude-3.5-haiku": {"input": 0.8e-6, "output": 4e-6},
     "claude-3-opus": {"input": 15e-6, "output": 75e-6},
