@@ -1,7 +1,8 @@
 """Git commit parsing utilities."""
 
 import re
-from typing import List, Optional, Tuple
+from datetime import datetime, date, timedelta
+from typing import List, Optional, Tuple, Union
 import git
 
 
@@ -33,16 +34,118 @@ def extract_ai_tag(commit: git.Commit) -> Optional[str]:
     return match.group(1) if match else None
 
 
-def parse_commits(repo_path: str, max_count: int = 100, ai_only: bool = True) -> List[Tuple[git.Commit, str]]:
-    """Parse commits from repository.
+def is_commit_in_date_range(
+    commit: git.Commit,
+    since: Optional[Union[date, datetime]] = None,
+    until: Optional[Union[date, datetime]] = None,
+    specific_date: Optional[date] = None
+) -> bool:
+    """Check if commit falls within date range.
     
-    Returns list of (commit, diff) tuples.
+    Args:
+        commit: Git commit object
+        since: Start date (inclusive)
+        until: End date (inclusive)
+        specific_date: Exact date to match (overrides since/until)
+    
+    Returns:
+        True if commit is within the specified date range
+    """
+    commit_date = commit.committed_datetime.date()
+    
+    if specific_date:
+        return commit_date == specific_date
+    
+    if since and commit_date < since:
+        return False
+    
+    if until and commit_date > until:
+        return False
+    
+    return True
+
+
+def get_first_commit_date(repo: git.Repo) -> date:
+    """Get the date of the first commit in the repository."""
+    try:
+        # Get all commits and find the oldest one
+        all_commits = list(repo.iter_commits('--all'))
+        if not all_commits:
+            return date.today()
+        
+        # The last commit in the list is the oldest (first)
+        oldest_commit = all_commits[-1]
+        return oldest_commit.committed_datetime.date()
+    except Exception:
+        return date.today()
+
+
+def parse_commits(
+    repo_path: str,
+    max_count: int = 100,
+    ai_only: bool = True,
+    since: Optional[Union[date, datetime, str]] = None,
+    until: Optional[Union[date, datetime, str]] = None,
+    specific_date: Optional[Union[date, str]] = None,
+    full_history: bool = False
+) -> List[Tuple[git.Commit, str]]:
+    """Parse commits from repository with date filtering.
+    
+    Args:
+        repo_path: Path to git repository
+        max_count: Maximum number of commits to analyze
+        ai_only: Only return commits with AI tags
+        since: Start date (inclusive) - can be date, datetime, or ISO string (YYYY-MM-DD)
+        until: End date (inclusive) - can be date, datetime, or ISO string (YYYY-MM-DD)
+        specific_date: Exact date to match - overrides since/until
+        full_history: If True, analyze all commits since repo creation (overrides since)
+    
+    Returns:
+        List of (commit, diff) tuples matching the criteria
     """
     repo = git.Repo(repo_path)
     commits = []
     
-    for commit in repo.iter_commits(max_count=max_count):
+    # Parse date arguments
+    parsed_since = None
+    parsed_until = None
+    parsed_specific = None
+    
+    if specific_date:
+        if isinstance(specific_date, str):
+            parsed_specific = datetime.strptime(specific_date, "%Y-%m-%d").date()
+        else:
+            parsed_specific = specific_date
+    else:
+        if since:
+            if isinstance(since, str):
+                parsed_since = datetime.strptime(since, "%Y-%m-%d").date()
+            elif isinstance(since, datetime):
+                parsed_since = since.date()
+            else:
+                parsed_since = since
+        
+        if until:
+            if isinstance(until, str):
+                parsed_until = datetime.strptime(until, "%Y-%m-%d").date()
+            elif isinstance(until, datetime):
+                parsed_until = until.date()
+            else:
+                parsed_until = until
+        
+        if full_history and not parsed_since:
+            parsed_since = get_first_commit_date(repo)
+    
+    # Determine max_count for full history
+    iter_count = max_count if not full_history else None
+    
+    for commit in repo.iter_commits(max_count=iter_count):
+        # Check AI tag filter
         if ai_only and not is_ai_commit(commit):
+            continue
+        
+        # Check date filters
+        if not is_commit_in_date_range(commit, parsed_since, parsed_until, parsed_specific):
             continue
         
         diff = get_commit_diff(repo, commit)
@@ -62,3 +165,19 @@ def get_repo_name(repo: git.Repo) -> str:
         return url.split('/')[-1]
     except:
         return repo.working_dir.split('/')[-1]
+
+
+def get_repo_stats(repo_path: str) -> dict:
+    """Get repository statistics including first commit date."""
+    repo = git.Repo(repo_path)
+    
+    all_commits = list(repo.iter_commits('--all'))
+    first_commit = all_commits[-1] if all_commits else None
+    last_commit = all_commits[0] if all_commits else None
+    
+    return {
+        "total_commits": len(all_commits),
+        "first_commit_date": first_commit.committed_datetime.date() if first_commit else None,
+        "last_commit_date": last_commit.committed_datetime.date() if last_commit else None,
+        "repo_name": get_repo_name(repo)
+    }

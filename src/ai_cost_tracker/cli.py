@@ -10,7 +10,7 @@ import git
 from dotenv import load_dotenv
 
 from .calculator import batch_calculate_costs, ai_cost
-from .git_parser import parse_commits, get_repo_name
+from .git_parser import parse_commits, get_repo_name, get_repo_stats
 from .models import DEFAULT_MODEL, DEFAULT_OPENROUTER_API_KEY, get_litellm_model_name
 
 # Load .env for CLI defaults
@@ -54,6 +54,10 @@ def analyze(
     output: Path = typer.Option(Path("ai_costs.csv"), "--output", "-o", help="Output CSV file"),
     ai_only: bool = typer.Option(True, "--ai-only/--all", help="Only analyze commits with [ai:] tag"),
     saas_url: str = typer.Option("https://your-saas.com/api/cost", "--saas-url", help="SaaS API endpoint"),
+    since: Optional[str] = typer.Option(None, "--since", help="Start date (YYYY-MM-DD) - analyze commits from this date"),
+    until: Optional[str] = typer.Option(None, "--until", help="End date (YYYY-MM-DD) - analyze commits until this date"),
+    specific_date: Optional[str] = typer.Option(None, "--date", help="Specific date (YYYY-MM-DD) - analyze only this day"),
+    full_history: bool = typer.Option(False, "--full-history", help="Analyze all commits since repository creation"),
 ):
     """Analyze AI costs for git commits with liteLLM support.
 
@@ -73,6 +77,13 @@ def analyze(
     OPENROUTER_API_KEY=sk-or-v1-...
     PFIX_MODEL=openrouter/qwen/qwen3-coder-next
     ```
+
+    **Date filtering options:**
+    - `--date 2024-01-15` - Analyze specific day only
+    - `--since 2024-01-01` - Analyze from date (inclusive)
+    - `--until 2024-01-31` - Analyze until date (inclusive)
+    - `--since 2024-01-01 --until 2024-01-31` - Date range
+    - `--full-history` - Analyze all commits since repo creation
     """
     if not repo.exists():
         typer.echo(f"❌ Repository not found: {repo}", err=True)
@@ -102,11 +113,34 @@ def analyze(
     effective_api_key = api_key if not use_saas else None
     effective_saas_token = saas_token if use_saas else None
     
-    typer.echo(f"🔍 Analyzing {max_commits} commits from {get_repo_name(git_repo)}...")
-    typer.echo(f"🤖 Model: {litellm_model} | Mode: {effective_mode}")
+    # Build filter description
+    filter_desc = []
+    if specific_date:
+        filter_desc.append(f"date={specific_date}")
+    elif since or until or full_history:
+        if full_history:
+            filter_desc.append("full history")
+        else:
+            if since:
+                filter_desc.append(f"since={since}")
+            if until:
+                filter_desc.append(f"until={until}")
     
-    # Parse commits
-    commits_data = parse_commits(str(repo), max_count=max_commits, ai_only=ai_only)
+    filter_str = " | ".join(filter_desc) if filter_desc else "last commits"
+    
+    typer.echo(f"🔍 Analyzing {max_commits} commits from {get_repo_name(git_repo)}...")
+    typer.echo(f"🤖 Model: {litellm_model} | Mode: {effective_mode} | Filter: {filter_str}")
+    
+    # Parse commits with date filtering
+    commits_data = parse_commits(
+        str(repo),
+        max_count=max_commits,
+        ai_only=ai_only,
+        since=since,
+        until=until,
+        specific_date=specific_date,
+        full_history=full_history
+    )
     
     if not commits_data:
         typer.echo("⚠️  No commits found. Use --all to analyze all commits.")
@@ -175,6 +209,35 @@ def estimate(
     typer.echo(f"🤖 Model: {litellm_model}")
     typer.echo(f"📊 Tokens: {result['tokens']['total']:,} (in: {result['tokens']['input']:,}, out: {result['tokens']['output']:,})")
     typer.echo(f"⚡ ROI: {result['roi_formatted']}")
+
+
+@app.command()
+def stats(
+    repo: Path = typer.Argument(..., help="Path to git repository"),
+):
+    """Show repository statistics including commit history."""
+    if not repo.exists():
+        typer.echo(f"❌ Repository not found: {repo}", err=True)
+        raise typer.Exit(1)
+    
+    try:
+        git_repo = git.Repo(repo)
+    except git.InvalidGitRepositoryError:
+        typer.echo(f"❌ Not a git repository: {repo}", err=True)
+        raise typer.Exit(1)
+    
+    repo_stats = get_repo_stats(str(repo))
+    
+    typer.echo()
+    typer.echo("📊 Repository Statistics")
+    typer.echo("=" * 40)
+    typer.echo(f"   Repository: {repo_stats['repo_name']}")
+    typer.echo(f"   Total commits: {repo_stats['total_commits']}")
+    if repo_stats['first_commit_date']:
+        typer.echo(f"   First commit: {repo_stats['first_commit_date']}")
+    if repo_stats['last_commit_date']:
+        typer.echo(f"   Last commit: {repo_stats['last_commit_date']}")
+    typer.echo("=" * 40)
 
 
 @app.command()
