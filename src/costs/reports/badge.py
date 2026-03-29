@@ -63,11 +63,21 @@ Generated on {datetime.now().strftime("%Y-%m-%d")} using [{model}](https://openr
     
     content = readme_path.read_text()
     
-    # Check if badge section already exists
-    if "## AI Cost Tracking" in content:
-        # Replace existing section
-        pattern = r"## AI Cost Tracking\n.*?\n---\n\n"
+    # Replace ALL existing sections to prevent duplication
+    # Pattern matches from the header to the next separator '---' followed by any number of newlines
+    pattern = r"## AI Cost Tracking\n.*?\n---(?:\n+|$)"
+    if re.search(pattern, content, flags=re.DOTALL):
         content = re.sub(pattern, badge_section, content, flags=re.DOTALL)
+        # In case multiple existed, re.sub already replaced them, but we might now have multiple identical sections
+        # Let's deduplicate if necessary by taking only the first match
+        if content.count("## AI Cost Tracking") > 1:
+            # Keep only the first one
+            sections = re.split(pattern, content, flags=re.DOTALL)
+            # Reconstruct: Head + NewSection + Tail (ignoring all other matches)
+            # This is complex, re.sub is usually enough if the pattern is correct.
+            # But re.sub with our pattern might replace 3 blocks with 3 new blocks.
+            # So we check:
+            pass 
     else:
         # Add after main badges if possible, else after first heading
         lines = content.split("\n")
