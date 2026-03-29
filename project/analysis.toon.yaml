@@ -1,20 +1,22 @@
-# code2llm | 14f 1919L | python:11,php:2,shell:1 | 2026-03-29
-# CC̄=5.2 | critical:0/43 | dups:0 | cycles:0
+# code2llm | 20f 2193L | python:17,php:2,shell:1 | 2026-03-29
+# CC̄=4.3 | critical:1/67 | dups:0 | cycles:0
 
-HEALTH[0]: ok
+HEALTH[1]:
+  🟡 CC    update_readme_badge CC=23 (limit:15)
 
-REFACTOR[0]: none needed
+REFACTOR[1]:
+  1. split 1 high-CC methods  (CC>15)
 
-PIPELINES[12]:
+PIPELINES[25]:
   [1] Src [extract_ai_tag]: extract_ai_tag
       PURITY: 100% pure
-  [2] Src [handleApiRequest]: handleApiRequest → generateBadge → determineColor
+  [2] Src [version_callback]: version_callback
       PURITY: 100% pure
-  [3] Src [version_callback]: version_callback
+  [3] Src [callback]: callback
       PURITY: 100% pure
-  [4] Src [callback]: callback
+  [4] Src [analyze]: analyze → analyze_logic → _get_repo
       PURITY: 100% pure
-  [5] Src [analyze]: analyze → _get_repo
+  [5] Src [report]: report → report_logic → parse_commits → _parse_date_args → ...(1 more)
       PURITY: 100% pure
 
 LAYERS:
@@ -22,22 +24,30 @@ LAYERS:
   │ badge.php                  231L  0C    4m  CC=14     ←0
   │ index.php                   26L  0C    0m  CC=0.0    ←0
   │
-  src/                            CC̄=4.9    ←in:0  →out:0
-  │ !! cli                        531L  0C   14m  CC=9      ←0
+  src/                            CC̄=4.0    ←in:0  →out:0
   │ html                       284L  0C    1m  CC=5      ←1
-  │ calculator                 210L  0C    7m  CC=8      ←1
-  │ git_parser                 186L  0C    9m  CC=11     ←2
+  │ calculator                 212L  0C    7m  CC=5      ←5
+  │ git_parser                 177L  0C   10m  CC=6      ←5
+  │ tokenizers                 158L  2C    9m  CC=11     ←1
+  │ analyze                    155L  0C    5m  CC=9      ←1
+  │ cli                        143L  0C   10m  CC=2      ←0
+  │ utils                      131L  0C    3m  CC=8      ←1
+  │ !! badge                      122L  0C    1m  CC=23     ←2
+  │ badge                      117L  0C    2m  CC=9      ←1
   │ markdown                   112L  0C    1m  CC=9      ←1
-  │ badge                      104L  0C    1m  CC=12     ←1
-  │ metrics                     79L  0C    1m  CC=12     ←1
-  │ models                      74L  0C    3m  CC=5      ←2
+  │ metrics                     87L  0C    4m  CC=6      ←1
+  │ models                      74L  0C    3m  CC=5      ←3
+  │ report                      72L  0C    1m  CC=8      ←1
+  │ __init__                    18L  0C    0m  CC=0.0    ←0
   │ __init__                    16L  0C    0m  CC=0.0    ←0
   │ base                        14L  0C    1m  CC=5      ←1
-  │ __init__                     8L  0C    0m  CC=0.0    ←0
+  │ __init__                     0L  0C    0m  CC=0.0    ←0
   │
   ./                              CC̄=0.0    ←in:0  →out:0
   │ project.sh                  44L  0C    1m  CC=0.0    ←0
   │
+  ── zero ──
+     src/costs/commands/__init__.py            0L
 
 COUPLING: no cross-package imports detected
 

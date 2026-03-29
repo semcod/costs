@@ -1,59 +1,101 @@
 flowchart LR
+    subgraph examples__03_multi_repo
+        examples__03_multi_repo__main__analyze_repository["analyze_repository"]
+    end
     subgraph services__badge_service
         services__badge_service__badge__handleApiRequest["handleApiRequest"]
         services__badge_service__badge__determineColor["determineColor"]
         services__badge_service__badge__generateBadge["generateBadge"]
     end
     subgraph src__costs
-        src__costs__calculator___estimate_single_file_tokens["_estimate_single_file_tokens"]
-        src__costs__git_parser__get_commit_diff["get_commit_diff"]
-        src__costs__git_parser__get_repo_name["get_repo_name"]
-        src__costs__calculator__estimate_tokens["estimate_tokens"]
         src__costs__calculator__ai_cost["ai_cost"]
-        src__costs__cli__auto_badge["auto_badge"]
-        src__costs__calculator__batch_calculate_costs["batch_calculate_costs"]
-        src__costs__models__get_model_price["get_model_price"]
-        src__costs__git_parser__parse_commits["parse_commits"]
-        src__costs__calculator__calculate_cost["calculate_cost"]
+        src__costs__commands__analyze___get_filter_str["_get_filter_str"]
+        src__costs__tokenizers__get_tokenizer["get_tokenizer"]
+        src__costs__git_parser__is_ai_commit["is_ai_commit"]
         src__costs__cli__badge["badge"]
+        src__costs__git_parser__parse_commits["parse_commits"]
+        src__costs__metrics___calculate_session_duration["_calculate_session_duration"]
+        src__costs__commands__analyze___display_results["_display_results"]
         src__costs__metrics__calculate_human_time["calculate_human_time"]
-        src__costs__cli__estimate["estimate"]
-        src__costs__models__get_litellm_model_name["get_litellm_model_name"]
-        src__costs__calculator__get_file_type_multiplier["get_file_type_multiplier"]
-        src__costs__git_parser__is_commit_in_date_range["is_commit_in_date_range"]
+        src__costs__calculator___estimate_single_file_tokens["_estimate_single_file_tokens"]
+        src__costs__models__get_model_price["get_model_price"]
+        src__costs__calculator__calculate_roi["calculate_roi"]
+        src__costs__git_parser___parse_date_args["_parse_date_args"]
+        src__costs__git_parser___to_date["_to_date"]
+        src__costs__tokenizers__GitDiffParser__parse_diff_stats["parse_diff_stats"]
         src__costs__git_parser__get_repo_stats["get_repo_stats"]
         src__costs__cli__report["report"]
-        src__costs__calculator__calculate_roi["calculate_roi"]
-        src__costs__reports__badge__update_readme_badge["update_readme_badge"]
-        src__costs__git_parser___parse_date_args["_parse_date_args"]
+        src__costs__metrics___calculate_author_time["_calculate_author_time"]
+        src__costs__cli__estimate["estimate"]
+        src__costs__metrics___group_commits_by_author["_group_commits_by_author"]
+        src__costs__cli__init["init"]
+        src__costs__commands__utils__stats_logic["stats_logic"]
+        src__costs__git_parser__is_commit_in_date_range["is_commit_in_date_range"]
+        src__costs__calculator__estimate_tokens["estimate_tokens"]
+        src__costs__calculator__calculate_cost["calculate_cost"]
+        src__costs__commands__badge__auto_badge_logic["auto_badge_logic"]
+        src__costs__tokenizers__count_tokens["count_tokens"]
+        src__costs__git_parser__get_commit_diff["get_commit_diff"]
+        src__costs__commands__badge__badge_logic["badge_logic"]
+        src__costs__calculator__batch_calculate_costs["batch_calculate_costs"]
+        src__costs__models__get_litellm_model_name["get_litellm_model_name"]
+        src__costs__commands__analyze___get_execution_context["_get_execution_context"]
+        src__costs__commands__report__report_logic["report_logic"]
         src__costs__cli__stats["stats"]
+        src__costs__commands__utils__estimate_logic["estimate_logic"]
         src__costs__git_parser__get_first_commit_date["get_first_commit_date"]
-        src__costs__git_parser__is_ai_commit["is_ai_commit"]
+        src__costs__commands__analyze__analyze_logic["analyze_logic"]
+        src__costs__commands__analyze___get_repo["_get_repo"]
+        src__costs__git_parser__get_repo_name["get_repo_name"]
+        src__costs__reports__badge__update_readme_badge["update_readme_badge"]
+        src__costs__commands__utils__init_logic["init_logic"]
+        src__costs__cli__auto_badge["auto_badge"]
     end
+    src__costs__git_parser___parse_date_args --> src__costs__git_parser___to_date
     src__costs__git_parser___parse_date_args --> src__costs__git_parser__get_first_commit_date
     src__costs__git_parser__parse_commits --> src__costs__git_parser___parse_date_args
     src__costs__git_parser__parse_commits --> src__costs__git_parser__get_commit_diff
     src__costs__git_parser__parse_commits --> src__costs__git_parser__is_commit_in_date_range
     src__costs__git_parser__parse_commits --> src__costs__git_parser__is_ai_commit
     src__costs__git_parser__get_repo_stats --> src__costs__git_parser__get_repo_name
-    src__costs__calculator___estimate_single_file_tokens --> src__costs__calculator__get_file_type_multiplier
-    src__costs__calculator__estimate_tokens --> src__costs__calculator___estimate_single_file_tokens
+    src__costs__cli__report --> src__costs__commands__report__report_logic
+    src__costs__cli__badge --> src__costs__commands__badge__badge_logic
+    src__costs__cli__auto_badge --> src__costs__commands__badge__auto_badge_logic
+    src__costs__cli__estimate --> src__costs__commands__utils__estimate_logic
+    src__costs__cli__stats --> src__costs__commands__utils__stats_logic
+    src__costs__cli__init --> src__costs__commands__utils__init_logic
+    src__costs__tokenizers__count_tokens --> src__costs__tokenizers__get_tokenizer
+    src__costs__calculator__estimate_tokens --> src__costs__tokenizers__GitDiffParser__parse_diff_stats
+    src__costs__calculator___estimate_single_file_tokens --> src__costs__calculator__estimate_tokens
     src__costs__calculator__calculate_cost --> src__costs__models__get_model_price
     src__costs__calculator__ai_cost --> src__costs__calculator__estimate_tokens
+    src__costs__calculator__ai_cost --> src__costs__tokenizers__GitDiffParser__parse_diff_stats
     src__costs__calculator__ai_cost --> src__costs__calculator__calculate_cost
     src__costs__calculator__ai_cost --> src__costs__calculator__calculate_roi
     src__costs__calculator__batch_calculate_costs --> src__costs__calculator__ai_cost
-    services__badge_service__badge__generateBadge --> services__badge_service__badge__determineColor
-    services__badge_service__badge__handleApiRequest --> services__badge_service__badge__generateBadge
-    src__costs__cli__report --> src__costs__git_parser__parse_commits
-    src__costs__cli__report --> src__costs__calculator__batch_calculate_costs
-    src__costs__cli__badge --> src__costs__git_parser__parse_commits
-    src__costs__cli__badge --> src__costs__calculator__batch_calculate_costs
-    src__costs__cli__badge --> src__costs__reports__badge__update_readme_badge
-    src__costs__cli__auto_badge --> src__costs__git_parser__parse_commits
-    src__costs__cli__auto_badge --> src__costs__calculator__batch_calculate_costs
-    src__costs__cli__estimate --> src__costs__models__get_litellm_model_name
-    src__costs__cli__estimate --> src__costs__calculator__ai_cost
-    src__costs__cli__stats --> src__costs__git_parser__get_repo_stats
+    src__costs__commands__analyze__analyze_logic --> src__costs__commands__analyze___get_repo
+    src__costs__commands__analyze__analyze_logic --> src__costs__commands__analyze___get_execution_context
+    src__costs__commands__analyze__analyze_logic --> src__costs__models__get_litellm_model_name
+    src__costs__commands__analyze__analyze_logic --> src__costs__commands__analyze___get_filter_str
+    src__costs__commands__analyze__analyze_logic --> src__costs__git_parser__parse_commits
+    src__costs__commands__analyze__analyze_logic --> src__costs__calculator__batch_calculate_costs
+    src__costs__commands__analyze__analyze_logic --> src__costs__commands__analyze___display_results
+    src__costs__commands__report__report_logic --> src__costs__git_parser__parse_commits
+    src__costs__commands__report__report_logic --> src__costs__calculator__batch_calculate_costs
+    src__costs__commands__utils__estimate_logic --> src__costs__models__get_litellm_model_name
+    src__costs__commands__utils__estimate_logic --> src__costs__calculator__ai_cost
+    src__costs__commands__utils__stats_logic --> src__costs__git_parser__get_repo_stats
+    src__costs__commands__badge__badge_logic --> src__costs__git_parser__parse_commits
+    src__costs__commands__badge__badge_logic --> src__costs__calculator__batch_calculate_costs
+    src__costs__commands__badge__badge_logic --> src__costs__reports__badge__update_readme_badge
+    src__costs__commands__badge__auto_badge_logic --> src__costs__git_parser__parse_commits
+    src__costs__commands__badge__auto_badge_logic --> src__costs__calculator__batch_calculate_costs
+    src__costs__commands__badge__auto_badge_logic --> src__costs__reports__badge__update_readme_badge
     src__costs__reports__badge__update_readme_badge --> src__costs__git_parser__parse_commits
     src__costs__reports__badge__update_readme_badge --> src__costs__metrics__calculate_human_time
+    examples__03_multi_repo__main__analyze_repository --> src__costs__calculator__ai_cost
+    services__badge_service__badge__generateBadge --> services__badge_service__badge__determineColor
+    services__badge_service__badge__handleApiRequest --> services__badge_service__badge__generateBadge
+    src__costs__metrics___calculate_author_time --> src__costs__metrics___calculate_session_duration
+    src__costs__metrics__calculate_human_time --> src__costs__metrics___group_commits_by_author
+    src__costs__metrics__calculate_human_time --> src__costs__metrics___calculate_author_time
