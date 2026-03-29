@@ -1,20 +1,20 @@
-# code2llm | 14f 1845L | python:11,php:2,shell:1 | 2026-03-29
-# CC̄=5.0 | critical:0/43 | dups:0 | cycles:0
+# code2llm | 14f 1919L | python:11,php:2,shell:1 | 2026-03-29
+# CC̄=5.2 | critical:0/43 | dups:0 | cycles:0
 
 HEALTH[0]: ok
 
 REFACTOR[0]: none needed
 
 PIPELINES[12]:
-  [1] Src [extract_ai_tag]: extract_ai_tag
+  [1] Src [version_callback]: version_callback
       PURITY: 100% pure
-  [2] Src [version_callback]: version_callback
+  [2] Src [callback]: callback
       PURITY: 100% pure
-  [3] Src [callback]: callback
+  [3] Src [analyze]: analyze → _get_repo
       PURITY: 100% pure
-  [4] Src [analyze]: analyze → _get_repo
+  [4] Src [report]: report → parse_commits → _parse_date_args → get_first_commit_date
       PURITY: 100% pure
-  [5] Src [report]: report → parse_commits → _parse_date_args → get_first_commit_date
+  [5] Src [badge]: badge → parse_commits → _parse_date_args → get_first_commit_date
       PURITY: 100% pure
 
 LAYERS:
@@ -22,13 +22,13 @@ LAYERS:
   │ badge.php                  231L  0C    4m  CC=14     ←0
   │ index.php                   26L  0C    0m  CC=0.0    ←0
   │
-  src/                            CC̄=4.7    ←in:0  →out:0
-  │ cli                        471L  0C   14m  CC=9      ←0
+  src/                            CC̄=4.9    ←in:0  →out:0
+  │ !! cli                        531L  0C   14m  CC=9      ←0
   │ html                       284L  0C    1m  CC=5      ←1
   │ calculator                 210L  0C    7m  CC=8      ←1
   │ git_parser                 186L  0C    9m  CC=11     ←2
-  │ markdown                   113L  0C    1m  CC=9      ←1
-  │ badge                       89L  0C    1m  CC=7      ←1
+  │ markdown                   112L  0C    1m  CC=9      ←1
+  │ badge                      104L  0C    1m  CC=12     ←1
   │ metrics                     79L  0C    1m  CC=12     ←1
   │ models                      74L  0C    3m  CC=5      ←2
   │ __init__                    16L  0C    0m  CC=0.0    ←0

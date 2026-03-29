@@ -1,13 +1,18 @@
 # code2llm/evolution | 43 func | 11f | 2026-03-29
 
-NEXT[0]: no refactoring needed
+NEXT[1] (ranked by impact):
+  [1] !! SPLIT           src/costs/cli.py
+      WHY: 531L, 0 classes, max CC=9
+      EFFORT: ~4h  IMPACT: 4779
 
-RISKS[0]: none
+
+RISKS[1]:
+  ⚠ Splitting src/costs/cli.py may break 14 import paths
 
 METRICS-TARGET:
-  CC̄:          5.0 → ≤3.5
+  CC̄:          5.2 → ≤3.6
   max-CC:      14 → ≤7
-  god-modules: 0 → 0
+  god-modules: 1 → 0
   high-CC(≥15): 0 → ≤0
   hub-types:   0 → ≤0
 
@@ -36,4 +41,4 @@ PATTERNS (language parser shared logic):
     - Standardized FunctionInfo/ClassInfo models
 
 HISTORY:
-  prev CC̄=5.0 → now CC̄=5.0
+  prev CC̄=5.0 → now CC̄=5.2

@@ -37,17 +37,13 @@
 - **Functions**: 1
 - **File**: `base.py`
 
-### src.costs.metrics
-- **Functions**: 1
-- **File**: `metrics.py`
-
 ### src.costs.reports.markdown
 - **Functions**: 1
 - **File**: `markdown.py`
 
-### src.costs.reports.html
+### src.costs.metrics
 - **Functions**: 1
-- **File**: `html.py`
+- **File**: `metrics.py`
 
 ### project
 - **Functions**: 1
@@ -56,6 +52,10 @@
 ### src.costs.reports.badge
 - **Functions**: 1
 - **File**: `badge.py`
+
+### src.costs.reports.html
+- **Functions**: 1
+- **File**: `html.py`
 
 ## Key Entry Points
 
@@ -76,6 +76,13 @@ genera
 > Analyze AI costs for git commits with liteLLM support.
 - **Calls**: app.command, typer.Argument, typer.Option, typer.Option, typer.Option, typer.Option, typer.Option, typer.Option
 
+### src.costs.cli.init
+> Initialize AI cost tracking for current project.
+
+Creates .env file and adds [tool.costs] to pyproject.toml if present.
+Use --auto for non-interactive
+- **Calls**: app.command, typer.Option, typer.Option, None.resolve, pyproject.exists, gitignore.exists, typer.echo, typer.echo
+
 ### src.costs.cli.badge
 > Generate or update cost badge in README.md.
 - **Calls**: app.command, typer.Argument, typer.Option, typer.Option, typer.echo, src.costs.git_parser.parse_commits, src.costs.calculator.batch_calculate_costs, src.costs.reports.badge.update_readme_badge
@@ -91,19 +98,15 @@ genera
 ### services.badge-service.badge.handleApiRequest
 - **Calls**: services.badge-service.badge.json_decode, services.badge-service.badge.file_get_contents, services.badge-service.badge.http_response_code, services.badge-service.badge.json_encode, services.badge-service.badge.generateBadge, services.badge-service.badge.isset, services.badge-service.badge.header, services.badge-service.badge.base64_encode
 
-### src.costs.cli.init
-> Initialize .env configuration file.
-- **Calls**: app.command, typer.Option, Path, env_path.write_text, typer.echo, env_path.exists, typer.echo, typer.Exit
-
-### src.costs.git_parser.extract_ai_tag
-> Extract AI tag from commit message.
-- **Calls**: re.search, match.group
-
 ### src.costs.cli.version_callback
 - **Calls**: typer.echo, typer.Exit
 
 ### src.costs.cli.callback
 - **Calls**: app.callback, typer.Option
+
+### src.costs.git_parser.extract_ai_tag
+> Extract AI tag from commit message.
+- **Calls**: re.search, match.group
 
 ### src.costs.cli.main
 - **Calls**: app
@@ -132,19 +135,24 @@ report [src.costs.cli]
 analyze [src.costs.cli]
 ```
 
-### Flow 4: badge
+### Flow 4: init
+```
+init [src.costs.cli]
+```
+
+### Flow 5: badge
 ```
 badge [src.costs.cli]
 ```
 
-### Flow 5: stats
+### Flow 6: stats
 ```
 stats [src.costs.cli]
   └─ →> get_repo_stats
       └─> get_repo_name
 ```
 
-### Flow 6: estimate
+### Flow 7: estimate
 ```
 estimate [src.costs.cli]
   └─ →> get_litellm_model_name
@@ -154,24 +162,19 @@ estimate [src.costs.cli]
           └─> _estimate_single_file_tokens
 ```
 
-### Flow 7: handleApiRequest
+### Flow 8: handleApiRequest
 ```
 handleApiRequest [services.badge-service.badge]
 ```
 
-### Flow 8: init
-```
-init [src.costs.cli]
-```
-
-### Flow 9: extract_ai_tag
-```
-extract_ai_tag [src.costs.git_parser]
-```
-
-### Flow 10: version_callback
+### Flow 9: version_callback
 ```
 version_callback [src.costs.cli]
+```
+
+### Flow 10: callback
+```
+callback [src.costs.cli]
 ```
 
 ## Data Transformation Functions
@@ -193,20 +196,20 @@ Functions exposed as public API (no underscore prefix):
 - `src.costs.cli.auto_badge` - 42 calls
 - `src.costs.cli.report` - 39 calls
 - `src.costs.cli.analyze` - 31 calls
+- `src.costs.cli.init` - 30 calls
 - `src.costs.cli.badge` - 22 calls
+- `src.costs.reports.badge.update_readme_badge` - 22 calls
 - `src.costs.metrics.calculate_human_time` - 21 calls
 - `src.costs.cli.stats` - 18 calls
 - `src.costs.cli.estimate` - 17 calls
-- `src.costs.reports.badge.update_readme_badge` - 17 calls
 - `src.costs.reports.markdown.generate_markdown_report` - 16 calls
-- `src.costs.reports.html.generate_html_report` - 14 calls
 - `services.badge-service.badge.handleApiRequest` - 14 calls
+- `src.costs.reports.html.generate_html_report` - 14 calls
 - `src.costs.calculator.ai_cost` - 11 calls
-- `src.costs.calculator.estimate_tokens` - 9 calls
 - `services.badge-service.badge.analyzeRepository` - 9 calls
+- `src.costs.calculator.estimate_tokens` - 9 calls
 - `src.costs.git_parser.get_commit_diff` - 8 calls
 - `src.costs.calculator.batch_calculate_costs` - 8 calls
-- `src.costs.cli.init` - 8 calls
 - `src.costs.git_parser.parse_commits` - 7 calls
 - `src.costs.git_parser.get_repo_stats` - 7 calls
 - `src.costs.calculator.calculate_roi` - 6 calls
@@ -214,14 +217,14 @@ Functions exposed as public API (no underscore prefix):
 - `services.badge-service.badge.generateBadge` - 5 calls
 - `src.costs.git_parser.get_repo_name` - 4 calls
 - `src.costs.models.get_model_price` - 3 calls
+- `src.costs.cli.version_callback` - 2 calls
+- `src.costs.cli.callback` - 2 calls
 - `src.costs.git_parser.is_ai_commit` - 2 calls
 - `src.costs.git_parser.extract_ai_tag` - 2 calls
 - `src.costs.calculator.get_file_type_multiplier` - 2 calls
 - `src.costs.calculator.calculate_cost` - 2 calls
-- `src.costs.cli.version_callback` - 2 calls
-- `src.costs.cli.callback` - 2 calls
-- `src.costs.git_parser.is_commit_in_date_range` - 1 calls
 - `src.costs.cli.main` - 1 calls
+- `src.costs.git_parser.is_commit_in_date_range` - 1 calls
 - `src.costs.models.get_openrouter_headers` - 0 calls
 - `src.costs.models.get_litellm_model_name` - 0 calls
 - `src.costs.reports.base.get_cost_color` - 0 calls
@@ -243,6 +246,10 @@ graph TD
     analyze --> command
     analyze --> Argument
     analyze --> Option
+    init --> command
+    init --> Option
+    init --> resolve
+    init --> exists
     badge --> command
     badge --> Argument
     badge --> Option
@@ -260,10 +267,6 @@ graph TD
     handleApiRequest --> file_get_contents
     handleApiRequest --> http_response_code
     handleApiRequest --> json_encode
-    handleApiRequest --> generateBadge
-    init --> command
-    init --> Option
-    init --> Path
 ```
 
 ## Reverse Engineering Guidelines

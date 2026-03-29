@@ -1,7 +1,7 @@
 <!-- code2docs:start --># cost
 
 ![version](https://img.shields.io/badge/version-0.1.0-blue) ![python](https://img.shields.io/badge/python-%3E%3D3.9-blue) ![coverage](https://img.shields.io/badge/coverage-unknown-lightgrey) ![functions](https://img.shields.io/badge/functions-43-green)
-> **43** functions | **0** classes | **14** files | CC̄ = 5.1
+> **43** functions | **0** classes | **14** files | CC̄ = 5.3
 
 > Auto-generated project documentation from source code analysis.
 
@@ -141,7 +141,7 @@ Content outside the markers is preserved when regenerating. Enable this with `sy
 
 ```
 cost/
-    ├── costs/        ├── models        ├── git_parser            ├── base        ├── calculator        ├── reports/            ├── markdown            ├── html            ├── badge        ├── index        ├── badge├── project        ├── metrics        ├── cli```
+    ├── costs/        ├── models        ├── git_parser            ├── base        ├── calculator        ├── reports/        ├── cli            ├── markdown        ├── badge            ├── html        ├── index├── project            ├── badge        ├── metrics```
 
 ## API Overview
 
@@ -165,15 +165,6 @@ cost/
 - `calculate_roi(cost, lines_changed, hourly_rate, review_factor)` — Calculate ROI metrics with human review overhead.
 - `ai_cost(commit_diff, model, api_key, saas_token)` — Calculate AI cost for a commit with file-type awareness.
 - `batch_calculate_costs(commits_data, model, api_key, saas_token)` — Calculate costs for multiple commits.
-- `generate_markdown_report(results, output_path)` — Generate markdown report with cost visualizations.
-- `generate_html_report(results, output_path)` — Generate interactive HTML report with visualizations.
-- `update_readme_badge(repo_path, results)` — Update README.md with cost badge including human time calculation.
-- `generateBadge()` — —
-- `determineColor()` — —
-- `analyzeRepository()` — —
-- `handleApiRequest()` — —
-- `install_hook()` — —
-- `calculate_human_time(commits)` — Calculate human development time with realistic overhead.
 - `version_callback(value)` — —
 - `callback(version)` — —
 - `analyze(repo, model, api_key, saas_token)` — Analyze AI costs for git commits with liteLLM support.
@@ -182,8 +173,17 @@ cost/
 - `auto_badge(repo, all_commits)` — Auto-generate badge based on pyproject.toml [tool.costs] configuration.
 - `estimate(diff_file, model)` — Estimate cost for a single diff using liteLLM token counting.
 - `stats(repo)` — Show repository statistics including commit history.
-- `init(force)` — Initialize .env configuration file.
+- `init(force, auto)` — Initialize AI cost tracking for current project.
 - `main()` — —
+- `generate_markdown_report(results, output_path)` — Generate markdown report with cost visualizations.
+- `generateBadge()` — —
+- `determineColor()` — —
+- `analyzeRepository()` — —
+- `handleApiRequest()` — —
+- `generate_html_report(results, output_path)` — Generate interactive HTML report with visualizations.
+- `install_hook()` — —
+- `update_readme_badge(repo_path, results)` — Update README.md with cost badge including human time calculation.
+- `calculate_human_time(commits)` — Calculate human development time with realistic overhead.
 
 
 ## Project Structure

@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.10] - 2026-03-29
 
 ### Fixed
+- Fix string-concat issues (ticket-0967ecb2)
+- Fix magic-numbers issues (ticket-5c9c519e)
+
+## [0.1.10] - 2026-03-29
+
+### Fixed
 - Fix relative-imports issues (ticket-3a8886ad)
 
 ## [0.1.10] - 2026-03-29
@@ -69,6 +75,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix llm-generated-code issues (ticket-7c8d1d82)
 
 ## [Unreleased]
+
+## [0.1.39] - 2026-03-29
+
+### Docs
+- Update CHANGELOG.md
+- Update README.md
+- Update TODO.md
+- Update docs/README.md
+- Update project/context.md
+
+### Other
+- Update planfile.yaml
+- Update project/analysis.toon.yaml
+- Update project/calls.mmd
+- Update project/calls.png
+- Update project/duplication.toon.yaml
+- Update project/evolution.toon.yaml
+- Update project/flow.mmd
+- Update project/flow.png
+- Update project/index.html
+- Update project/map.toon.yaml
+- ... and 1 more files
 
 ## [0.1.38] - 2026-03-29
 

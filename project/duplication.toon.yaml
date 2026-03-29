@@ -1,9 +1,9 @@
-# redup/duplication | 0 groups | 9f 1520L | 2026-03-29
+# redup/duplication | 0 groups | 9f 1594L | 2026-03-29
 
 SUMMARY:
   files_scanned: 9
-  total_lines:   1520
+  total_lines:   1594
   dup_groups:    0
   dup_fragments: 0
   saved_lines:   0
-  scan_ms:       4623
+  scan_ms:       5095
