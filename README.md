@@ -1,20 +1,8 @@
 # AI Cost Tracker
 
-## AI Cost Tracking
-
-![AI Cost](https://img.shields.io/badge/AI%20Cost-$0.57-brightgreen) ![AI Model](https://img.shields.io/badge/AI%20Model-openrouter%2Fqwen%2Fqwen3-coder-next-lightgrey)
-
-This project uses AI-generated code. Total cost: **$0.5748** with **25** AI commits.
-
-Generated on 2026-03-29 using [openrouter/qwen/qwen3-coder-next](https://openrouter.ai/models/openrouter/qwen/qwen3-coder-next)
-
----
-
-
-
 [![PyPI version](https://badge.fury.io/py/costs.svg)](https://pypi.org/project/costs/)
-[![AI Cost](https://img.shields.io/badge/AI%20Cost%20Tracker-Tool%20for%20tracking%20AI%20costs-blue)](https://github.com/semcod/cost)
-[![Default Model](https://img.shields.io/badge/Default%20Model-Claude%204%20Sonnet-lightgrey)](https://anthropic.com/claude)
+[![AI Cost](https://img.shields.io/badge/AI%20Cost-$0.57-brightgreen)](https://github.com/semcod/cost)
+[![AI Model](https://img.shields.io/badge/AI%20Model-openrouter%2Fqwen%2Fqwen3--coder--next-lightgrey)](https://openrouter.ai/models/openrouter/qwen/qwen3-coder-next)
 
 💰 **Track AI costs for your projects** - This tool helps developers monitor AI usage costs across git commits.
 
@@ -45,13 +33,14 @@ Track AI usage costs across your git commits with three flexible usage modes - n
 ## Features
 
 - **liteLLM Integration** - Support for 100+ AI providers via liteLLM
-- **Default: Claude 4 Sonnet** - Pre-configured with Anthropic's latest model
+- **Default: Qwen3 Coder Next** - Pre-configured with openrouter/qwen/qwen3-coder-next
 - **Zero Config** - Works out of the box, reads from `.env` file
 - **Smart Token Estimation** - Accurate cost calculation using liteLLM tokenizers
 - **ROI Calculation** - Track value generated vs AI costs
 - **Date Filtering** - Analyze specific days, date ranges, or full history
 - **Auto Badges** - Automatically generate and update cost badges in README
 - **Rich Reports** - Markdown and HTML reports with visualizations
+- **All Commits Support** - Analyze all commits with `--all` flag (not just AI-tagged)
 
 ## Installation
 
@@ -72,11 +61,14 @@ echo "OPENROUTER_API_KEY=YOUR_KEY" >> .env
 ### 2. Run Analysis
 
 ```bash
-# Uses defaults from .env (Claude 4 Sonnet)
+# Uses defaults from .env (Qwen3 Coder Next)
 costs analyze --repo .
 
 # Or specify directly
-costs analyze --repo . --model anthropic/claude-4-sonnet --api-key YOUR_KEY
+costs analyze --repo . --model openrouter/qwen/qwen3-coder-next --api-key YOUR_KEY
+
+# Analyze all commits (not just AI-tagged)
+costs analyze --repo . --all
 ```
 
 ## Configuration
@@ -110,12 +102,12 @@ costs analyze --repo . --api-key YOUR_KEY
 ```
 
 **Supported models via liteLLM:**
-- `anthropic/claude-4-sonnet` (default)
+- `openrouter/qwen/qwen3-coder-next` (default)
+- `anthropic/claude-4-sonnet`
 - `anthropic/claude-3.5-sonnet`
 - `anthropic/claude-3.5-haiku`
 - `openai/gpt-4o`
 - `openai/gpt-4o-mini`
-- `openrouter/qwen/qwen3-coder-next`
 - 100+ more via liteLLM
 
 ### Option 2: Local/Ollama - Zero API Costs
@@ -141,6 +133,12 @@ costs analyze --repo . --since 2024-01-01 --until 2024-03-31
 
 # Analyze all commits since repository creation
 costs analyze --repo . --full-history
+
+# Analyze only AI-tagged commits (default)
+costs analyze --repo . --ai-only
+
+# Analyze all commits (not just AI-tagged)
+costs analyze --repo . --all
 ```
 
 ## Badge Generation
@@ -148,11 +146,17 @@ costs analyze --repo . --full-history
 Generate and update cost badges in your README:
 
 ```bash
-# Generate badge based on pyproject.toml configuration
+# Generate badge based on pyproject.toml configuration (AI commits only)
 costs auto-badge --repo .
 
-# Or manually
-costs badge --repo . --model anthropic/claude-4-sonnet
+# Generate badge for all commits (not just AI-tagged)
+costs auto-badge --repo . --all
+
+# Manual badge generation
+costs badge --repo . --model openrouter/qwen/qwen3-coder-next
+
+# Manual badge for all commits
+costs badge --repo . --all
 ```
 
 This adds a badge section to README showing total cost, AI commits, and model used.
@@ -230,10 +234,10 @@ git commit -m "[ai:anthropic/claude-3.5-sonnet] Add payment integration"
 
 ```
 🔍 Analyzing 100 commits from my-project...
-🤖 Model: anthropic/claude-4-sonnet | Mode: byok
+🤖 Model: openrouter/qwen/qwen3-coder-next | Mode: byok
 
 ==================================================
-📊 AI COST ANALYSIS - anthropic/claude-4-sonnet
+📊 AI COST ANALYSIS - openrouter/qwen/qwen3-coder-next
 ==================================================
    Commits analyzed: 42
    Total cost:       $12.34
@@ -244,8 +248,8 @@ git commit -m "[ai:anthropic/claude-3.5-sonnet] Add payment integration"
 📁 Results saved to: ai_costs.csv
 
 💡 Recent AI commits:
-   a1b2c3d4 | $0.32 | [ai:claude-4-sonnet] Refactor...
-   e5f6g7h8 | $0.45 | [ai:claude-4-sonnet] Add feature...
+   a1b2c3d4 | $0.32 | [ai:qwen3-coder-next] Refactor...
+   e5f6g7h8 | $0.45 | [ai:qwen3-coder-next] Add feature...
 ```
 
 ## CSV Export Format
@@ -359,15 +363,15 @@ The repository includes a workflow that runs on push/PR:
 
 ## CLI Commands
 
-| Command | Description |
-|---------|-------------|
-| `costs init` | Initialize `.env` configuration |
-| `costs analyze` | Analyze repository commits |
-| `costs stats` | Show repository statistics |
-| `costs report` | Generate markdown/HTML reports |
-| `costs badge` | Generate cost badge |
-| `costs auto-badge` | Auto-generate badge from pyproject.toml |
-| `costs estimate` | Estimate cost for single diff |
+| Command | Description | Key Options |
+|---------|-------------|-------------|
+| `costs init` | Initialize `.env` configuration | `--force` - overwrite existing |
+| `costs analyze` | Analyze repository commits | `--repo`, `--model`, `--api-key`, `--all`, `--since`, `--until`, `--date`, `--full-history`, `--max-commits`, `--output` |
+| `costs stats` | Show repository statistics | `--repo` |
+| `costs report` | Generate markdown/HTML reports | `--repo`, `--model`, `--format`, `--output`, `--update-readme` |
+| `costs badge` | Generate cost badge | `--repo`, `--model`, `--all` |
+| `costs auto-badge` | Auto-generate badge from pyproject.toml | `--repo`, `--all` |
+| `costs estimate` | Estimate cost for single diff | `--model` |
 
 📖 **Automatic Badge Generation**: See [docs/AUTO_BADGE.md](docs/AUTO_BADGE.md) for GitHub Actions, pre-commit hooks, and CI/CD integration.
 
