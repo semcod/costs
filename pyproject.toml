@@ -61,7 +61,7 @@ readme_path = "README.md"  # Path to README file
 badge_color_thresholds = { low = 1.0, medium = 5.0, high = 10.0, critical = 50.0 }
 
 # Analysis configuration
-default_model = "openrouter/qwen/qwen3-coder-next"
+default_model = "openrouter/deep/deep-v4-pro"
 analysis_mode = "byok"  # byok, local, saas
 full_history = false  # Analyze full git history by default
 max_commits = 1000  # Maximum commits to analyze
@@ -79,7 +79,7 @@ badge_message_template = "${cost} with {model} · {commits} AI commits"
 
 [tool.pfix]
 # Self-healing Python configuration
-model = "openrouter/qwen/qwen3-coder-next"
+model = "openrouter/deep/deep-v4-pro"
 auto_apply = true
 auto_install_deps = true
 auto_restart = false
