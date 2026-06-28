@@ -12,6 +12,11 @@
 - refactor(output): improve output formatting and presentation
 - test(commit-message): add tests for commit-message generator
 
+## [0.1.52] - 2026-06-29
+
+### Docs
+- Update README.md
+
 ## [0.1.51] - 2026-05-12
 
 ### Docs
