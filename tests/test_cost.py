@@ -101,3 +101,62 @@ def test_reports_module():
 
     assert callable(generate_markdown_report)
     assert callable(update_readme_badge)
+
+
+def test_readme_badge_uses_summary_version(tmp_path, monkeypatch):
+    """README version badge must use the analyzed project's full version."""
+    from src.costs import git_parser
+    from src.costs.reports import update_readme_badge
+
+    monkeypatch.setattr(git_parser, "parse_commits", lambda *args, **kwargs: [])
+    (tmp_path / "README.md").write_text(
+        "# Demo\n\n"
+        "## AI Cost Tracking\n\n"
+        "![Version](https://img.shields.io/badge/version-0.1.31-blue)\n\n"
+        "---\n\n",
+        encoding="utf-8",
+    )
+
+    updated = update_readme_badge(
+        tmp_path,
+        {
+            "summary": {
+                "model": "openrouter/deep/deep-v4-pro",
+                "total_cost": 1.23,
+                "total_cost_formatted": "$1.2300",
+                "total_commits": 7,
+                "version": "0.1.351",
+            }
+        },
+    )
+
+    content = (tmp_path / "README.md").read_text(encoding="utf-8")
+    assert updated is True
+    assert "version-0.1.351-blue" in content
+    assert "version-0.1.31-blue" not in content
+
+
+def test_readme_badge_falls_back_to_project_version_file(tmp_path, monkeypatch):
+    """Badge generation should not fall back to a hardcoded package version."""
+    from src.costs import git_parser
+    from src.costs.reports import update_readme_badge
+
+    monkeypatch.setattr(git_parser, "parse_commits", lambda *args, **kwargs: [])
+    (tmp_path / "README.md").write_text("# Demo\n", encoding="utf-8")
+    (tmp_path / "VERSION").write_text("2.4.68\n", encoding="utf-8")
+
+    updated = update_readme_badge(
+        tmp_path,
+        {
+            "summary": {
+                "model": "openrouter/deep/deep-v4-pro",
+                "total_cost": 1.23,
+                "total_cost_formatted": "$1.2300",
+                "total_commits": 7,
+            }
+        },
+    )
+
+    content = (tmp_path / "README.md").read_text(encoding="utf-8")
+    assert updated is True
+    assert "version-2.4.68-blue" in content

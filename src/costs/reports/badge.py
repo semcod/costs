@@ -7,6 +7,28 @@ from datetime import datetime
 from ..metrics import calculate_human_time
 
 
+def _read_project_version(repo_path: Path) -> str | None:
+    pyproject_path = repo_path / "pyproject.toml"
+    if pyproject_path.is_file():
+        match = re.search(
+            r"(?m)^version\s*=\s*[\"']([^\"']+)[\"']",
+            pyproject_path.read_text(encoding="utf-8"),
+        )
+        if match:
+            return match.group(1)
+
+    version_path = repo_path / "VERSION"
+    if version_path.is_file():
+        version = version_path.read_text(encoding="utf-8").strip()
+        if version:
+            return version
+    return None
+
+
+def _badge_version(repo_path: Path, summary: Dict[str, Any]) -> str:
+    return str(summary.get("version") or _read_project_version(repo_path) or "unknown")
+
+
 def update_readme_badge(repo_path: Path, results: Dict[str, Any]) -> bool:
     """Update README.md with cost badge including human time calculation."""
     readme_path = repo_path / "README.md"
@@ -16,6 +38,7 @@ def update_readme_badge(repo_path: Path, results: Dict[str, Any]) -> bool:
     summary = results["summary"]
     model = summary["model"]
     total_cost = summary["total_cost"]
+    version = _badge_version(repo_path, summary)
     
     # Get all commits (not just AI) for accurate human time calculation
     # Import here to avoid circular dependencies if any
@@ -38,7 +61,7 @@ def update_readme_badge(repo_path: Path, results: Dict[str, Any]) -> bool:
     
     # Create badge lines with standout colors
     pypi_badge = "![PyPI](https://img.shields.io/badge/pypi-costs-blue)"
-    version_badge = "![Version](https://img.shields.io/badge/version-0.1.31-blue)"
+    version_badge = f"![Version](https://img.shields.io/badge/version-{version}-blue)"
     python_badge = "![Python](https://img.shields.io/badge/python-3.9+-blue)"
     license_badge = "![License](https://img.shields.io/badge/license-Apache--2.0-green)"
     cost_badge = f"![AI Cost](https://img.shields.io/badge/AI%20Cost-${total_cost:.2f}-orange)"

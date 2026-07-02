@@ -12,6 +12,17 @@
 - refactor(output): improve output formatting and presentation
 - test(commit-message): add tests for commit-message generator
 
+## [0.1.53] - 2026-07-02
+
+### Docs
+- Update README.md
+
+### Test
+- Update tests/test_cost.py
+
+### Other
+- Update uv.lock
+
 ## [0.1.52] - 2026-06-29
 
 ### Docs
