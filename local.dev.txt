@@ -1,0 +1,8 @@
+# local.dev.txt — locally developed dependencies of this project (generated 2026-07-04)
+# by ~/github/local.dev.sh — DO NOT EDIT; see ~/github/local.dev.md
+# project: costs 0.1.53 (python) at /home/tom/github/semcod/costs
+# deps declared: 9 | with local source: 0
+
+## LOCAL DEPS: none — all dependencies are external
+
+## EXTERNAL DEPS (no local source, 9): anthropic, click, gitpython, httpx, litellm, pandas, python-dotenv, tiktoken, typer
