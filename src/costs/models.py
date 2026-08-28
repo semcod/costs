@@ -63,7 +63,7 @@ def get_openrouter_headers() -> Dict[str, str]:
     return {
         "Authorization": f"Bearer {DEFAULT_OPENROUTER_API_KEY}",
         "HTTP-Referer": "https://github.com/your-org/ai-cost-tracker",
-        "X-Title": "AI Cost Tracker"
+        "X-OpenRouter-Title": os.getenv("OPENROUTER_APP_NAME", "AI Cost Tracker")
     }
 
 
