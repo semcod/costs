@@ -1,0 +1,438 @@
+{
+  "schema": "costs.dependency-rollout-evidence/v1",
+  "recorded_at": "2026-09-05T20:02:55.764032+00:00",
+  "owner_repository": "semcod/costs",
+  "documentation_reference": {
+    "repository": "wellmanifest/docs",
+    "revision": "f64de5806577769672ebc1730d2e144b4c7671ec",
+    "scope": "repository-owned information and refactoring plans",
+    "source": "https://github.com/wellmanifest/docs/blob/f64de5806577769672ebc1730d2e144b4c7671ec/README.md"
+  },
+  "scope": {
+    "inventory_repositories": 187,
+    "scheduled_consumers": 4,
+    "inventory_is_historical": true,
+    "all_repositories_current": false
+  },
+  "goal_release": {
+    "version": "2.2.0",
+    "requires_python": ">=3.12",
+    "requires_dist": [
+      "click>=8.0.0",
+      "typer>=0.24",
+      "PyYAML>=6.0",
+      "clickmd>=0.1.0",
+      "costs>=0.2.0",
+      "tomlkit>=0.12.0",
+      "nfo>=0.2.22; extra == \"nfo\"",
+      "pytest>=7.0.0; extra == \"dev\"",
+      "build; extra == \"dev\"",
+      "twine; extra == \"dev\"",
+      "pfix>=0.1.60; python_version >= \"3.10\" and extra == \"dev\"",
+      "tox>=4.0.0; extra == \"dev\""
+    ],
+    "project_urls": {
+      "Homepage": "https://github.com/semcod/goal",
+      "Issues": "https://github.com/semcod/goal/issues",
+      "Repository": "https://github.com/semcod/goal"
+    },
+    "observed_at": "2026-09-05T19:43:21.037705+00:00",
+    "artifacts": [
+      {
+        "file": "goal-2.2.0-py3-none-any.whl",
+        "sha256": "0d8f93aa317ac92a66b64b797e210a5d66044ce8db2cb05b012b03d42aced95e",
+        "url": "https://files.pythonhosted.org/packages/24/69/8a4cf5710683bb777f1f6e4cd44dd3907befe97b94c6ea6e97d4305b4e44/goal-2.2.0-py3-none-any.whl",
+        "download_verified": true
+      },
+      {
+        "file": "goal-2.2.0.tar.gz",
+        "sha256": "e9e2c1ac9493dae3b887b16d503f7c1f83d02ddcbdd3c5cf58d44a458bb2662f",
+        "url": "https://files.pythonhosted.org/packages/c7/9c/135e3f67a7324c3c49ef4246f5518b59ad90226e62c3d30ae20cba005c1d/goal-2.2.0.tar.gz",
+        "download_verified": true
+      }
+    ]
+  },
+  "changes": [
+    {
+      "repository": "semcod/goal",
+      "pull_request": "https://github.com/semcod/goal/pull/119",
+      "head_sha": "84f18540d14c24cc8ff5b7f202d2874344779ecc",
+      "merge_sha": "6cf49574f47031495db7d58e244585ea17ab6bfc",
+      "merged_at": "2026-09-05T19:40:22Z",
+      "state": "MERGED"
+    },
+    {
+      "repository": "semcod/goal",
+      "pull_request": "https://github.com/semcod/goal/pull/120",
+      "head_sha": "7d092c7b8509d56d4357508428134f9bd3ecb18b",
+      "merge_sha": "d9ce9e602a4047a69cb9b6984d82d1b282701a42",
+      "merged_at": "2026-09-05T19:45:43Z",
+      "state": "MERGED"
+    },
+    {
+      "repository": "semcod/code2docs",
+      "pull_request": "https://github.com/semcod/code2docs/pull/2",
+      "head_sha": "9c47d812af806f86c45dc79e687e3d530b41944a",
+      "merge_sha": "145414ed40c7c0e9b15fe26c42472692d839add3",
+      "merged_at": "2026-09-05T19:49:37Z",
+      "state": "MERGED"
+    },
+    {
+      "repository": "autogrammar/env2llm",
+      "pull_request": "https://github.com/autogrammar/env2llm/pull/5",
+      "head_sha": "e7db1e1cf19d89bc36d087e59d4ff9cb84133809",
+      "merge_sha": "544a0f5fd8a5e594b573d6fc8c862bbf8b414f02",
+      "merged_at": "2026-09-05T19:49:40Z",
+      "state": "MERGED"
+    },
+    {
+      "repository": "if-uri/urirun-contract",
+      "pull_request": "https://github.com/if-uri/urirun-contract/pull/4",
+      "head_sha": "7c7ced053baff4c08a8cc803a8a566b888c93de3",
+      "merge_sha": "44dfcdeadb6b1959e6b6433985d11257004f3e86",
+      "merged_at": "2026-09-05T19:49:45Z",
+      "state": "MERGED"
+    },
+    {
+      "repository": "subactor/shell",
+      "pull_request": "https://github.com/subactor/shell/pull/27",
+      "head_sha": "6fed001f17f3b1b33aeade89aedf7b8b95603167",
+      "merge_sha": "28ea6766bec6d72d802d1256b0fa733476630316",
+      "merged_at": "2026-09-05T19:49:49Z",
+      "state": "MERGED"
+    }
+  ],
+  "consumer_runs": [
+    {
+      "repository": "semcod/code2docs",
+      "freshness": {
+        "conclusion": "success",
+        "databaseId": 33988334194,
+        "event": "workflow_dispatch",
+        "headSha": "145414ed40c7c0e9b15fe26c42472692d839add3",
+        "status": "completed",
+        "url": "https://github.com/semcod/code2docs/actions/runs/33988334194",
+        "workflowName": "Internal dependency freshness"
+      },
+      "dependabot": [
+        {
+          "conclusion": "success",
+          "databaseId": 33988281844,
+          "event": "dynamic",
+          "headSha": "145414ed40c7c0e9b15fe26c42472692d839add3",
+          "status": "completed",
+          "url": "https://github.com/semcod/code2docs/actions/runs/33988281844",
+          "workflowName": "Dependabot Updates"
+        },
+        {
+          "conclusion": "success",
+          "databaseId": 33988281475,
+          "event": "dynamic",
+          "headSha": "145414ed40c7c0e9b15fe26c42472692d839add3",
+          "status": "completed",
+          "url": "https://github.com/semcod/code2docs/actions/runs/33988281475",
+          "workflowName": "Dependabot Updates"
+        }
+      ],
+      "packages": [
+        {
+          "name": "clickmd",
+          "repository": "semcod/clickmd",
+          "locked": [
+            "1.1.15"
+          ],
+          "target": "1.1.15",
+          "requires_python": [
+            ">=3.10"
+          ],
+          "status": "current"
+        },
+        {
+          "name": "code2llm",
+          "repository": "semcod/code2llm",
+          "locked": [
+            "0.5.176"
+          ],
+          "target": "0.5.176",
+          "requires_python": [
+            ">=3.8"
+          ],
+          "status": "current"
+        },
+        {
+          "name": "costs",
+          "repository": "semcod/costs",
+          "locked": [
+            "0.2.0"
+          ],
+          "target": "0.2.0",
+          "requires_python": [
+            ">=3.9"
+          ],
+          "status": "current"
+        },
+        {
+          "name": "goal",
+          "repository": "semcod/goal",
+          "locked": [
+            "2.2.0"
+          ],
+          "target": "2.2.0",
+          "requires_python": [
+            ">=3.12"
+          ],
+          "status": "current"
+        },
+        {
+          "name": "pfix",
+          "repository": "semcod/pfix",
+          "locked": [
+            "0.1.79"
+          ],
+          "target": "0.1.79",
+          "requires_python": [
+            ">=3.10"
+          ],
+          "status": "current"
+        }
+      ]
+    },
+    {
+      "repository": "autogrammar/env2llm",
+      "freshness": {
+        "conclusion": "success",
+        "databaseId": 33988336581,
+        "event": "workflow_dispatch",
+        "headSha": "544a0f5fd8a5e594b573d6fc8c862bbf8b414f02",
+        "status": "completed",
+        "url": "https://github.com/autogrammar/env2llm/actions/runs/33988336581",
+        "workflowName": "Internal dependency freshness"
+      },
+      "dependabot": [
+        {
+          "conclusion": "success",
+          "databaseId": 33988282152,
+          "event": "dynamic",
+          "headSha": "544a0f5fd8a5e594b573d6fc8c862bbf8b414f02",
+          "status": "completed",
+          "url": "https://github.com/autogrammar/env2llm/actions/runs/33988282152",
+          "workflowName": "Dependabot Updates"
+        }
+      ],
+      "packages": [
+        {
+          "name": "clickmd",
+          "repository": "semcod/clickmd",
+          "locked": [
+            "1.1.15"
+          ],
+          "target": "1.1.15",
+          "requires_python": [
+            ">=3.10"
+          ],
+          "status": "current"
+        },
+        {
+          "name": "costs",
+          "repository": "semcod/costs",
+          "locked": [
+            "0.2.0"
+          ],
+          "target": "0.2.0",
+          "requires_python": [
+            ">=3.9"
+          ],
+          "status": "current"
+        },
+        {
+          "name": "goal",
+          "repository": "semcod/goal",
+          "locked": [
+            "2.2.0"
+          ],
+          "target": "2.2.0",
+          "requires_python": [
+            ">=3.12"
+          ],
+          "status": "current"
+        },
+        {
+          "name": "pfix",
+          "repository": "semcod/pfix",
+          "locked": [
+            "0.1.79"
+          ],
+          "target": "0.1.79",
+          "requires_python": [
+            ">=3.10"
+          ],
+          "status": "current"
+        }
+      ]
+    },
+    {
+      "repository": "if-uri/urirun-contract",
+      "freshness": {
+        "conclusion": "success",
+        "databaseId": 33988339273,
+        "event": "workflow_dispatch",
+        "headSha": "44dfcdeadb6b1959e6b6433985d11257004f3e86",
+        "status": "completed",
+        "url": "https://github.com/if-uri/urirun-contract/actions/runs/33988339273",
+        "workflowName": "Internal dependency freshness"
+      },
+      "dependabot": [
+        {
+          "conclusion": "success",
+          "databaseId": 33988288331,
+          "event": "dynamic",
+          "headSha": "44dfcdeadb6b1959e6b6433985d11257004f3e86",
+          "status": "completed",
+          "url": "https://github.com/if-uri/urirun-contract/actions/runs/33988288331",
+          "workflowName": "Dependabot Updates"
+        },
+        {
+          "conclusion": "success",
+          "databaseId": 33988287508,
+          "event": "dynamic",
+          "headSha": "44dfcdeadb6b1959e6b6433985d11257004f3e86",
+          "status": "completed",
+          "url": "https://github.com/if-uri/urirun-contract/actions/runs/33988287508",
+          "workflowName": "Dependabot Updates"
+        }
+      ],
+      "packages": [
+        {
+          "name": "clickmd",
+          "repository": "semcod/clickmd",
+          "locked": [
+            "1.1.15"
+          ],
+          "target": "1.1.15",
+          "requires_python": [
+            ">=3.10"
+          ],
+          "status": "current"
+        },
+        {
+          "name": "costs",
+          "repository": "semcod/costs",
+          "locked": [
+            "0.2.0"
+          ],
+          "target": "0.2.0",
+          "requires_python": [
+            ">=3.9"
+          ],
+          "status": "current"
+        },
+        {
+          "name": "goal",
+          "repository": "semcod/goal",
+          "locked": [
+            "2.2.0"
+          ],
+          "target": "2.2.0",
+          "requires_python": [
+            ">=3.12"
+          ],
+          "status": "current"
+        },
+        {
+          "name": "pfix",
+          "repository": "semcod/pfix",
+          "locked": [
+            "0.1.79"
+          ],
+          "target": "0.1.79",
+          "requires_python": [
+            ">=3.10"
+          ],
+          "status": "current"
+        }
+      ]
+    },
+    {
+      "repository": "subactor/shell",
+      "freshness": {
+        "conclusion": "success",
+        "databaseId": 33988341410,
+        "event": "workflow_dispatch",
+        "headSha": "28ea6766bec6d72d802d1256b0fa733476630316",
+        "status": "completed",
+        "url": "https://github.com/subactor/shell/actions/runs/33988341410",
+        "workflowName": "Internal dependency freshness"
+      },
+      "dependabot": [
+        {
+          "conclusion": "success",
+          "databaseId": 33988290162,
+          "event": "dynamic",
+          "headSha": "28ea6766bec6d72d802d1256b0fa733476630316",
+          "status": "completed",
+          "url": "https://github.com/subactor/shell/actions/runs/33988290162",
+          "workflowName": "Dependabot Updates"
+        },
+        {
+          "conclusion": "success",
+          "databaseId": 33988288781,
+          "event": "dynamic",
+          "headSha": "28ea6766bec6d72d802d1256b0fa733476630316",
+          "status": "completed",
+          "url": "https://github.com/subactor/shell/actions/runs/33988288781",
+          "workflowName": "Dependabot Updates"
+        }
+      ],
+      "packages": [
+        {
+          "name": "clickmd",
+          "repository": "semcod/clickmd",
+          "locked": [
+            "1.1.15"
+          ],
+          "target": "1.1.15",
+          "requires_python": [
+            ">=3.10"
+          ],
+          "status": "current"
+        },
+        {
+          "name": "costs",
+          "repository": "semcod/costs",
+          "locked": [
+            "0.2.0"
+          ],
+          "target": "0.2.0",
+          "requires_python": [
+            ">=3.9"
+          ],
+          "status": "current"
+        },
+        {
+          "name": "goal",
+          "repository": "semcod/goal",
+          "locked": [
+            "2.2.0"
+          ],
+          "target": "2.2.0",
+          "requires_python": [
+            ">=3.12"
+          ],
+          "status": "current"
+        },
+        {
+          "name": "pfix",
+          "repository": "semcod/pfix",
+          "locked": [
+            "0.1.79"
+          ],
+          "target": "0.1.79",
+          "requires_python": [
+            ">=3.10"
+          ],
+          "status": "current"
+        }
+      ]
+    }
+  ]
+}
