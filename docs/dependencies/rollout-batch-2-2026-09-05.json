@@ -885,6 +885,116 @@
         "ruleset_url": "https://github.com/autogrammar/imgl/rules/21952608",
         "required_approvals": 1,
         "required_status": "test"
+      },
+      "pr_checks": {
+        "headRefOid": "52248a1c0b22620cec812a709b67a96bbf17bf08",
+        "reviewDecision": "REVIEW_REQUIRED",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-09-05T20:26:02Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/autogrammar/imgl/actions/runs/33989900424/job/101370554203",
+            "name": "freshness",
+            "startedAt": "2026-09-05T20:25:19Z",
+            "status": "COMPLETED",
+            "workflowName": "Internal dependency freshness"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-09-05T20:23:06Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/autogrammar/imgl/actions/runs/33989900427/job/101370154632",
+            "name": "test (3.10)",
+            "startedAt": "2026-09-05T20:22:19Z",
+            "status": "COMPLETED",
+            "workflowName": "Locked tests"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-09-05T20:23:11Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/autogrammar/imgl/actions/runs/33989900427/job/101370154685",
+            "name": "test (3.13)",
+            "startedAt": "2026-09-05T20:22:20Z",
+            "status": "COMPLETED",
+            "workflowName": "Locked tests"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-09-05T20:23:53Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/autogrammar/imgl/actions/runs/33989900427/job/101370276180",
+            "name": "test",
+            "startedAt": "2026-09-05T20:23:50Z",
+            "status": "COMPLETED",
+            "workflowName": "Locked tests"
+          }
+        ]
+      },
+      "freshness": {
+        "schema": "goal.internal-dependency-report/v1",
+        "observed_at": "2026-09-05T20:25:58.142460+00:00",
+        "versioning": "stable-semver",
+        "manifest_sha256": "982b277731f1c82e9502012d655930cae0602bb2d1cfa396458ca66b1b8c6f11",
+        "lock_sha256": "aaca04591176ac1e3297b13b1fade9d944ed18ea8307e6468b65794b59414525",
+        "packages": [
+          {
+            "name": "clickmd",
+            "repository": "semcod/clickmd",
+            "locked": [
+              "1.1.15"
+            ],
+            "target": "1.1.15",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "costs",
+            "repository": "semcod/costs",
+            "locked": [
+              "0.2.0"
+            ],
+            "target": "0.2.0",
+            "requires_python": [
+              ">=3.9"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "goal",
+            "repository": "semcod/goal",
+            "locked": [
+              "2.2.0"
+            ],
+            "target": "2.2.0",
+            "requires_python": [
+              ">=3.12"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "pfix",
+            "repository": "semcod/pfix",
+            "locked": [
+              "0.1.79"
+            ],
+            "target": "0.1.79",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          }
+        ],
+        "fresh": true,
+        "application_tests_run": false
+      },
+      "freshness_retry": {
+        "run_id": 33989900424,
+        "successful_attempt": 2,
+        "first_attempt_error": "Connection reset by peer fetching clickmd metadata"
       }
     }
   ]
