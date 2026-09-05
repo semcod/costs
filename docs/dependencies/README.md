@@ -1,6 +1,6 @@
-# Aktualizacje zależności costs
+# Archiwum aktualizacji zależności costs
 
-Dokumentacja utrzymywana w `semcod/costs`, dotycząca wydań costs i aktualizacji jego konsumentów. Właścicielem wykonawcy aktualizacji jest `semcod/goal`.
+Historyczne dowody wydań costs i aktualizacji konsumentów pozostają w tym repozytorium. Kanoniczny [raport przekrojowy](https://github.com/subactor/docs/blob/3391236d3cc0732a11f1e87492f2fb053d228dcf/architecture/analysis/internal-dependencies.md) należy do `subactor/docs`; jego pierwsza wersja jest w [PR #26](https://github.com/subactor/docs/pull/26), jeszcze niescalona. Właścicielem wykonawcy aktualizacji jest `semcod/goal`.
 
 - [Raport wdrożenia z 2026-09-05](rollout-2026-09-05.md) — wykonane zmiany, wyniki kontroli i pozostały zakres.
 - [Dowody w JSON](rollout-2026-09-05.json) — wersje, SHA256 publikacji, commity, PR-y i uruchomienia CI.
@@ -10,6 +10,8 @@ Dokumentacja utrzymywana w `semcod/costs`, dotycząca wydań costs i aktualizacj
 - [Dowody trzeciej grupy](rollout-batch-3-2026-09-05.json) — także pozostali kandydaci z historycznego audytu.
 - [Instrukcja wykonawcy Goal](https://github.com/semcod/goal/blob/84f18540d14c24cc8ff5b7f202d2874344779ecc/docs/internal-dependencies.md).
 
-Kolejne raporty zapisujemy w tym katalogu i dodajemy do tego indeksu. Instrukcje konkretnego konsumenta należą do jego `docs/`. Raport jest wersjonowany wraz z repozytorium i nie zależy od prywatnej ścieżki na komputerze autora. Surowe logi, środowiska testowe i pliki tymczasowe nie zastępują dokumentacji wynikowej.
+Nowe ustalenia przekrojowe dopisujemy przez zwiększenie wersji kanonicznego dokumentu `subactor/docs:architecture/analysis/internal-dependencies.md`. Powyższe raporty są historycznymi zapisami; nie tworzymy kolejnych kopii bieżącego raportu w costs.
 
-Przyjęto zasadę dokumentacji należącej do repozytorium z [wellmanifest/docs](https://github.com/wellmanifest/docs/blob/f64de5806577769672ebc1730d2e144b4c7671ec/README.md). Ten pakiet w odczytanej rewizji jest zalążkiem standardu; nie udostępnia osobnego schematu walidacji raportów. Schemat JSON obok raportu jest lokalnym formatem costs, a nie certyfikatem zgodności wellmanifest.
+Lokalne informacje costs należą do `docs/information/`, analizy do `docs/analysis/`, plany do `docs/refactoring/`, a decyzje do `docs/decisions/`, z indeksem w `docs/README.md`. Obowiązują metadane i sekcje [wellmanifest/docs 0.1.0](https://github.com/wellmanifest/docs/blob/fdb0fcaa7c606dc2503cabb71eff64d5f86ee659/docs/standard/POLICY.md). Starsze raporty zachowują swoje formaty i odniesienia jako historię. Sam odnośnik do standardu nie dowodzi adopcji jego checkera ani egzekwowania w CI.
+
+Surowe logi, środowiska testowe i kopie odzyskiwania pozostają w prywatnym magazynie roboczym; nie zastępują wersjonowanej dokumentacji wynikowej.

@@ -5,7 +5,8 @@ Costs szacuje zużycie tokenów i koszt analizy zmian Git. Raporty estymacji nie
 - [Instalacja i użycie](../README.md).
 - [Automatyczna aktualizacja badge](AUTO_BADGE.md).
 - [Wydajność, metoda pomiarów i przyjęcie wellmanifest](performance/README.md).
-- [Aktualizacje zależności i raporty wdrożeń](dependencies/README.md).
+- [Archiwum aktualizacji zależności](dependencies/README.md).
+- [Kanoniczny raport zależności w subactor/docs](https://github.com/subactor/docs/blob/3391236d3cc0732a11f1e87492f2fb053d228dcf/architecture/analysis/internal-dependencies.md) — [PR #26](https://github.com/subactor/docs/pull/26), oczekuje na scalenie.
 - [Przykłady użycia](../examples/README.md).
 
-Raporty wynikowe i instrukcje utrzymujemy w tym repozytorium. Dodając dokument, należy wskazać go w odpowiednim indeksie i używać przenośnych odnośników do dowodów.
+Lokalne informacje, analizy, plany i decyzje costs utrzymujemy odpowiednio w `docs/{information,analysis,refactoring,decisions}/`, z metadanymi i sekcjami wellmanifest/docs 0.1.0 oraz odnośnikiem w tym indeksie. Wyniki przekrojowe mają jednego właściciela w `subactor/docs:architecture/`; tutaj zamieszczamy link. Historyczne raporty zachowują poprzednie formaty i dowody.
