@@ -1,0 +1,1143 @@
+{
+  "schema": "costs.dependency-rollout-evidence/v1",
+  "owner_repository": "semcod/costs",
+  "recorded_at": "2026-09-05T21:07:04.442620+00:00",
+  "scope": {
+    "batch_merged": 6,
+    "confirmed_consumers_across_batches": 16,
+    "all_repositories_current": false,
+    "catalog_packages": [
+      "costs",
+      "goal",
+      "pfix",
+      "clickmd",
+      "code2llm"
+    ]
+  },
+  "repositories": [
+    {
+      "repository": "semcod/docval",
+      "base": "5adb7033b90980ed9c200b78eb9c813b3a6ca5f8",
+      "head": "26de7cf933cd09f4b8eede7ebbaa6c88c2947855",
+      "pr_url": "https://github.com/semcod/docval/pull/1",
+      "publication": {
+        "mergeCommit": {
+          "oid": "14242e95ea7938a0097f5f5b03697f804e716a45"
+        },
+        "mergedAt": "2026-09-05T20:51:20Z",
+        "state": "MERGED"
+      },
+      "local_tests": [
+        {
+          "python": "3.10",
+          "exit": 0,
+          "passed": 43,
+          "skipped": 0
+        },
+        {
+          "python": "3.13",
+          "exit": 0,
+          "passed": 43,
+          "skipped": 0
+        }
+      ],
+      "local_build_exit": 0,
+      "main_checks": {
+        "freshness": {
+          "id": 33991333674,
+          "name": "Internal dependency freshness",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "14242e95ea7938a0097f5f5b03697f804e716a45",
+          "html_url": "https://github.com/semcod/docval/actions/runs/33991333674"
+        },
+        "tests": {
+          "id": 33991333322,
+          "name": "Locked tests",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "14242e95ea7938a0097f5f5b03697f804e716a45",
+          "html_url": "https://github.com/semcod/docval/actions/runs/33991333322"
+        },
+        "dependabot": {
+          "id": 33991338863,
+          "name": "uv in /. - Update #1558877008",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "14242e95ea7938a0097f5f5b03697f804e716a45",
+          "html_url": "https://github.com/semcod/docval/actions/runs/33991338863"
+        }
+      },
+      "freshness": {
+        "schema": "goal.internal-dependency-report/v1",
+        "observed_at": "2026-09-05T20:52:11.112967+00:00",
+        "versioning": "stable-semver",
+        "manifest_sha256": "940032c954eddda69c556936349589969277d48f23ec337f855a48d9e920a8e2",
+        "lock_sha256": "a1b0b141396d17e3f7930ea1c1037c677ebcef87e2c85367213eba73bf4bab89",
+        "packages": [
+          {
+            "name": "clickmd",
+            "repository": "semcod/clickmd",
+            "locked": [
+              "1.1.15"
+            ],
+            "target": "1.1.15",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "costs",
+            "repository": "semcod/costs",
+            "locked": [
+              "0.2.0"
+            ],
+            "target": "0.2.0",
+            "requires_python": [
+              ">=3.9"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "goal",
+            "repository": "semcod/goal",
+            "locked": [
+              "2.2.0"
+            ],
+            "target": "2.2.0",
+            "requires_python": [
+              ">=3.12"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "pfix",
+            "repository": "semcod/pfix",
+            "locked": [
+              "0.1.79"
+            ],
+            "target": "0.1.79",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          }
+        ],
+        "fresh": true,
+        "application_tests_run": false
+      }
+    },
+    {
+      "repository": "semcod/fixop",
+      "base": "4fa28ce08994d1d7464420f90c3440fce1979e8e",
+      "head": "d4df0f076cf73fae1261fe9d5a54247492d7d6b6",
+      "pr_url": "https://github.com/semcod/fixop/pull/1",
+      "publication": {
+        "mergeCommit": {
+          "oid": "a523374ec1c2a7a3d599c1733a7e48c283a72e44"
+        },
+        "mergedAt": "2026-09-05T20:51:27Z",
+        "state": "MERGED"
+      },
+      "local_tests": [
+        {
+          "python": "3.10",
+          "exit": 0,
+          "passed": 102,
+          "skipped": 0
+        },
+        {
+          "python": "3.13",
+          "exit": 0,
+          "passed": 102,
+          "skipped": 0
+        }
+      ],
+      "local_build_exit": 0,
+      "main_checks": {
+        "freshness": {
+          "id": 33991338021,
+          "name": "Internal dependency freshness",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "a523374ec1c2a7a3d599c1733a7e48c283a72e44",
+          "html_url": "https://github.com/semcod/fixop/actions/runs/33991338021"
+        },
+        "tests": {
+          "id": 33991337489,
+          "name": "Locked tests",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "a523374ec1c2a7a3d599c1733a7e48c283a72e44",
+          "html_url": "https://github.com/semcod/fixop/actions/runs/33991337489"
+        },
+        "dependabot": {
+          "id": 33991343877,
+          "name": "uv in /. - Update #1558877054",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "a523374ec1c2a7a3d599c1733a7e48c283a72e44",
+          "html_url": "https://github.com/semcod/fixop/actions/runs/33991343877"
+        }
+      },
+      "freshness": {
+        "schema": "goal.internal-dependency-report/v1",
+        "observed_at": "2026-09-05T20:52:11.218387+00:00",
+        "versioning": "stable-semver",
+        "manifest_sha256": "6f7c4c39761b00307b532fa3503094134e07d1f14eba84c00ca815234b6aff54",
+        "lock_sha256": "6b5e3d502dd2ee76b75ee6d261666cfb49154defd5ade5066e83012f82811d0d",
+        "packages": [
+          {
+            "name": "clickmd",
+            "repository": "semcod/clickmd",
+            "locked": [
+              "1.1.15"
+            ],
+            "target": "1.1.15",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "costs",
+            "repository": "semcod/costs",
+            "locked": [
+              "0.2.0"
+            ],
+            "target": "0.2.0",
+            "requires_python": [
+              ">=3.9"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "goal",
+            "repository": "semcod/goal",
+            "locked": [
+              "2.2.0"
+            ],
+            "target": "2.2.0",
+            "requires_python": [
+              ">=3.12"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "pfix",
+            "repository": "semcod/pfix",
+            "locked": [
+              "0.1.79"
+            ],
+            "target": "0.1.79",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          }
+        ],
+        "fresh": true,
+        "application_tests_run": false
+      }
+    },
+    {
+      "repository": "semcod/nxdo",
+      "base": "09a6daf9affd3a8d0d358618135159f53cb2affb",
+      "head": "d7be0bf5d83586147e4a872df6d47ecffe00b1d2",
+      "pr_url": "https://github.com/semcod/nxdo/pull/4",
+      "publication": {
+        "mergeCommit": {
+          "oid": "b5e4c64dffeeeb3014e7ca542fb6dc58b75720d3"
+        },
+        "mergedAt": "2026-09-05T21:03:13Z",
+        "state": "MERGED"
+      },
+      "local_tests": [
+        {
+          "python": "3.10",
+          "exit": 0,
+          "passed": 138,
+          "skipped": 0
+        },
+        {
+          "python": "3.13",
+          "exit": 0,
+          "passed": 138,
+          "skipped": 0
+        }
+      ],
+      "local_build_exit": 0,
+      "main_checks": {
+        "freshness": {
+          "id": 33991896541,
+          "name": "Internal dependency freshness",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b5e4c64dffeeeb3014e7ca542fb6dc58b75720d3",
+          "html_url": "https://github.com/semcod/nxdo/actions/runs/33991896541"
+        },
+        "tests": {
+          "id": 33991895830,
+          "name": "CI",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b5e4c64dffeeeb3014e7ca542fb6dc58b75720d3",
+          "html_url": "https://github.com/semcod/nxdo/actions/runs/33991895830"
+        },
+        "dependabot": {
+          "id": 33991899520,
+          "name": "uv in /. - Update #1558883715",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b5e4c64dffeeeb3014e7ca542fb6dc58b75720d3",
+          "html_url": "https://github.com/semcod/nxdo/actions/runs/33991899520"
+        }
+      },
+      "freshness": {
+        "schema": "goal.internal-dependency-report/v1",
+        "observed_at": "2026-09-05T21:04:01.615616+00:00",
+        "versioning": "stable-semver",
+        "manifest_sha256": "c440d85db05cc16809109a34f3bbe98577105662a776e6c00442e743f6017270",
+        "lock_sha256": "ab85e97d43e3c0f9ae4f9981c664e127ec7bc4d1b651050619371e74fc61597a",
+        "packages": [
+          {
+            "name": "clickmd",
+            "repository": "semcod/clickmd",
+            "locked": [
+              "1.1.15"
+            ],
+            "target": "1.1.15",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "costs",
+            "repository": "semcod/costs",
+            "locked": [
+              "0.2.0"
+            ],
+            "target": "0.2.0",
+            "requires_python": [
+              ">=3.9"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "goal",
+            "repository": "semcod/goal",
+            "locked": [
+              "2.2.0"
+            ],
+            "target": "2.2.0",
+            "requires_python": [
+              ">=3.12"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "pfix",
+            "repository": "semcod/pfix",
+            "locked": [
+              "0.1.79"
+            ],
+            "target": "0.1.79",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          }
+        ],
+        "fresh": true,
+        "application_tests_run": false
+      },
+      "coverage_percent": 95.98,
+      "local_quality_gates": [
+        {
+          "python": "3.10",
+          "results": [
+            {
+              "command": [
+                "uv",
+                "sync",
+                "--locked",
+                "--extra",
+                "dev",
+                "--python",
+                "3.10"
+              ],
+              "exit": 0
+            },
+            {
+              "command": [
+                "uv",
+                "run",
+                "--no-sync",
+                "python",
+                "-m",
+                "pytest",
+                "tests/",
+                "-q",
+                "--cov=nxdo",
+                "--cov-report=term-missing",
+                "--cov-fail-under=95"
+              ],
+              "exit": 0
+            },
+            {
+              "command": [
+                "uv",
+                "run",
+                "--no-sync",
+                "mypy",
+                "src/nxdo"
+              ],
+              "exit": 0
+            },
+            {
+              "command": [
+                "uv",
+                "run",
+                "--no-sync",
+                "ruff",
+                "check",
+                "src/nxdo",
+                "tests/"
+              ],
+              "exit": 0
+            },
+            {
+              "command": [
+                "bash",
+                "examples/check-examples.sh"
+              ],
+              "exit": 0
+            }
+          ]
+        },
+        {
+          "python": "3.13",
+          "results": [
+            {
+              "command": [
+                "uv",
+                "sync",
+                "--locked",
+                "--extra",
+                "dev",
+                "--python",
+                "3.13"
+              ],
+              "exit": 0
+            },
+            {
+              "command": [
+                "uv",
+                "run",
+                "--no-sync",
+                "python",
+                "-m",
+                "pytest",
+                "tests/",
+                "-q",
+                "--cov=nxdo",
+                "--cov-report=term-missing",
+                "--cov-fail-under=95"
+              ],
+              "exit": 0
+            },
+            {
+              "command": [
+                "uv",
+                "run",
+                "--no-sync",
+                "mypy",
+                "src/nxdo"
+              ],
+              "exit": 0
+            },
+            {
+              "command": [
+                "uv",
+                "run",
+                "--no-sync",
+                "ruff",
+                "check",
+                "src/nxdo",
+                "tests/"
+              ],
+              "exit": 0
+            },
+            {
+              "command": [
+                "bash",
+                "examples/check-examples.sh"
+              ],
+              "exit": 0
+            }
+          ]
+        }
+      ],
+      "pr_checks": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-05T21:01:58Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/semcod/nxdo/actions/runs/33991812181/job/101375264909",
+          "name": "test (3.10)",
+          "startedAt": "2026-09-05T21:01:37Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-05T21:02:16Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/semcod/nxdo/actions/runs/33991812174/job/101375264840",
+          "name": "freshness",
+          "startedAt": "2026-09-05T21:01:36Z",
+          "status": "COMPLETED",
+          "workflowName": "Internal dependency freshness"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-05T21:02:00Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/semcod/nxdo/actions/runs/33991812181/job/101375264929",
+          "name": "test (3.11)",
+          "startedAt": "2026-09-05T21:01:37Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-05T21:02:05Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/semcod/nxdo/actions/runs/33991812181/job/101375264969",
+          "name": "test (3.12)",
+          "startedAt": "2026-09-05T21:01:37Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-05T21:02:08Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/semcod/nxdo/actions/runs/33991812181/job/101375264822",
+          "name": "test (3.13)",
+          "startedAt": "2026-09-05T21:01:38Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        }
+      ]
+    },
+    {
+      "repository": "semcod/planfile",
+      "base": "13f1d7faefedfed6f0c30f964242d315abea9871",
+      "head": "406c7d27ac3fdeebad0d2a74d036c31e2647fd2e",
+      "pr_url": "https://github.com/semcod/planfile/pull/54",
+      "publication": {
+        "mergeCommit": {
+          "oid": "13e204be43d62badf3712cd6acd1395c4313f057"
+        },
+        "mergedAt": "2026-09-05T20:51:34Z",
+        "state": "MERGED"
+      },
+      "local_tests": [
+        {
+          "python": "3.10",
+          "exit": 0,
+          "passed": 440,
+          "skipped": 6
+        },
+        {
+          "python": "3.13",
+          "exit": 0,
+          "passed": 440,
+          "skipped": 6
+        }
+      ],
+      "local_build_exit": 0,
+      "main_checks": {
+        "freshness": {
+          "id": 33991343224,
+          "name": "Internal dependency freshness",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "13e204be43d62badf3712cd6acd1395c4313f057",
+          "html_url": "https://github.com/semcod/planfile/actions/runs/33991343224"
+        },
+        "tests": {
+          "id": 33991342903,
+          "name": "Locked tests",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "13e204be43d62badf3712cd6acd1395c4313f057",
+          "html_url": "https://github.com/semcod/planfile/actions/runs/33991342903"
+        },
+        "dependabot": {
+          "id": 33991346650,
+          "name": "uv in /. - Update #1558877068",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "13e204be43d62badf3712cd6acd1395c4313f057",
+          "html_url": "https://github.com/semcod/planfile/actions/runs/33991346650"
+        }
+      },
+      "freshness": {
+        "schema": "goal.internal-dependency-report/v1",
+        "observed_at": "2026-09-05T20:52:19.317966+00:00",
+        "versioning": "stable-semver",
+        "manifest_sha256": "b95cb9ffff218311c971ef1626fc67d77d916bd8f71ca728e94177976445af59",
+        "lock_sha256": "1affd6efd6da93978ad15bce0f120ba4a247682889a2cd867175ecf1bfdbc8e0",
+        "packages": [
+          {
+            "name": "clickmd",
+            "repository": "semcod/clickmd",
+            "locked": [
+              "1.1.15"
+            ],
+            "target": "1.1.15",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "costs",
+            "repository": "semcod/costs",
+            "locked": [
+              "0.2.0"
+            ],
+            "target": "0.2.0",
+            "requires_python": [
+              ">=3.9"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "goal",
+            "repository": "semcod/goal",
+            "locked": [
+              "2.2.0"
+            ],
+            "target": "2.2.0",
+            "requires_python": [
+              ">=3.12"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "pfix",
+            "repository": "semcod/pfix",
+            "locked": [
+              "0.1.79"
+            ],
+            "target": "0.1.79",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          }
+        ],
+        "fresh": true,
+        "application_tests_run": false
+      }
+    },
+    {
+      "repository": "autogrammar/op3",
+      "base": "fb729c052ca2db8769984c194f90c04c05ffac2d",
+      "head": "7cc83fd1250d604d73c2bb3f346d8e96e4c387f4",
+      "pr_url": "https://github.com/autogrammar/op3/pull/1",
+      "publication": {
+        "mergeCommit": {
+          "oid": "b24f6fcd9490a23ac5dee3bd41a3f26534376fb5"
+        },
+        "mergedAt": "2026-09-05T20:51:41Z",
+        "state": "MERGED"
+      },
+      "local_tests": [
+        {
+          "python": "3.10",
+          "exit": 0,
+          "passed": 132,
+          "skipped": 0
+        },
+        {
+          "python": "3.13",
+          "exit": 0,
+          "passed": 132,
+          "skipped": 0
+        }
+      ],
+      "local_build_exit": 0,
+      "main_checks": {
+        "freshness": {
+          "id": 33991347860,
+          "name": "Internal dependency freshness",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b24f6fcd9490a23ac5dee3bd41a3f26534376fb5",
+          "html_url": "https://github.com/autogrammar/op3/actions/runs/33991347860"
+        },
+        "tests": {
+          "id": 33991347483,
+          "name": "Locked tests",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b24f6fcd9490a23ac5dee3bd41a3f26534376fb5",
+          "html_url": "https://github.com/autogrammar/op3/actions/runs/33991347483"
+        },
+        "dependabot": {
+          "id": 33991353567,
+          "name": "uv in /. - Update #1558877571",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "b24f6fcd9490a23ac5dee3bd41a3f26534376fb5",
+          "html_url": "https://github.com/autogrammar/op3/actions/runs/33991353567"
+        }
+      },
+      "freshness": {
+        "schema": "goal.internal-dependency-report/v1",
+        "observed_at": "2026-09-05T20:52:27.666666+00:00",
+        "versioning": "stable-semver",
+        "manifest_sha256": "9c7be738ba5eb2d0abad8faeeae3d829d2cc5af0745fc55a048a00a30f96a86c",
+        "lock_sha256": "c55ddd8727c87508b9f12f15b9925382f93523da7534641055ebd9a5f458611b",
+        "packages": [
+          {
+            "name": "clickmd",
+            "repository": "semcod/clickmd",
+            "locked": [
+              "1.1.15"
+            ],
+            "target": "1.1.15",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "costs",
+            "repository": "semcod/costs",
+            "locked": [
+              "0.2.0"
+            ],
+            "target": "0.2.0",
+            "requires_python": [
+              ">=3.9"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "goal",
+            "repository": "semcod/goal",
+            "locked": [
+              "2.2.0"
+            ],
+            "target": "2.2.0",
+            "requires_python": [
+              ">=3.12"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "pfix",
+            "repository": "semcod/pfix",
+            "locked": [
+              "0.1.79"
+            ],
+            "target": "0.1.79",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          }
+        ],
+        "fresh": true,
+        "application_tests_run": false
+      }
+    },
+    {
+      "repository": "autogrammar/toonic",
+      "base": "81687f3f7bf3c5deefff8368b9dd976581b0be36",
+      "head": "8b9cd683229ad710c4bef19ac585834dcc7e9fce",
+      "pr_url": "https://github.com/autogrammar/toonic/pull/1",
+      "publication": {
+        "mergeCommit": {
+          "oid": "433e3e61fccb3523ee17b7008b6210841acaa3c0"
+        },
+        "mergedAt": "2026-09-05T20:51:47Z",
+        "state": "MERGED"
+      },
+      "local_tests": [
+        {
+          "python": "3.10",
+          "exit": 0,
+          "passed": 454,
+          "skipped": 0
+        },
+        {
+          "python": "3.13",
+          "exit": 0,
+          "passed": 454,
+          "skipped": 0
+        }
+      ],
+      "local_build_exit": 0,
+      "main_checks": {
+        "freshness": {
+          "id": 33991352828,
+          "name": "Internal dependency freshness",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "433e3e61fccb3523ee17b7008b6210841acaa3c0",
+          "html_url": "https://github.com/autogrammar/toonic/actions/runs/33991352828"
+        },
+        "tests": {
+          "id": 33991351958,
+          "name": "Locked tests",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "433e3e61fccb3523ee17b7008b6210841acaa3c0",
+          "html_url": "https://github.com/autogrammar/toonic/actions/runs/33991351958"
+        },
+        "dependabot": {
+          "id": 33991357561,
+          "name": "uv in /. - Update #1558877787",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "433e3e61fccb3523ee17b7008b6210841acaa3c0",
+          "html_url": "https://github.com/autogrammar/toonic/actions/runs/33991357561"
+        }
+      },
+      "freshness": {
+        "schema": "goal.internal-dependency-report/v1",
+        "observed_at": "2026-09-05T20:52:38.414190+00:00",
+        "versioning": "stable-semver",
+        "manifest_sha256": "f824144c1c53314e60a22dad39a6c175e789975627d5a85251eca59ca3af5ceb",
+        "lock_sha256": "7df5f50dc948b63574b2e0abd98ae821c1f8066b3d578b6a6420fa8eec2cc767",
+        "packages": [
+          {
+            "name": "clickmd",
+            "repository": "semcod/clickmd",
+            "locked": [
+              "1.1.15"
+            ],
+            "target": "1.1.15",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "costs",
+            "repository": "semcod/costs",
+            "locked": [
+              "0.2.0"
+            ],
+            "target": "0.2.0",
+            "requires_python": [
+              ">=3.9"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "goal",
+            "repository": "semcod/goal",
+            "locked": [
+              "2.2.0"
+            ],
+            "target": "2.2.0",
+            "requires_python": [
+              ">=3.12"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "pfix",
+            "repository": "semcod/pfix",
+            "locked": [
+              "0.1.79"
+            ],
+            "target": "0.1.79",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          }
+        ],
+        "fresh": true,
+        "application_tests_run": false
+      }
+    }
+  ],
+  "remaining_candidates": {
+    "source": "historical 2026-09-05 audit; completed batches removed",
+    "fresh_remote_inventory": false,
+    "repositories": [
+      {
+        "repository": "autogrammar/curllm",
+        "review_hints": [
+          "confirm registry ownership: testql",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "autogrammar/doql",
+        "review_hints": [
+          "confirm registry ownership: op3",
+          "confirm registry ownership: testql",
+          "local source/workspace policy",
+          "repository governance review",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "autogrammar/gillm",
+        "review_hints": [
+          "local source/workspace policy",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "autogrammar/hillm",
+        "review_hints": [
+          "confirm registry ownership: testql",
+          "local source/workspace policy",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "autogrammar/imgl",
+        "review_hints": [
+          "PR #2 checks passed; independent approval of latest push required"
+        ]
+      },
+      {
+        "repository": "autogrammar/intract",
+        "review_hints": [
+          "repository governance review",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "autogrammar/iterun",
+        "review_hints": [
+          "confirm registry ownership: nfo",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "autogrammar/nexu",
+        "review_hints": [
+          "confirm registry ownership: repatch",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "autogrammar/nlp2cmd",
+        "review_hints": [
+          "confirm registry ownership: env2llm",
+          "confirm registry ownership: nlp2uri",
+          "confirm registry ownership: testql",
+          "local source/workspace policy",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "autogrammar/nlp2dsl",
+        "review_hints": [
+          "local source/workspace policy",
+          "repository governance review",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "autogrammar/nlp2env",
+        "review_hints": [
+          "confirm registry ownership: nlp2uri",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "autogrammar/nlp2uri",
+        "review_hints": [
+          "confirm registry ownership: env2llm",
+          "confirm registry ownership: nlp2env",
+          "confirm registry ownership: vql",
+          "local source/workspace policy",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "autogrammar/redsl",
+        "review_hints": [
+          "confirm registry ownership: redeploy",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "autogrammar/tillm",
+        "review_hints": [
+          "confirm registry ownership: env2llm",
+          "confirm registry ownership: testql",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "autogrammar/vql",
+        "review_hints": [
+          "repository governance review",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/deconnnected",
+        "review_hints": [
+          "confirm registry ownership: testql",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/fixos",
+        "review_hints": [
+          "repository governance review"
+        ]
+      },
+      {
+        "repository": "semcod/glon",
+        "review_hints": [
+          "repository now governed; ticket-based change and required approvals"
+        ]
+      },
+      {
+        "repository": "semcod/koru",
+        "review_hints": [
+          "confirm registry ownership: subactor-subllm",
+          "repository governance review"
+        ]
+      },
+      {
+        "repository": "semcod/prefact",
+        "review_hints": [
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/proxym",
+        "review_hints": [
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/redeploy",
+        "review_hints": [
+          "confirm registry ownership: op3",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/redup",
+        "review_hints": [
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/regix",
+        "review_hints": [
+          "confirm registry ownership: nfo",
+          "confirm registry ownership: pyqual",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/reko",
+        "review_hints": [
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/repatch",
+        "review_hints": [
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/tagi",
+        "review_hints": [
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/taskill",
+        "review_hints": [
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/testless",
+        "review_hints": [
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/todocs",
+        "review_hints": [
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/vallm",
+        "review_hints": [
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/wup",
+        "review_hints": [
+          "local source/workspace policy",
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "semcod/wupbro",
+        "review_hints": [
+          "separate goal automation from Python <3.12 contexts"
+        ]
+      },
+      {
+        "repository": "subactor/llm-code-benchmark",
+        "review_hints": [
+          "confirm registry ownership: subactor-subllm",
+          "repository governance review"
+        ]
+      },
+      {
+        "repository": "subactor/onedev-agent",
+        "review_hints": [
+          "direct pinned Git dependency: subactor-subllm; verify existing control-plane delivery policy"
+        ]
+      }
+    ]
+  }
+}
