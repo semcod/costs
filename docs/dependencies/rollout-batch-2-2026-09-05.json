@@ -1,0 +1,1001 @@
+{
+  "schema": "costs.dependency-rollout-evidence/v1",
+  "recorded_at": "2026-09-05T20:24:00.937647+00:00",
+  "owner_repository": "semcod/costs",
+  "scope": {
+    "batch_candidates": 8,
+    "merged": 6,
+    "awaiting_review": 1,
+    "deferred_governed_repository": "semcod/glon",
+    "all_repositories_current": false
+  },
+  "repositories": [
+    {
+      "repository": "semcod/clickmd",
+      "base": "4e74ef3c57b13c685bb994d91f5671da6835a20f",
+      "head": "5ab5ce56ecb7003a27ebc45cb776e0a03019648f",
+      "pr_url": "https://github.com/semcod/clickmd/pull/1",
+      "minimum_python": "3.10",
+      "tests": [
+        {
+          "python": "3.10",
+          "exit": 0
+        },
+        {
+          "python": "3.13",
+          "exit": 0
+        }
+      ],
+      "local_build_exit": 0,
+      "publication": {
+        "mergeCommit": {
+          "oid": "104b0aee960adda2d83d564000e791050309e4c1"
+        },
+        "mergedAt": "2026-09-05T20:19:06Z",
+        "state": "MERGED"
+      },
+      "main_runs": [
+        {
+          "id": 33989821871,
+          "name": "Internal dependency freshness",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "104b0aee960adda2d83d564000e791050309e4c1",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/clickmd/actions/runs/33989821871"
+        },
+        {
+          "id": 33989749017,
+          "name": "uv in /. - Update #1558858185",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "104b0aee960adda2d83d564000e791050309e4c1",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/clickmd/actions/runs/33989749017"
+        },
+        {
+          "id": 33989746377,
+          "name": "uv in /. - Update #1558858162",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "104b0aee960adda2d83d564000e791050309e4c1",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/clickmd/actions/runs/33989746377"
+        },
+        {
+          "id": 33989743309,
+          "name": "Locked tests",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "104b0aee960adda2d83d564000e791050309e4c1",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/clickmd/actions/runs/33989743309"
+        },
+        {
+          "id": 33989743281,
+          "name": "Trigger org metadata sync",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "104b0aee960adda2d83d564000e791050309e4c1",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/clickmd/actions/runs/33989743281"
+        },
+        {
+          "id": 33989743081,
+          "name": "pages build and deployment",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "104b0aee960adda2d83d564000e791050309e4c1",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/clickmd/actions/runs/33989743081"
+        }
+      ],
+      "freshness": {
+        "schema": "goal.internal-dependency-report/v1",
+        "observed_at": "2026-09-05T20:21:23.359731+00:00",
+        "versioning": "stable-semver",
+        "manifest_sha256": "9b01da6f30ad83ea102ed8a8f5088fa337bb9f507015763c32e6df856b9ab04f",
+        "lock_sha256": "c2ae68441550075a44ae3d0ec3a1a00d2086eb3427a7c21d6a53e007e3cbddbc",
+        "packages": [
+          {
+            "name": "costs",
+            "repository": "semcod/costs",
+            "locked": [
+              "0.2.0"
+            ],
+            "target": "0.2.0",
+            "requires_python": [
+              ">=3.9"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "goal",
+            "repository": "semcod/goal",
+            "locked": [
+              "2.2.0"
+            ],
+            "target": "2.2.0",
+            "requires_python": [
+              ">=3.12"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "pfix",
+            "repository": "semcod/pfix",
+            "locked": [
+              "0.1.79"
+            ],
+            "target": "0.1.79",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          }
+        ],
+        "fresh": true,
+        "application_tests_run": false
+      }
+    },
+    {
+      "repository": "semcod/pfix",
+      "base": "64d60664296d17bb59aca4f4872d628fcbe85809",
+      "head": "2bb2c1b060ceb49cae484002f5085f7b13c80dfa",
+      "pr_url": "https://github.com/semcod/pfix/pull/1",
+      "minimum_python": "3.10",
+      "tests": [
+        {
+          "python": "3.10",
+          "exit": 0
+        },
+        {
+          "python": "3.13",
+          "exit": 0
+        }
+      ],
+      "local_build_exit": 0,
+      "publication": {
+        "mergeCommit": {
+          "oid": "5bd8e49a5d80e235e80b2bd30c23e9a172f961ab"
+        },
+        "mergedAt": "2026-09-05T20:19:10Z",
+        "state": "MERGED"
+      },
+      "main_runs": [
+        {
+          "id": 33989823335,
+          "name": "Internal dependency freshness",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "5bd8e49a5d80e235e80b2bd30c23e9a172f961ab",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/pfix/actions/runs/33989823335"
+        },
+        {
+          "id": 33989751044,
+          "name": "uv in /. - Update #1558858198",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "5bd8e49a5d80e235e80b2bd30c23e9a172f961ab",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/pfix/actions/runs/33989751044"
+        },
+        {
+          "id": 33989749588,
+          "name": "uv in /. - Update #1558858187",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "5bd8e49a5d80e235e80b2bd30c23e9a172f961ab",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/pfix/actions/runs/33989749588"
+        },
+        {
+          "id": 33989746418,
+          "name": "Trigger org metadata sync",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "5bd8e49a5d80e235e80b2bd30c23e9a172f961ab",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/pfix/actions/runs/33989746418"
+        },
+        {
+          "id": 33989746405,
+          "name": "Locked tests",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "5bd8e49a5d80e235e80b2bd30c23e9a172f961ab",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/pfix/actions/runs/33989746405"
+        },
+        {
+          "id": 33989745862,
+          "name": "pages build and deployment",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "5bd8e49a5d80e235e80b2bd30c23e9a172f961ab",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/pfix/actions/runs/33989745862"
+        }
+      ],
+      "freshness": {
+        "schema": "goal.internal-dependency-report/v1",
+        "observed_at": "2026-09-05T20:21:25.670672+00:00",
+        "versioning": "stable-semver",
+        "manifest_sha256": "e77d5fc24bce5f783290a0fdc8d3bffe3071bbc5bf0684b228c39f72787f40ab",
+        "lock_sha256": "9b8754ea9f7f7491598efa9f7aa06742ac0d811f90d90e2ea0846cb19e965d9c",
+        "packages": [
+          {
+            "name": "clickmd",
+            "repository": "semcod/clickmd",
+            "locked": [
+              "1.1.15"
+            ],
+            "target": "1.1.15",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "costs",
+            "repository": "semcod/costs",
+            "locked": [
+              "0.2.0"
+            ],
+            "target": "0.2.0",
+            "requires_python": [
+              ">=3.9"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "goal",
+            "repository": "semcod/goal",
+            "locked": [
+              "2.2.0"
+            ],
+            "target": "2.2.0",
+            "requires_python": [
+              ">=3.12"
+            ],
+            "status": "current"
+          }
+        ],
+        "fresh": true,
+        "application_tests_run": false
+      }
+    },
+    {
+      "repository": "semcod/code2llm",
+      "base": "086a7351b5562b022ff455fb4b2b50ccfd426032",
+      "head": "7c46f1fffaea83138033159370577d10d99abdb7",
+      "pr_url": "https://github.com/semcod/code2llm/pull/1",
+      "minimum_python": "3.10",
+      "tests": [
+        {
+          "python": "3.10",
+          "exit": 0
+        },
+        {
+          "python": "3.13",
+          "exit": 0
+        }
+      ],
+      "local_build_exit": 0,
+      "publication": {
+        "mergeCommit": {
+          "oid": "56f54cb2544e886b14031f837df24cfc6c756fef"
+        },
+        "mergedAt": "2026-09-05T20:19:14Z",
+        "state": "MERGED"
+      },
+      "main_runs": [
+        {
+          "id": 33989824619,
+          "name": "Internal dependency freshness",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "56f54cb2544e886b14031f837df24cfc6c756fef",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/code2llm/actions/runs/33989824619"
+        },
+        {
+          "id": 33989754102,
+          "name": "uv in /. - Update #1558858236",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "56f54cb2544e886b14031f837df24cfc6c756fef",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/code2llm/actions/runs/33989754102"
+        },
+        {
+          "id": 33989752640,
+          "name": "uv in /. - Update #1558858216",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "56f54cb2544e886b14031f837df24cfc6c756fef",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/code2llm/actions/runs/33989752640"
+        },
+        {
+          "id": 33989749891,
+          "name": "Trigger org metadata sync",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "56f54cb2544e886b14031f837df24cfc6c756fef",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/code2llm/actions/runs/33989749891"
+        },
+        {
+          "id": 33989749877,
+          "name": "Locked tests",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "56f54cb2544e886b14031f837df24cfc6c756fef",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/code2llm/actions/runs/33989749877"
+        },
+        {
+          "id": 33989749328,
+          "name": "pages build and deployment",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "56f54cb2544e886b14031f837df24cfc6c756fef",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/code2llm/actions/runs/33989749328"
+        }
+      ],
+      "freshness": {
+        "schema": "goal.internal-dependency-report/v1",
+        "observed_at": "2026-09-05T20:21:26.266413+00:00",
+        "versioning": "stable-semver",
+        "manifest_sha256": "e896db1437893970265b960e033418dbb59cca745b54b6a2bfb89125d4645a60",
+        "lock_sha256": "a39e2ae75ee098627ab322c8534c2ab7558fbfe5e0c7d68e35a0b5024898a7c4",
+        "packages": [
+          {
+            "name": "clickmd",
+            "repository": "semcod/clickmd",
+            "locked": [
+              "1.1.15"
+            ],
+            "target": "1.1.15",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "costs",
+            "repository": "semcod/costs",
+            "locked": [
+              "0.2.0"
+            ],
+            "target": "0.2.0",
+            "requires_python": [
+              ">=3.9"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "goal",
+            "repository": "semcod/goal",
+            "locked": [
+              "2.2.0"
+            ],
+            "target": "2.2.0",
+            "requires_python": [
+              ">=3.12"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "pfix",
+            "repository": "semcod/pfix",
+            "locked": [
+              "0.1.79"
+            ],
+            "target": "0.1.79",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          }
+        ],
+        "fresh": true,
+        "application_tests_run": false
+      }
+    },
+    {
+      "repository": "semcod/mdflow",
+      "base": "f87c89ddfca7f95a29ccbb19c8d47bbb0ada6b32",
+      "head": "c5c85077353a5ccbcb99174c5095f2e4898beb0c",
+      "pr_url": "https://github.com/semcod/mdflow/pull/1",
+      "minimum_python": "3.11",
+      "tests": [
+        {
+          "python": "3.11",
+          "exit": 0
+        },
+        {
+          "python": "3.13",
+          "exit": 0
+        }
+      ],
+      "local_build_exit": 0,
+      "publication": {
+        "mergeCommit": {
+          "oid": "ce403e91d54d0a531e5e332c6655ff46e588ba3e"
+        },
+        "mergedAt": "2026-09-05T20:19:20Z",
+        "state": "MERGED"
+      },
+      "main_runs": [
+        {
+          "id": 33989826053,
+          "name": "Internal dependency freshness",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "ce403e91d54d0a531e5e332c6655ff46e588ba3e",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/mdflow/actions/runs/33989826053"
+        },
+        {
+          "id": 33989761630,
+          "name": "uv in /. - Update #1558858302",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "ce403e91d54d0a531e5e332c6655ff46e588ba3e",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/mdflow/actions/runs/33989761630"
+        },
+        {
+          "id": 33989758824,
+          "name": "uv in /. - Update #1558858271",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "ce403e91d54d0a531e5e332c6655ff46e588ba3e",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/mdflow/actions/runs/33989758824"
+        },
+        {
+          "id": 33989754383,
+          "name": "Locked tests",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "ce403e91d54d0a531e5e332c6655ff46e588ba3e",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/mdflow/actions/runs/33989754383"
+        },
+        {
+          "id": 33989754374,
+          "name": "Trigger org metadata sync",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "ce403e91d54d0a531e5e332c6655ff46e588ba3e",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/mdflow/actions/runs/33989754374"
+        },
+        {
+          "id": 33989753861,
+          "name": "pages build and deployment",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "ce403e91d54d0a531e5e332c6655ff46e588ba3e",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/mdflow/actions/runs/33989753861"
+        }
+      ],
+      "freshness": {
+        "schema": "goal.internal-dependency-report/v1",
+        "observed_at": "2026-09-05T20:21:29.113801+00:00",
+        "versioning": "stable-semver",
+        "manifest_sha256": "bb9194f53c519f8a06f5d79990454d3cee908a4501d513c7521f45eea20309db",
+        "lock_sha256": "e5df50405491e0da8a27be83de00f4dfba4b1653fb279b08dae9fe903fb3817b",
+        "packages": [
+          {
+            "name": "clickmd",
+            "repository": "semcod/clickmd",
+            "locked": [
+              "1.1.15"
+            ],
+            "target": "1.1.15",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "costs",
+            "repository": "semcod/costs",
+            "locked": [
+              "0.2.0"
+            ],
+            "target": "0.2.0",
+            "requires_python": [
+              ">=3.9"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "goal",
+            "repository": "semcod/goal",
+            "locked": [
+              "2.2.0"
+            ],
+            "target": "2.2.0",
+            "requires_python": [
+              ">=3.12"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "pfix",
+            "repository": "semcod/pfix",
+            "locked": [
+              "0.1.79"
+            ],
+            "target": "0.1.79",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          }
+        ],
+        "fresh": true,
+        "application_tests_run": false
+      }
+    },
+    {
+      "repository": "semcod/giton",
+      "base": "5519931a2b77f477ca6a6e97d5e574672ce3ce5c",
+      "head": "11fe5ee889db3a750619d0ee0b22aec1c94b9040",
+      "pr_url": "https://github.com/semcod/giton/pull/2",
+      "minimum_python": "3.10",
+      "tests": [
+        {
+          "python": "3.10",
+          "exit": 0
+        },
+        {
+          "python": "3.13",
+          "exit": 0
+        }
+      ],
+      "local_build_exit": 0,
+      "publication": {
+        "mergeCommit": {
+          "oid": "be17a602676d51c565fbbc20a5d4bd1695eba590"
+        },
+        "mergedAt": "2026-09-05T20:19:24Z",
+        "state": "MERGED"
+      },
+      "main_runs": [
+        {
+          "id": 33989827539,
+          "name": "Internal dependency freshness",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "be17a602676d51c565fbbc20a5d4bd1695eba590",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/giton/actions/runs/33989827539"
+        },
+        {
+          "id": 33989765862,
+          "name": "uv in /. - Update #1558858337",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "be17a602676d51c565fbbc20a5d4bd1695eba590",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/giton/actions/runs/33989765862"
+        },
+        {
+          "id": 33989762692,
+          "name": "uv in /. - Update #1558858317",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "be17a602676d51c565fbbc20a5d4bd1695eba590",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/giton/actions/runs/33989762692"
+        },
+        {
+          "id": 33989758431,
+          "name": "Trigger org metadata sync",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "be17a602676d51c565fbbc20a5d4bd1695eba590",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/giton/actions/runs/33989758431"
+        },
+        {
+          "id": 33989758428,
+          "name": "Locked tests",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "be17a602676d51c565fbbc20a5d4bd1695eba590",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/giton/actions/runs/33989758428"
+        },
+        {
+          "id": 33989758144,
+          "name": "pages build and deployment",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "be17a602676d51c565fbbc20a5d4bd1695eba590",
+          "head_branch": "main",
+          "html_url": "https://github.com/semcod/giton/actions/runs/33989758144"
+        }
+      ],
+      "freshness": {
+        "schema": "goal.internal-dependency-report/v1",
+        "observed_at": "2026-09-05T20:21:31.365530+00:00",
+        "versioning": "stable-semver",
+        "manifest_sha256": "e2876840e9c23044c79610961d28f47f1363686369a15ede90b38bc769c2a058",
+        "lock_sha256": "f0373e151206e1972635e81699d31969aa7b90e955879aab87d379d1b3aec397",
+        "packages": [
+          {
+            "name": "clickmd",
+            "repository": "semcod/clickmd",
+            "locked": [
+              "1.1.15"
+            ],
+            "target": "1.1.15",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "costs",
+            "repository": "semcod/costs",
+            "locked": [
+              "0.2.0"
+            ],
+            "target": "0.2.0",
+            "requires_python": [
+              ">=3.9"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "goal",
+            "repository": "semcod/goal",
+            "locked": [
+              "2.2.0"
+            ],
+            "target": "2.2.0",
+            "requires_python": [
+              ">=3.12"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "pfix",
+            "repository": "semcod/pfix",
+            "locked": [
+              "0.1.79"
+            ],
+            "target": "0.1.79",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          }
+        ],
+        "fresh": true,
+        "application_tests_run": false
+      }
+    },
+    {
+      "repository": "autogrammar/code2schema",
+      "base": "5a34e88ad962815247007c904b172ee9d7d6d175",
+      "head": "97d81a76f257849cbf31d9fce14c53b2d671bc51",
+      "pr_url": "https://github.com/autogrammar/code2schema/pull/1",
+      "minimum_python": "3.10",
+      "tests": [
+        {
+          "python": "3.10",
+          "exit": 0
+        },
+        {
+          "python": "3.13",
+          "exit": 0
+        }
+      ],
+      "local_build_exit": 0,
+      "publication": {
+        "mergeCommit": {
+          "oid": "0852f7a8c92bf943e4da1968941e03f72a9a4d71"
+        },
+        "mergedAt": "2026-09-05T20:19:28Z",
+        "state": "MERGED"
+      },
+      "main_runs": [
+        {
+          "id": 33989828760,
+          "name": "Internal dependency freshness",
+          "event": "workflow_dispatch",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "0852f7a8c92bf943e4da1968941e03f72a9a4d71",
+          "head_branch": "main",
+          "html_url": "https://github.com/autogrammar/code2schema/actions/runs/33989828760"
+        },
+        {
+          "id": 33989766178,
+          "name": "uv in /. - Update #1558858346",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "0852f7a8c92bf943e4da1968941e03f72a9a4d71",
+          "head_branch": "main",
+          "html_url": "https://github.com/autogrammar/code2schema/actions/runs/33989766178"
+        },
+        {
+          "id": 33989765369,
+          "name": "uv in /. - Update #1558858332",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "0852f7a8c92bf943e4da1968941e03f72a9a4d71",
+          "head_branch": "main",
+          "html_url": "https://github.com/autogrammar/code2schema/actions/runs/33989765369"
+        },
+        {
+          "id": 33989762462,
+          "name": "pages build and deployment",
+          "event": "dynamic",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "0852f7a8c92bf943e4da1968941e03f72a9a4d71",
+          "head_branch": "main",
+          "html_url": "https://github.com/autogrammar/code2schema/actions/runs/33989762462"
+        },
+        {
+          "id": 33989761937,
+          "name": "Locked tests",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "0852f7a8c92bf943e4da1968941e03f72a9a4d71",
+          "head_branch": "main",
+          "html_url": "https://github.com/autogrammar/code2schema/actions/runs/33989761937"
+        },
+        {
+          "id": 33989761935,
+          "name": "Trigger org metadata sync",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "failure",
+          "head_sha": "0852f7a8c92bf943e4da1968941e03f72a9a4d71",
+          "head_branch": "main",
+          "html_url": "https://github.com/autogrammar/code2schema/actions/runs/33989761935"
+        }
+      ],
+      "freshness": {
+        "schema": "goal.internal-dependency-report/v1",
+        "observed_at": "2026-09-05T20:21:34.175147+00:00",
+        "versioning": "stable-semver",
+        "manifest_sha256": "86b5741c971bbb1240bcdb968c3f678a699b2e481cb7a3c33e5403e0ebd0e6bb",
+        "lock_sha256": "0c32340c55a083c79e90ab78510cf834c06765f01bcdfcb12fdf4cbab990f2c1",
+        "packages": [
+          {
+            "name": "clickmd",
+            "repository": "semcod/clickmd",
+            "locked": [
+              "1.1.15"
+            ],
+            "target": "1.1.15",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "costs",
+            "repository": "semcod/costs",
+            "locked": [
+              "0.2.0"
+            ],
+            "target": "0.2.0",
+            "requires_python": [
+              ">=3.9"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "goal",
+            "repository": "semcod/goal",
+            "locked": [
+              "2.2.0"
+            ],
+            "target": "2.2.0",
+            "requires_python": [
+              ">=3.12"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "pfix",
+            "repository": "semcod/pfix",
+            "locked": [
+              "0.1.79"
+            ],
+            "target": "0.1.79",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          }
+        ],
+        "fresh": true,
+        "application_tests_run": false
+      }
+    },
+    {
+      "repository": "autogrammar/imgl",
+      "base": "4d1fc3444443437a69344eec224c811a109967aa",
+      "head": "52248a1c0b22620cec812a709b67a96bbf17bf08",
+      "pr_url": "https://github.com/autogrammar/imgl/pull/2",
+      "minimum_python": "3.10",
+      "tests": [
+        {
+          "python": "3.10",
+          "exit": 0
+        },
+        {
+          "python": "3.13",
+          "exit": 0
+        }
+      ],
+      "local_build_exit": 0,
+      "publication": {
+        "state": "OPEN",
+        "reason": "GitHub main-supervised-autonomy requires independent approval of the latest push",
+        "ruleset_url": "https://github.com/autogrammar/imgl/rules/21952608",
+        "required_approvals": 1,
+        "required_status": "test"
+      },
+      "pr_checks": {
+        "headRefOid": "52248a1c0b22620cec812a709b67a96bbf17bf08",
+        "reviewDecision": "REVIEW_REQUIRED",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-09-05T20:26:02Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/autogrammar/imgl/actions/runs/33989900424/job/101370554203",
+            "name": "freshness",
+            "startedAt": "2026-09-05T20:25:19Z",
+            "status": "COMPLETED",
+            "workflowName": "Internal dependency freshness"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-09-05T20:23:06Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/autogrammar/imgl/actions/runs/33989900427/job/101370154632",
+            "name": "test (3.10)",
+            "startedAt": "2026-09-05T20:22:19Z",
+            "status": "COMPLETED",
+            "workflowName": "Locked tests"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-09-05T20:23:11Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/autogrammar/imgl/actions/runs/33989900427/job/101370154685",
+            "name": "test (3.13)",
+            "startedAt": "2026-09-05T20:22:20Z",
+            "status": "COMPLETED",
+            "workflowName": "Locked tests"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-09-05T20:23:53Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/autogrammar/imgl/actions/runs/33989900427/job/101370276180",
+            "name": "test",
+            "startedAt": "2026-09-05T20:23:50Z",
+            "status": "COMPLETED",
+            "workflowName": "Locked tests"
+          }
+        ]
+      },
+      "freshness": {
+        "schema": "goal.internal-dependency-report/v1",
+        "observed_at": "2026-09-05T20:25:58.142460+00:00",
+        "versioning": "stable-semver",
+        "manifest_sha256": "982b277731f1c82e9502012d655930cae0602bb2d1cfa396458ca66b1b8c6f11",
+        "lock_sha256": "aaca04591176ac1e3297b13b1fade9d944ed18ea8307e6468b65794b59414525",
+        "packages": [
+          {
+            "name": "clickmd",
+            "repository": "semcod/clickmd",
+            "locked": [
+              "1.1.15"
+            ],
+            "target": "1.1.15",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "costs",
+            "repository": "semcod/costs",
+            "locked": [
+              "0.2.0"
+            ],
+            "target": "0.2.0",
+            "requires_python": [
+              ">=3.9"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "goal",
+            "repository": "semcod/goal",
+            "locked": [
+              "2.2.0"
+            ],
+            "target": "2.2.0",
+            "requires_python": [
+              ">=3.12"
+            ],
+            "status": "current"
+          },
+          {
+            "name": "pfix",
+            "repository": "semcod/pfix",
+            "locked": [
+              "0.1.79"
+            ],
+            "target": "0.1.79",
+            "requires_python": [
+              ">=3.10"
+            ],
+            "status": "current"
+          }
+        ],
+        "fresh": true,
+        "application_tests_run": false
+      },
+      "freshness_retry": {
+        "run_id": 33989900424,
+        "successful_attempt": 2,
+        "first_attempt_error": "Connection reset by peer fetching clickmd metadata"
+      }
+    }
+  ]
+}
