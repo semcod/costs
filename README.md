@@ -1,10 +1,10 @@
 ## AI Cost Tracking
 
 ![PyPI](https://img.shields.io/badge/pypi-costs-blue) ![Version](https://img.shields.io/badge/version-0.2.0-blue) ![Python](https://img.shields.io/badge/python-3.9+-blue) ![License](https://img.shields.io/badge/license-Apache--2.0-green)
-![AI Cost](https://img.shields.io/badge/AI%20Cost-$2.68-orange) ![Human Time](https://img.shields.io/badge/Human%20Time-21.0h-blue) ![Model](https://img.shields.io/badge/Model-openrouter%2Fdeepseek%2Fdeepseek--v4--pro-lightgrey)
+![AI Cost](https://img.shields.io/badge/AI%20Cost-$2.68-orange) ![Human Time](https://img.shields.io/badge/Human%20Time-21.5h-blue) ![Model](https://img.shields.io/badge/Model-openrouter%2Fdeepseek%2Fdeepseek--v4--pro-lightgrey)
 
-- 🤖 **LLM usage:** $2.6792 (65 commits)
-- 👤 **Human dev:** ~$2101 (21.0h @ $100/h, 30min dedup)
+- 🤖 **LLM usage:** $2.6817 (66 commits)
+- 👤 **Human dev:** ~$2151 (21.5h @ $100/h, 30min dedup)
 
 Generated on 2026-09-05 using [openrouter/deepseek/deepseek-v4-pro](https://openrouter.ai/deepseek/deepseek-v4-pro)
 
