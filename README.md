@@ -1,12 +1,12 @@
 ## AI Cost Tracking
 
-![PyPI](https://img.shields.io/badge/pypi-costs-blue) ![Version](https://img.shields.io/badge/version-0.1.53-blue) ![Python](https://img.shields.io/badge/python-3.9+-blue) ![License](https://img.shields.io/badge/license-Apache--2.0-green)
-![AI Cost](https://img.shields.io/badge/AI%20Cost-$1.61-orange) ![Human Time](https://img.shields.io/badge/Human%20Time-17.4h-blue) ![Model](https://img.shields.io/badge/Model-openrouter%2Fdeep%2Fdeep--v4--pro-lightgrey)
+![PyPI](https://img.shields.io/badge/pypi-costs-blue) ![Version](https://img.shields.io/badge/version-0.2.0-blue) ![Python](https://img.shields.io/badge/python-3.9+-blue) ![License](https://img.shields.io/badge/license-Apache--2.0-green)
+![AI Cost](https://img.shields.io/badge/AI%20Cost-$1.61-orange) ![Human Time](https://img.shields.io/badge/Human%20Time-18.4h-blue) ![Model](https://img.shields.io/badge/Model-openrouter%2Fdeepseek%2Fdeepseek--v4--pro-lightgrey)
 
-- 🤖 **LLM usage:** $1.6114 (60 commits)
-- 👤 **Human dev:** ~$1738 (17.4h @ $100/h, 30min dedup)
+- 🤖 **LLM usage:** $1.6119 (61 commits)
+- 👤 **Human dev:** ~$1838 (18.4h @ $100/h, 30min dedup)
 
-Generated on 2026-08-28 using [openrouter/deep/deep-v4-pro](https://openrouter.ai/deep/deep-v4-pro)
+Generated on 2026-09-05 using [openrouter/deepseek/deepseek-v4-pro](https://openrouter.ai/deepseek/deepseek-v4-pro)
 
 ---
 
@@ -17,7 +17,7 @@ Track AI usage costs across your git commits with three flexible usage modes - n
 - **liteLLM Integration** - Support for 100+ AI providers via liteLLM
 - **Default: Qwen3 Coder Next** - Pre-configured with openrouter/qwen/qwen3-coder-next
 - **Zero Config** - Works out of the box, reads from `.env` file
-- **Smart Token Estimation** - Accurate cost calculation using tiktoken (OpenAI) and Anthropic tokenizer
+- **Local Token Estimation** - Model-specific tiktoken encodings with explicit approximations for other providers
 - **ROI Calculation** - Track value generated vs AI costs
 - **Date Filtering** - Analyze specific days, date ranges, or full history
 - **Auto Badges** - Automatically generate and update cost badges in README
@@ -26,13 +26,52 @@ Track AI usage costs across your git commits with three flexible usage modes - n
 
 ## Tokenization
 
-The tool uses accurate tokenization for precise cost estimation:
+The calculator estimates the cost of reviewing a Git diff. It does not reconstruct
+actual API usage from commits. Input text uses the encoding selected by tiktoken
+for supported models; other families use a local approximation.
 
-| Model | Tokenizer | Accuracy |
-|-------|-----------|----------|
-| OpenAI GPT-4/4o | tiktoken (cl100k_base) | ~99% |
-| Anthropic Claude | Anthropic SDK (local) | 100% |
-| OpenRouter/Other | tiktoken fallback | ~95% |
+| Model | Tokenizer | Interpretation |
+|-------|-----------|----------------|
+| Supported OpenAI models | Model-specific tiktoken encoding | Token count for the review prompt text |
+| Anthropic Claude | cl100k_base fallback | Approximate; no Anthropic API call |
+| Other / unknown models | cl100k_base fallback | Approximate |
+
+Output tokens remain a heuristic: the greater of 30 tokens per added line,
+25% of input tokens (rounded down), or one token. An empty diff has zero tokens
+and zero cost. Prices come from a dated snapshot of OpenRouter's public catalog, bundled in
+`src/costs/data/prices.json`. They are reference USD-per-token rates, not invoices.
+Unknown models raise `UnknownModelPrice` instead of inheriting a guessed price.
+Legacy rates for retired models are explicitly marked `unverified`. The `pricing`,
+`estimation` and `diff_stats` fields expose the source, date and method used.
+Known provider-prefixed aliases resolve to the same rate, including the old
+`openrouter/deep/deep-v4-pro` spelling of `deepseek/deepseek-v4-pro`.
+
+```bash
+costs prices                 # Show source and retrieval date
+costs prices --refresh       # Explicitly refresh the local catalog
+```
+
+New processes use the refreshed catalog. `COSTS_PRICES_FILE` selects a custom
+catalog in the same validated format. The calculator includes published long
+context input/output tiers. Tool calls, cached provider input, image/audio
+charges and provider-specific routing fees are outside this text-token estimate.
+
+Batch analysis caches token counts and diff statistics in a local SQLite database.
+The cache key includes the diff content hash, model, encoding, tiktoken version
+and estimator revision. Prices and ROI are recalculated on every run. Records
+expire after 30 days and the cache holds at most 10,000 entries. No source code
+or API keys are stored. Corrupt, locked or unavailable caches fall back to fresh
+calculation. Set `COSTS_CACHE=0` to disable or `COSTS_CACHE_DIR` to change its location
+(default: `$XDG_CACHE_HOME/costs`, otherwise `~/.cache/costs`). Summaries expose
+`cache_hits` and `cache_misses`. Git patch extraction still runs to verify inputs.
+
+History analysis reads patches in groups of at most 16 commits, compares merges
+with their first parent, and includes initial commits. Token counts include file
+headers. Tiny costs have no artificial minimum; batch time/value totals are
+rounded only after aggregation. These corrections can change previous reports.
+
+See [performance evidence and Wellmanifest adoption](docs/performance/README.md)
+for the benchmark, compatibility notes, pinned standard and validation commands.
 
 ### Token Counting Examples
 
@@ -41,8 +80,8 @@ from costs.tokenizers import count_tokens, Tokenizer
 
 # Count tokens for any model
 text = "def hello(): print('world')"
-tokens = count_tokens(text, "claude-3.5-sonnet")  # 10 tokens
-tokens = count_tokens(text, "gpt-4o")             # 10 tokens
+tokens = count_tokens(text, "claude-3.5-sonnet")  # local approximation
+tokens = count_tokens(text, "gpt-4o")             # model-specific encoding
 
 # Use tokenizer directly
 tokenizer = Tokenizer()
@@ -60,13 +99,13 @@ echo "OPENROUTER_API_KEY=YOUR_KEY" >> .env
 ```
 
 # Uses defaults from .env (Qwen3 Coder Next)
-costs analyze --repo .
+costs analyze .
 
 # Or specify directly
-costs analyze --repo . --model openrouter/qwen/qwen3-coder-next --api-key YOUR_KEY
+costs analyze . --model openrouter/qwen/qwen3-coder-next --api-key YOUR_KEY
 
 # Analyze all commits (not just AI-tagged)
-costs analyze --repo . --all
+costs analyze . --all
 ```
 
 ## Configuration
@@ -87,14 +126,15 @@ costs init
 
 ### Option 1: BYOK (Bring Your Own Key) - Free
 
-Use your own API key via OpenRouter. Costs calculated locally with real provider pricing.
+The BYOK label records that an API key was supplied. This estimator calculates
+costs locally from bundled rates; it does not send a completion request.
 
 ```bash
 # With OpenRouter key (default from .env)
-costs analyze --repo .
+costs analyze .
 
 # Explicit key
-costs analyze --repo . --api-key YOUR_KEY
+costs analyze . --api-key YOUR_KEY
 ```
 
 **Supported models via liteLLM:**
@@ -106,15 +146,16 @@ costs analyze --repo . --api-key YOUR_KEY
 - `openai/gpt-5.4-mini`
 - 100+ more via liteLLM
 
-### Option 2: Local/Ollama - Zero API Costs
+### Option 2: Local/Ollama - Local Estimates
 
-No API key needed. Estimates based on diff size using local pricing.
+No API key is needed. Estimates use tokenized diffs and bundled reference rates.
 
 ```bash
-costs --repo . --mode local
+costs analyze . --mode local
 ```
 
-**Estimation formula:** `diff_chars / 4 * 0.0001$/M tokens`
+**Cost formula:** `input_tokens * input_price + output_tokens * output_price`
+(prices in USD per token). Local/Ollama reference rates are estimates, not API charges.
 
 ## Date Filtering
 
@@ -122,19 +163,19 @@ Analyze commits for specific time periods:
 
 ```bash
 # Analyze specific day
-costs analyze --repo . --date 2024-03-15
+costs analyze . --date 2024-03-15
 
 # Analyze date range
-costs analyze --repo . --since 2024-01-01 --until 2024-03-31
+costs analyze . --since 2024-01-01 --until 2024-03-31
 
 # Analyze all commits since repository creation
-costs analyze --repo . --full-history
+costs analyze . --full-history
 
 # Analyze only AI-tagged commits (default)
-costs analyze --repo . --ai-only
+costs analyze . --ai-only
 
 # Analyze all commits (not just AI-tagged)
-costs analyze --repo . --all
+costs analyze . --all
 ```
 
 ## Badge Generation
@@ -149,22 +190,22 @@ costs auto-badge --repo .
 costs auto-badge --repo . --all
 
 # Manual badge generation
-costs badge --repo . --model openrouter/qwen/qwen3-coder-next
+costs badge . --model openrouter/qwen/qwen3-coder-next
 
 # Manual badge for all commits
-costs badge --repo . --all
+costs badge . --all
 ```
 
 This adds a badge section to README showing total cost, AI commits, and model used.
 
 # Generate markdown report with charts
-costs report --repo . --format markdown
+costs report . --format markdown
 
 # Generate HTML report
-costs report --repo . --format html
+costs report . --format html
 
 # Generate both and update README
-costs report --repo . --format both --update-readme
+costs report . --format both --update-readme
 ```
 
 ## Python API
@@ -193,7 +234,7 @@ See `examples/` directory for more usage patterns.
 ## How It Works
 
 1. **Parse git history** - Analyzes commits with optional `[ai:model]` tags
-2. **Estimate tokens** - Uses tiktoken for OpenAI models, Anthropic tokenizer for Claude, with accurate diff parsing
+2. **Estimate tokens** - Uses model-specific tiktoken encodings where supported and an explicit local approximation for Claude and other models
 3. **Calculate cost** - Multiplies tokens × model price
 4. **Generate ROI** - Estimates time saved (100 LOC/h × $100/h)
 
@@ -215,28 +256,28 @@ costs --repo . --saas-token PLACEHOLDER
 ```
 
 # Analyze last 50 commits (uses .env defaults)
-costs analyze --repo . -n 50
+costs analyze . -n 50
 
 # Use specific model via liteLLM
-costs analyze --repo . --model anthropic/claude-3.5-sonnet
+costs analyze . --model anthropic/claude-3.5-sonnet
 
 # Analyze all commits (not just AI-tagged)
-costs analyze --repo . --all
+costs analyze . --all
 
 # Analyze with date filtering
-costs analyze --repo . --since 2024-01-01 --until 2024-03-31
+costs analyze . --since 2024-01-01 --until 2024-03-31
 
 # Export to custom file
-costs analyze --repo . --output my_costs.csv
+costs analyze . --output my_costs.csv
 
 # Show repository statistics
-costs stats --repo .
+costs stats .
 
 # Generate reports
-costs report --repo . --format both --update-readme
+costs report . --format both --update-readme
 
 # Generate badge for all commits
-costs badge --repo . --all
+costs badge . --all
 
 # Auto-badge with pyproject.toml config
 costs auto-badge --repo . --all
@@ -298,15 +339,11 @@ git commit -m "[ai:anthropic/claude-3.5-sonnet] Add payment integration"
 
 ## Pricing Reference
 
-| Model | Input | Output | Tokenizer |
-|-------|-------|--------|-----------|
-| anthropic/claude-4-sonnet | $3/M | $15/M | Anthropic |
-| anthropic/claude-3.5-sonnet | $3/M | $15/M | Anthropic |
-| anthropic/claude-3.5-haiku | $0.8/M | $4/M | Anthropic |
-| openai/gpt-4o | $5/M | $15/M | tiktoken |
-| openai/gpt-5.4-mini | $0.15/M | $0.6/M | tiktoken |
-| openrouter/qwen/qwen3-coder-next | $0.50/M | $1.50/M | tiktoken |
-| ollama/* | ~$0.0001/M | ~$0.0001/M | tiktoken |
+Run `costs prices` to inspect the active catalog provenance. The bundled snapshot
+was retrieved from [OpenRouter's public models API](https://openrouter.ai/api/v1/models)
+on 2026-09-05. Refresh explicitly with `costs prices --refresh`; normal calculation
+never fetches prices automatically. Applications can still register an explicit
+custom rate in `costs.models.PRICES`.
 
 ## Business Model
 
@@ -316,7 +353,7 @@ git commit -m "[ai:anthropic/claude-3.5-sonnet] Add payment integration"
 | **SaaS** | $9/month | Unlimited, managed keys, dashboard, EU invoicing |
 
 # Run CLI
-poetry run costs analyze --repo ..
+poetry run costs analyze ..
 
 # Publish to PyPI
 poetry publish --build

@@ -3,6 +3,7 @@
 import os
 from typing import Dict
 from dotenv import load_dotenv
+from .pricing import load_catalog, UnknownModelPrice
 
 # Load environment variables from .env file
 
@@ -39,23 +40,87 @@ PRICES: Dict[str, Dict[str, float]] = {
     "ollama/*": {"input": 1e-7, "output": 1e-7},
 }
 
-def get_model_price(model: str) -> Dict[str, float]:
-    """Get pricing for a model, fallback to local if unknown."""
-    # Try exact match first
-    if model in PRICES:
-        return PRICES[model]
-    
-    # Try provider/model format
-    if "/" in model:
-        # Check if it's an OpenRouter model
-        if model.startswith("openrouter/"):
-            return PRICES.get(model, {"input": 0.5e-6, "output": 1.5e-6})
-        # Check if it's an Ollama model
-        if model.startswith("ollama/"):
-            return PRICES["ollama/*"]
-    
-    # Fallback to local pricing
-    return PRICES["local"]
+
+# Keep explicitly registered legacy rates compatible, but identify them as
+# unverified. Current catalog entries override them when the model still exists.
+_PRICE_METADATA = {
+    name: {
+        "source": "legacy bundled estimate",
+        "retrieved_at": None,
+        "status": "unverified",
+        "rates": dict(rates),
+    }
+    for name, rates in PRICES.items()
+}
+_catalog = load_catalog()
+for _name, _entry in _catalog["models"].items():
+    PRICES[_name] = {"input": _entry["input"], "output": _entry["output"]}
+    _PRICE_METADATA[_name] = {
+        "source": _catalog["source"],
+        "retrieved_at": _catalog["retrieved_at"],
+        "status": "catalog",
+        "rates": dict(PRICES[_name]),
+        "tiers": _entry.get("tiers", []),
+    }
+_ALIASES = {
+    # Compatibility for the misspelling previously shipped in tool.costs config.
+    "openrouter/deep/deep-v4-pro": "deepseek/deepseek-v4-pro",
+    "claude-4-sonnet": "anthropic/claude-sonnet-4",
+    "anthropic/claude-4-sonnet": "anthropic/claude-sonnet-4",
+    "claude-3.5-sonnet": "anthropic/claude-3.5-sonnet",
+    "claude-3.5-haiku": "anthropic/claude-3.5-haiku",
+    "claude-3-opus": "anthropic/claude-3-opus",
+    "gpt-4o": "openai/gpt-4o",
+    "gpt-4": "openai/gpt-4",
+    "gpt-5.4-mini": "openai/gpt-5.4-mini",
+}
+_ALIASES.update({"openrouter/" + name: name for name in _catalog["models"]})
+for _alias, _canonical in _ALIASES.items():
+    if _canonical in PRICES:
+        PRICES[_alias] = PRICES[_canonical]
+        _PRICE_METADATA[_alias] = _PRICE_METADATA[_canonical]
+
+
+def get_model_price_info(model: str, input_tokens: int = 0) -> dict:
+    """Resolve explicit prices and their provenance, including context tiers."""
+    name = model if model in PRICES else model.removeprefix("openrouter/")
+    if name not in PRICES and name.startswith("ollama/"):
+        name = "ollama/*"
+    if name not in PRICES and "openai/" + name in PRICES:
+        name = "openai/" + name
+    if name not in PRICES:
+        raise UnknownModelPrice(
+            f"No price for model {model!r}. Run 'costs prices --refresh' or register explicit rates in costs.models.PRICES."
+        )
+    rates = dict(PRICES[name])
+    metadata = _PRICE_METADATA.get(name, {})
+    if rates != metadata.get("rates"):
+        return {
+            "rates": rates,
+            "source": "custom registration",
+            "retrieved_at": None,
+            "status": "custom",
+            "currency": "USD",
+            "scope": "text_tokens",
+        }
+    for tier in sorted(
+        metadata.get("tiers", []), key=lambda value: value["min_prompt_tokens"]
+    ):
+        if input_tokens >= tier["min_prompt_tokens"]:
+            rates = {"input": tier["input"], "output": tier["output"]}
+    return {
+        "rates": rates,
+        "source": metadata["source"],
+        "retrieved_at": metadata["retrieved_at"],
+        "status": metadata["status"],
+        "currency": "USD",
+        "scope": "text_tokens",
+    }
+
+
+def get_model_price(model: str, input_tokens: int = 0) -> Dict[str, float]:
+    """Get USD-per-token prices. Unknown models never inherit a guessed rate."""
+    return get_model_price_info(model, input_tokens)["rates"]
 
 
 def get_openrouter_headers() -> Dict[str, str]:
@@ -63,7 +128,7 @@ def get_openrouter_headers() -> Dict[str, str]:
     return {
         "Authorization": f"Bearer {DEFAULT_OPENROUTER_API_KEY}",
         "HTTP-Referer": "https://github.com/your-org/ai-cost-tracker",
-        "X-OpenRouter-Title": os.getenv("OPENROUTER_APP_NAME", "AI Cost Tracker")
+        "X-OpenRouter-Title": os.getenv("OPENROUTER_APP_NAME", "AI Cost Tracker"),
     }
 
 

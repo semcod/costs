@@ -12,6 +12,33 @@
 - refactor(output): improve output formatting and presentation
 - test(commit-message): add tests for commit-message generator
 
+## [0.2.0] - 2026-09-05
+
+### Docs
+- Update README.md
+- Update docs/performance/README.md
+- Update docs/performance/baseline.json
+- Update docs/performance/candidate.json
+- Update docs/performance/incremental.json
+- Update docs/performance/plan.json
+- Update docs/performance/receipt.json
+
+### Test
+- Update tests/conftest.py
+- Update tests/test_cache_pricing.py
+- Update tests/test_calculation.py
+- Update tests/test_consumer_audit.py
+- Update tests/test_cost.py
+- Update tests/test_git_parser.py
+
+### Other
+- Update benchmarks/calculation.py
+- Update benchmarks/check_performance.py
+- Update benchmarks/incremental.py
+- Update scripts/audit_consumers.py
+- Update src/costs/data/prices.json
+- Update uv.lock
+
 ## [0.1.53] - 2026-07-02
 
 ### Docs

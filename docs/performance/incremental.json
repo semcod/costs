@@ -1,0 +1,75 @@
+{
+  "schema": "costs.incremental-benchmark/v1",
+  "commits": 64,
+  "samples": {
+    "cold": [
+      {
+        "wall_s": 0.05519454900058918,
+        "cpu_s": 0.055003126999999985
+      },
+      {
+        "wall_s": 0.046639680993393995,
+        "cpu_s": 0.04660708999999996
+      },
+      {
+        "wall_s": 0.05394461899413727,
+        "cpu_s": 0.05236454200000007
+      },
+      {
+        "wall_s": 0.045949866995215416,
+        "cpu_s": 0.04588467299999999
+      },
+      {
+        "wall_s": 0.04537050500221085,
+        "cpu_s": 0.04466614300000005
+      }
+    ],
+    "warm": [
+      {
+        "wall_s": 0.004754331996082328,
+        "cpu_s": 0.004757518000000016
+      },
+      {
+        "wall_s": 0.00386319198878482,
+        "cpu_s": 0.0038657810000000126
+      },
+      {
+        "wall_s": 0.0040961270133266225,
+        "cpu_s": 0.004098633000000018
+      },
+      {
+        "wall_s": 0.004043441003886983,
+        "cpu_s": 0.004046131999999925
+      },
+      {
+        "wall_s": 0.003440814994974062,
+        "cpu_s": 0.0034427649999999588
+      }
+    ]
+  },
+  "workload_sha256": "182eeb4869c3fa92aadbe7fc98807f3ae8278a8e1785147e72c5e27406fff2d5",
+  "medians": {
+    "cold": {
+      "wall_s": 0.046639680993393995,
+      "cpu_s": 0.04660708999999996
+    },
+    "warm": {
+      "wall_s": 0.004043441003886983,
+      "cpu_s": 0.004046131999999925
+    }
+  },
+  "equal_results": true,
+  "warm_cache_hits": 64,
+  "source_sha256": {
+    "/home/tom/github/semcod/costs/benchmarks/incremental.py": "6fc9b4421125231d4976c4e5f3aff9e4dfc264ab77efe2aff09de922b33ae205",
+    "src/costs/__init__.py": "cbbb66c47fed7b92012a0eb3f2eb5465f954c4ec2b94007d8a037dfa207f74bd",
+    "src/costs/cache.py": "67c9bbbf96d26d5b95ba1bf6eec04e277b3be950f4e8f6556421ee99cb4d3741",
+    "src/costs/calculator.py": "4dce8e491c19d67e49a72152ec292c7d4a114aabd9cf58f42d507a339d343218",
+    "src/costs/cli.py": "fcbc381e759117c2cbe939b399e2739eb121a31f24d4fd27ca68edf42e68fa06",
+    "src/costs/git_parser.py": "d1a8a78347b20042b3f3d901d8be011619c5b23307992a73d955078423b848cf",
+    "src/costs/metrics.py": "14425007977c0b2b4781c2bc6ab8a0a9a11dd6d9a0cf3d4cce1854ba17f1d41c",
+    "src/costs/models.py": "37ba8e7b3566489a4d068958e42a2e554431e4af61da2ba389da654b9b6c5cc4",
+    "src/costs/pricing.py": "3597dffd5824b57429d2bd420f452710f7e5474abef5864981009150ef629e33",
+    "src/costs/tokenizers.py": "20410eedb9e4070968709489550bd69f1a98945870b7837f91563aecb2d75dfa"
+  }
+}

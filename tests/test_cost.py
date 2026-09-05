@@ -15,73 +15,46 @@ def test_import():
     from src.costs import cli  # noqa: F401
 
 
-def test_aicost_auto_badge():
-    """Test that aicost auto-badge command runs successfully.
+def test_cli_version_matches_package():
+    from typer.testing import CliRunner
+    from src.costs import __version__
+    from src.costs.cli import app
 
-    This test automatically calculates costs and updates the badge,
-    ensuring the cost calculation pipeline works end-to-end.
-    """
+    result = CliRunner().invoke(app, ["--version"])
+    assert result.exit_code == 0
+    assert result.stdout.strip() == f"costs {__version__}"
+
+
+def test_aicost_auto_badge(tmp_path):
+    """Exercise the current checkout against an isolated repository."""
+    import os
+    import git
+
+    repo = git.Repo.init(tmp_path)
+    (tmp_path / "README.md").write_text("# Demo\n", encoding="utf-8")
+    (tmp_path / "pyproject.toml").write_text(
+        '[project]\nname = "demo"\nversion = "1.0.0"\n'
+        '[tool.costs]\ndefault_model = "claude-3.5-sonnet"\n'
+        "badge = true\nupdate_readme = true\n",
+        encoding="utf-8",
+    )
+    repo.index.add(["README.md", "pyproject.toml"])
+    actor = git.Actor("Test", "test@example.invalid")
+    repo.index.commit("[ai:test] initial", author=actor, committer=actor)
     repo_root = Path(__file__).parent.parent
-
-    # Check if pyproject.toml has [tool.costs] config
-    pyproject_path = repo_root / "pyproject.toml"
-    if not pyproject_path.exists():
-        print("⚠️  pyproject.toml not found, skipping auto-badge test")
-        return
-
-    pyproject_content = pyproject_path.read_text()
-    if "[tool.costs]" not in pyproject_content:
-        print("⚠️  [tool.costs] not configured, skipping auto-badge test")
-        return
-
-    # Find costs command
-    costs_cmd = None
-    for cmd in [
-        "costs",
-        str(repo_root / ".venv" / "bin" / "costs"),
-        str(repo_root / "venv" / "bin" / "costs"),
-    ]:
-        result = subprocess.run(
-            ["which", cmd] if "/" not in cmd else ["test", "-f", cmd],
-            capture_output=True,
-            shell=False if "/" not in cmd else True,
-        )
-        if result.returncode == 0 or Path(cmd).exists():
-            costs_cmd = cmd
-            break
-
-    if not costs_cmd:
-        # Try to use python -m
-        result = subprocess.run(
-            [
-                sys.executable,
-                "-m",
-                "src.costs.cli",
-                "auto-badge",
-                "--repo",
-                str(repo_root),
-            ],
-            cwd=str(repo_root),
-            capture_output=True,
-            text=True,
-        )
-    else:
-        result = subprocess.run(
-            [costs_cmd, "auto-badge", "--repo", str(repo_root)],
-            cwd=str(repo_root),
-            capture_output=True,
-            text=True,
-        )
-
-    # Command should succeed (exit code 0) or exit with 0 if no AI commits
-    assert result.returncode in [0], f"costs auto-badge failed: {result.stderr}"
-
-    # Verify README.md exists and potentially has badge
-    readme_path = repo_root / "README.md"
-    if readme_path.exists():
-        readme_content = readme_path.read_text()
-        # Check if badge marker or cost info is present
-        assert "AI Cost" in readme_content or "cost" in readme_content.lower() or True
+    env = {**os.environ, "PYTHONPATH": str(repo_root / "src")}
+    for name in ("OPENROUTER_API_KEY", "ANTHROPIC_API_KEY", "SAAS_TOKEN", "LLM_MODEL"):
+        env.pop(name, None)
+    result = subprocess.run(
+        [sys.executable, "-m", "costs.cli", "auto-badge", "--repo", str(tmp_path)],
+        cwd=tmp_path,
+        env=env,
+        capture_output=True,
+        text=True,
+        timeout=60,
+    )
+    assert result.returncode == 0, result.stderr
+    assert "AI Cost" in (tmp_path / "README.md").read_text()
 
 
 def test_cost_calculator_imports():

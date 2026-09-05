@@ -1,0 +1,76 @@
+{
+  "status": "accepted",
+  "scope": "Local source candidate and representative benchmark; no deployment performed",
+  "standard": {
+    "adopt": "wellmanifest/performance",
+    "revision": "1b9b259f90adc480257ec6a13df30d7be549db4d"
+  },
+  "plan": {
+    "path": "docs/performance/plan.json",
+    "sha256": "5d39c09eba567ae113075103a55ca3cd2aa338daab44b679b9ecae93256025cb"
+  },
+  "json_schema_validation": "passed with upstream performance-plan.schema.v1.json",
+  "checks": [
+    {
+      "command": [
+        "/home/tom/github/semcod/koru/.venv/bin/python3",
+        "/home/tom/github/wellmanifest/performance/src/performance.py",
+        "validate",
+        "docs/performance/plan.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"findings\": [],\n  \"ok\": true,\n  \"schema\": \"performance.report/v1\"\n}"
+    },
+    {
+      "command": [
+        "/home/tom/github/semcod/koru/.venv/bin/python3",
+        "benchmarks/check_performance.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: evidence digests, workload, environment, source, samples and budgets"
+    },
+    {
+      "command": [
+        "/home/tom/github/semcod/koru/.venv/bin/python3",
+        "-m",
+        "ruff",
+        "check",
+        "src/costs/calculator.py",
+        "src/costs/tokenizers.py",
+        "src/costs/git_parser.py",
+        "src/costs/models.py",
+        "src/costs/commands/analyze.py",
+        "tests",
+        "benchmarks"
+      ],
+      "exit_code": 0,
+      "stdout": "All checks passed!"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": ""
+    }
+  ],
+  "tests": {
+    "command": "PYTHONPATH=src python3 -m pytest -q",
+    "exit_code": 0,
+    "summary": "44 passed in 5.32s"
+  },
+  "files": {
+    "src/costs/calculator.py": "8c2c963606b35ad6f608280a8b3a8f66c38b1996672d8f4b89edef6a0e902c93",
+    "src/costs/tokenizers.py": "20410eedb9e4070968709489550bd69f1a98945870b7837f91563aecb2d75dfa",
+    "src/costs/git_parser.py": "d1a8a78347b20042b3f3d901d8be011619c5b23307992a73d955078423b848cf",
+    "src/costs/models.py": "680ed06bd824b855c1e393f53f8ab3e1c014d426ab9cc09e0307d08abadd0e55",
+    "src/costs/commands/analyze.py": "1becaa72d97d39ed234d301287a20914d38e04ccb5f497884af1f7d71568d13f",
+    "tests/test_calculation.py": "66fa7cc19a2285ee563c721457a1944d413ecee24c8ff4dad024af46489bf26f",
+    "tests/test_cost.py": "97d58d22e92cf4e4b9bb6f58732ebc26a900b1d2e583db900cca2ac86b027f87",
+    "tests/test_git_parser.py": "a31a21351e9788b1e9f1264f8085c9646bd282d30c8f4a274105102f0f88360e",
+    "benchmarks/calculation.py": "ef0c47094487155d9a12c38c174dfb370da72d5ebdaf0ceb146b5a4b38bcdbf5",
+    "benchmarks/check_performance.py": "5bc7d3d87f0354d1ceca0c077f6ea2bc66d84f9e5819448e187d9ad7b8e5383d"
+  }
+}

@@ -1,0 +1,25 @@
+name: Calculator correctness and cache
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.9', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -e . pytest
+      - run: python -m pytest -q
+      - run: python benchmarks/check_performance.py --historical
+      - run: python benchmarks/incremental.py --output /tmp/incremental.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: incremental-python-${{ matrix.python }}
+          path: /tmp/incremental.json

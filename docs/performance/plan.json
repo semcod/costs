@@ -1,0 +1,255 @@
+{
+  "schema": "performance.plan/v1",
+  "subject": {
+    "repository": "semcod/costs",
+    "revision": "d77d31004ddc92141577c0577046150ccaca452c",
+    "component": "Git patch extraction and local cost calculation"
+  },
+  "profiles": [
+    "repository"
+  ],
+  "workload": {
+    "id": "costs-30-commits-v1",
+    "description": "30 newest commits at the subject revision, 2216592 bytes of canonical patches, Claude local approximation. No provider inference calls.",
+    "method": "Linux perf_counter wall time, RUSAGE_SELF plus RUSAGE_CHILDREN CPU time, process peak RSS. Median of nine samples for parse, fixed-patch calculation and the complete pipeline.",
+    "warmup": "One full pass per scenario before the nine measured samples. Each variant runs in a fresh Python process with the same environment and harness.",
+    "samples": 9,
+    "evidence": {
+      "uri": "benchmarks/calculation.py",
+      "sha256": "ef0c47094487155d9a12c38c174dfb370da72d5ebdaf0ceb146b5a4b38bcdbf5"
+    }
+  },
+  "baseline": {
+    "workloadId": "costs-30-commits-v1",
+    "metrics": [
+      {
+        "name": "peak_rss",
+        "unit": "bytes",
+        "value": 146591744
+      },
+      {
+        "name": "parse_wall",
+        "unit": "s",
+        "value": 0.5512919470056659
+      },
+      {
+        "name": "parse_cpu",
+        "unit": "s",
+        "value": 0.41568499999999986
+      },
+      {
+        "name": "calculate_wall",
+        "unit": "s",
+        "value": 0.6106297020014608
+      },
+      {
+        "name": "calculate_cpu",
+        "unit": "s",
+        "value": 0.5604279999999999
+      },
+      {
+        "name": "pipeline_wall",
+        "unit": "s",
+        "value": 1.4094229259935673
+      },
+      {
+        "name": "pipeline_cpu",
+        "unit": "s",
+        "value": 1.091196
+      }
+    ],
+    "evidence": {
+      "uri": "docs/performance/baseline.json",
+      "sha256": "1053f06adb059c65642e1f1944c445309bd654870f1efe485c71d7fd33ff9916"
+    }
+  },
+  "candidate": {
+    "workloadId": "costs-30-commits-v1",
+    "metrics": [
+      {
+        "name": "peak_rss",
+        "unit": "bytes",
+        "value": 119623680
+      },
+      {
+        "name": "parse_wall",
+        "unit": "s",
+        "value": 0.17440151399932802
+      },
+      {
+        "name": "parse_cpu",
+        "unit": "s",
+        "value": 0.13661499999999993
+      },
+      {
+        "name": "calculate_wall",
+        "unit": "s",
+        "value": 0.530457620989182
+      },
+      {
+        "name": "calculate_cpu",
+        "unit": "s",
+        "value": 0.5148420000000007
+      },
+      {
+        "name": "pipeline_wall",
+        "unit": "s",
+        "value": 0.8965978899941547
+      },
+      {
+        "name": "pipeline_cpu",
+        "unit": "s",
+        "value": 0.7394770000000008
+      }
+    ],
+    "evidence": {
+      "uri": "docs/performance/candidate.json",
+      "sha256": "077a319445e6dfaf5e9997665755ead80762e178a8d42c2ae8126e74ed62ec25"
+    }
+  },
+  "budgets": [
+    {
+      "metric": "pipeline_wall",
+      "unit": "s",
+      "comparison": "at_most",
+      "threshold": 1.2684806333942107
+    },
+    {
+      "metric": "pipeline_cpu",
+      "unit": "s",
+      "comparison": "at_most",
+      "threshold": 0.9820764000000001
+    },
+    {
+      "metric": "parse_cpu",
+      "unit": "s",
+      "comparison": "at_most",
+      "threshold": 0.3325479999999999
+    },
+    {
+      "metric": "calculate_cpu",
+      "unit": "s",
+      "comparison": "at_most",
+      "threshold": 0.6164708
+    },
+    {
+      "metric": "peak_rss",
+      "unit": "bytes",
+      "comparison": "at_most",
+      "threshold": 146591744
+    }
+  ],
+  "controls": [
+    {
+      "kind": "repository_working_set",
+      "target": "benchmark history input",
+      "limit": 100,
+      "unit": "count",
+      "mechanism": "Explicit commit ceiling and 20 MB workload rejection, no recursive filesystem scan",
+      "verification": "Benchmark argument validation and recorded patch byte count",
+      "exception": ""
+    },
+    {
+      "kind": "request_amplification",
+      "target": "Git patch extraction",
+      "limit": 16,
+      "unit": "records",
+      "mechanism": "One sequential Git show per group of at most 16 selected commits",
+      "verification": "Batched patches equal individual reads across batch boundaries",
+      "exception": ""
+    },
+    {
+      "kind": "concurrency",
+      "target": "Git patch extraction",
+      "limit": 1,
+      "unit": "count",
+      "mechanism": "Synchronous bounded groups, no worker pool or pending task queue",
+      "verification": "Source review and pipeline regression tests",
+      "exception": ""
+    },
+    {
+      "kind": "refresh_cache",
+      "target": "tokenizer model metadata",
+      "limit": 32,
+      "unit": "records",
+      "mechanism": "LRU by model name, immutable encoding mapping for process lifetime, eviction or process restart invalidates, no source text or credentials cached",
+      "verification": "Bounded cache declaration and local tokenizer tests",
+      "exception": ""
+    },
+    {
+      "kind": "process_resource",
+      "target": "benchmark process peak RSS",
+      "limit": 146591744,
+      "unit": "bytes",
+      "mechanism": "Measured memory acceptance gate before accepting the local candidate",
+      "verification": "Candidate peak RSS does not exceed baseline",
+      "exception": ""
+    }
+  ],
+  "invariants": [
+    {
+      "id": "patch-correctness",
+      "kind": "functional",
+      "verification": "tests/test_git_parser.py compares root, merge, rename, deletion, binary and batched diffs with Git",
+      "required": true
+    },
+    {
+      "id": "arithmetic",
+      "kind": "functional",
+      "verification": "tests/test_calculation.py verifies exact small costs, zero work, invalid inputs and rounding after aggregation",
+      "required": true
+    },
+    {
+      "id": "estimation-contract",
+      "kind": "compatibility",
+      "verification": "Existing result keys remain, new estimation and diff_stats fields are additive, documented corrections are checked by regression tests",
+      "required": true
+    },
+    {
+      "id": "local-boundary",
+      "kind": "security",
+      "verification": "Provider clients are forbidden in local estimation tests and external Git diff and textconv helpers are disabled",
+      "required": true
+    },
+    {
+      "id": "bounded-resources",
+      "kind": "resource",
+      "verification": "benchmarks/check_performance.py verifies measured CPU and memory budgets and evidence identity",
+      "required": true
+    },
+    {
+      "id": "execution-authority",
+      "kind": "authority",
+      "verification": "Local changes authorized by the user, no deployment, publication or shared repository mutation",
+      "required": true
+    }
+  ],
+  "strategy": {
+    "outcome": "same_language",
+    "rationale": "Profiled Git startup and native tokenization dominate runtime. Reduce Git calls, eliminate duplicate diff scans and failed SDK initialization without adding parallel work.",
+    "changedPaths": [
+      "src/costs/calculator.py",
+      "src/costs/tokenizers.py",
+      "src/costs/git_parser.py",
+      "src/costs/models.py",
+      "src/costs/commands/analyze.py"
+    ],
+    "compatibility": "Preserve existing API fields and filter order. Correct root patches, literal plus and minus lines, model encodings and aliases, zero costs, aggregation rounding and finite ROI formatting. Add estimation metadata. See regression tests."
+  },
+  "rollout": {
+    "mechanism": "Local source candidate with regression suite and benchmark budget gate",
+    "scope": "Local calculator and Git parser, 30 commit measurement fixture",
+    "observationSeconds": 60,
+    "abortThreshold": "Any regression test or declared performance budget failure"
+  },
+  "rollback": {
+    "mechanism": "Restore only the implementation paths from the subject revision and rerun the same workload",
+    "scope": "Five changed implementation files, preserve unrelated user changes and evidence",
+    "observationSeconds": 60,
+    "abortThreshold": "Functional tests fail or baseline workload identity changes"
+  },
+  "authority": {
+    "requestOnly": true,
+    "executionGrantEmbedded": false
+  }
+}

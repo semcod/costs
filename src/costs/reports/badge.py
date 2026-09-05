@@ -2,12 +2,12 @@
 
 import re
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 from datetime import datetime
 from ..metrics import calculate_human_time
 
 
-def _read_project_version(repo_path: Path) -> str | None:
+def _read_project_version(repo_path: Path) -> Optional[str]:
     pyproject_path = repo_path / "pyproject.toml"
     if pyproject_path.is_file():
         match = re.search(

@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [project]
 name = "costs"
-version = "0.1.53"
+version = "0.2.0"
 description = "Zero-config AI cost calculator per commit/model with liteLLM"
 readme = "README.md"
 license = "Apache-2.0"
@@ -21,7 +21,8 @@ dependencies = [
     "litellm>=1.0",
     "python-dotenv>=1.0",
     "tiktoken>=0.7",
-    "anthropic>=0.30"
+    "anthropic>=0.30",
+    "tomli>=2.0; python_version < '3.11'"
 ]
 
 [project.scripts]
@@ -29,6 +30,7 @@ costs = "costs.cli:main"
 
 [tool.poetry]
 packages = [{include = "costs", from = "src"}]
+include = [{path = "src/costs/data/prices.json", format = ["sdist", "wheel"]}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -40,6 +42,7 @@ litellm = "^1.0"
 python-dotenv = "^1.0"
 tiktoken = "^0.7"
 anthropic = "^0.30"
+tomli = {version = ">=2.0", python = "<3.11"}
 
 [tool.poetry.scripts]
 costs = "costs.cli:main"
@@ -61,7 +64,7 @@ readme_path = "README.md"  # Path to README file
 badge_color_thresholds = { low = 1.0, medium = 5.0, high = 10.0, critical = 50.0 }
 
 # Analysis configuration
-default_model = "openrouter/deep/deep-v4-pro"
+default_model = "openrouter/deepseek/deepseek-v4-pro"
 analysis_mode = "byok"  # byok, local, saas
 full_history = false  # Analyze full git history by default
 max_commits = 1000  # Maximum commits to analyze

@@ -22,11 +22,11 @@ jobs:
         python-version: '3.11'
     
     - name: Install costs
-      run: pip install costs
+      run: python -m pip install --upgrade costs
     
     - name: Update AI Cost Badge
       run: |
-        aicost auto-badge --repo .
+        costs auto-badge --repo .
       env:
         OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
     

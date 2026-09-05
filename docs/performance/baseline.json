@@ -1,0 +1,299 @@
+{
+  "workload": {
+    "revision": "d77d31004ddc92141577c0577046150ccaca452c",
+    "commits": [
+      [
+        "d77d31004ddc92141577c0577046150ccaca452c",
+        "b2c9c3969c6065f8af035ca80cfa9be755e24483a6acad199249006b0dcf9004"
+      ],
+      [
+        "1a17b0aa40690ab1b62870554e39c5a03b88e158",
+        "d71630b2ba7425728718591fbe205f07ae52cc2623619d3d5859299cf58c2047"
+      ],
+      [
+        "5ef0d7d1683e520aeb01ef7ccd1b0f9bc6ed440d",
+        "36ac7bcebbf894491d3f71988cadbe693aea1d4f95d792ae5799ecbabf042b54"
+      ],
+      [
+        "1b420d73956975ea670245128daf581926bd65a6",
+        "417dd68217bf947a7ecf95cdbd7d19ca87a0f7ae058e47c41a62b38c4912073f"
+      ],
+      [
+        "d383625e8894256389df515bccf8467a937f81b2",
+        "3293236f855f82bb7716113b3fb2c358e5af38de4ae52adfe8a31aec90bb3167"
+      ],
+      [
+        "3f882897edc5f5d7cf8b9b80952c6768c1a9a05f",
+        "7461ffee8e89dd4d48963598a8620d9346054c0fbf0673384c0eaed099744695"
+      ],
+      [
+        "226cb99158555f0c96069f8a19640a21454f1f2f",
+        "b71bf4f6ae0d52552daa7d53121753220c20b24c3a3dd991faf3aec0e9c8f309"
+      ],
+      [
+        "db687575743015abd3f80bb6c90861c30d3c2898",
+        "195c1c18a715d44fbbeb2a957fc056e6bc4756129e0926620702fcb40aa1c7a5"
+      ],
+      [
+        "4b463670b2a13448a0b0932ef64b6882541c38d4",
+        "86966513f661b66e7a6056809d037d3db7d54d865f72211084e2271e46453b8c"
+      ],
+      [
+        "81370ce46b7c3112b6eb244408bdeeb16237879b",
+        "387ebef0a77716f7c42668c51879c3b9f4c2afa89a3008fc16253e4dd2a9dc5a"
+      ],
+      [
+        "ea80d2441c2a9114a8dd4794abeab04a38ba1143",
+        "e23d2ecd5d27f789e09fab8c4edd3a64d593ea29f17b83923e48edb9d31422fa"
+      ],
+      [
+        "ffe3cf2f97c55d2a2f7eebe97bdf5b93955a25e7",
+        "03fe63c253782862b7b7216776067e20a7e7cff8c2333b1bad0123a536034579"
+      ],
+      [
+        "c76999a733f73668c2cb41933f7c4218a6da053f",
+        "7f1525614d6f52fad63fa3502f34e4b1a846501bb5cc246876c23e919b6df4a3"
+      ],
+      [
+        "9f8782a4cd6d1cf85fe6e740c45d45ec13dc663e",
+        "e356531023bad22e4b5b2bb90e05ac0bb8a36b698a102de00312ae731fc1c19a"
+      ],
+      [
+        "810b0aa6d79a2ae60646a8ee2143a7967b0ed6e6",
+        "a76f7a452fe07373478e2ea8dabd4d227f565fd378e494182b0788b940f2ff31"
+      ],
+      [
+        "1bb9cd97e43f516ffc914490f841a908f9dc5fe9",
+        "b8a9513d2761c643400a9b39feeb45e2e8149358e734e7bc4f6c2c6f431b9a83"
+      ],
+      [
+        "7ecc5bcaf0fb2cf4976d26050619113642d4d719",
+        "6ac5e1814e9fb10a2e12c9bed59fcecdfa45a3e31c6c164ac9b970feb633ee2e"
+      ],
+      [
+        "be070e36a1167291478300170b053b43aea96027",
+        "07af13057044139e9a5389892e5cac6e5e567530691b7e99bef546e14daf52e9"
+      ],
+      [
+        "38512f2dc15621b30db7f22dedebabc265eed50f",
+        "4bcbf533af48330ed0065fc3fb9e63d9dc0176a5314bb5f4cde7845bb0c6f0fe"
+      ],
+      [
+        "06acfab7d1d0df58149fac7743210ba54bdf02aa",
+        "cf0faadb402cbc8643f73feb4b5442121fa661d686a949912166fabbf20b4db5"
+      ],
+      [
+        "08114c58aacde5f594d6e59d1a2976a7942d4233",
+        "a320d5564f45935779c56d0a7d78b088a93942c8b79a952097aa790aed7a1672"
+      ],
+      [
+        "1d8300a178b2a972295027154176f41154641057",
+        "453c7f6a3609ace4df54df89fbfed57f3dd9b70042ebd663031a74a43d167c9e"
+      ],
+      [
+        "4b82ee758c7c4340a0ae59a043a92bfa3ca70999",
+        "31764872101a228d7c337891f585af5afde2da768d48c058f8a695a3d400ac3f"
+      ],
+      [
+        "bd7a2210015d53a36e013abb5f95920a10490547",
+        "0935e1637ead6010923ca29b1727cd344f1edfc00083b7662d664284753429dc"
+      ],
+      [
+        "f6ddba0a61309c354aa4d44ac97854da305a9837",
+        "d415db6ccea82116cb5bd076ab6ab318f7303286cfb0e5c7b29996482d4430e8"
+      ],
+      [
+        "a70f8c85934252f77732dff2bb58f604e1c86d5a",
+        "236609de6776f77c4a02084c135f0fa38aafcb22c444cf676c34b6d847bea6c8"
+      ],
+      [
+        "b9b88b106feefe7f9865a5112c1fb3498e31ad05",
+        "0ad30ba7179a8e2ae0d865acad3e236120dab5a9c4ca54a5f60a7c9cf3d49ac2"
+      ],
+      [
+        "8ab2f0c0c8180214727e44d6680dfffad5f23e4a",
+        "61f0a33cac1a4050088001a51973323fe58c18e3b624aab91ef58b40a507c6a7"
+      ],
+      [
+        "3bde0a3a123c3a3711b5e1683f807ef6884683f4",
+        "e528fe08421b37fb450f82a04f4d45d66da4e45485e2a9cc54522224d403ab1d"
+      ],
+      [
+        "fcc6a67971b0845e6531814c64e2d3c046d047af",
+        "6d99926cf2cc5dce6a5c42de4097be308dba2e10a5935e39a28d6c36cc10ecf9"
+      ]
+    ],
+    "patch_bytes": 2216592,
+    "model": "claude-3.5-sonnet",
+    "samples": 9,
+    "warmup": "one complete pass per scenario"
+  },
+  "workload_sha256": "86c01809c62033b1e06c75e64b43357d2a566c6cb21b33ca25a844889389289c",
+  "environment": {
+    "python": "3.13.7",
+    "platform": "Linux-6.17.0-41-generic-x86_64-with-glibc2.42",
+    "dependencies": {
+      "GitPython": "3.1.58",
+      "tiktoken": "0.13.0",
+      "anthropic": "0.120.2"
+    }
+  },
+  "source_sha256": {
+    "__init__.py": "cbbb66c47fed7b92012a0eb3f2eb5465f954c4ec2b94007d8a037dfa207f74bd",
+    "calculator.py": "a9179624ec747a8e1bb67507186a3a340a29b38f07d07a1fec176f1ebb1c48b4",
+    "cli.py": "5afe6a823d36c1d8b027481088a395853613d3cccf3c6aa40f8b783f8e78eff2",
+    "git_parser.py": "2adb574417d141c4ebf07395a28d55c51e162f199f04f8558c176c8b91c2018b",
+    "metrics.py": "14425007977c0b2b4781c2bc6ab8a0a9a11dd6d9a0cf3d4cce1854ba17f1d41c",
+    "models.py": "78a64f4826f3abe69e0351165cbc3a0678ae15de6d8cdfb0531af52ac71a7197",
+    "tokenizers.py": "542242ebdd96737510704364cb5777d63fe323ca5ee5bb3bcf93b22c44df73c2"
+  },
+  "measurements": {
+    "parse": {
+      "samples": [
+        {
+          "wall_s": 0.6560793910030043,
+          "cpu_s": 0.4108280000000001
+        },
+        {
+          "wall_s": 0.5689845220040297,
+          "cpu_s": 0.43601
+        },
+        {
+          "wall_s": 0.7769156440044753,
+          "cpu_s": 0.43445899999999993
+        },
+        {
+          "wall_s": 0.5039755400066497,
+          "cpu_s": 0.4028930000000006
+        },
+        {
+          "wall_s": 0.5270641410024837,
+          "cpu_s": 0.41823699999999997
+        },
+        {
+          "wall_s": 0.6909285570000065,
+          "cpu_s": 0.40767400000000054
+        },
+        {
+          "wall_s": 0.5300128610106185,
+          "cpu_s": 0.4197120000000001
+        },
+        {
+          "wall_s": 0.5512919470056659,
+          "cpu_s": 0.41568499999999986
+        },
+        {
+          "wall_s": 0.43493561098875944,
+          "cpu_s": 0.39262700000000006
+        }
+      ],
+      "median_wall_s": 0.5512919470056659,
+      "median_cpu_s": 0.41568499999999986
+    },
+    "calculate": {
+      "samples": [
+        {
+          "wall_s": 0.5646486840123544,
+          "cpu_s": 0.551018
+        },
+        {
+          "wall_s": 0.5510637970000971,
+          "cpu_s": 0.5177250000000004
+        },
+        {
+          "wall_s": 0.5783689769887133,
+          "cpu_s": 0.5128599999999999
+        },
+        {
+          "wall_s": 0.5197354929987341,
+          "cpu_s": 0.5082430000000002
+        },
+        {
+          "wall_s": 0.6323357520013815,
+          "cpu_s": 0.5669360000000001
+        },
+        {
+          "wall_s": 0.6106297020014608,
+          "cpu_s": 0.5604279999999999
+        },
+        {
+          "wall_s": 0.6284767249890137,
+          "cpu_s": 0.5617679999999989
+        },
+        {
+          "wall_s": 0.8139251999964472,
+          "cpu_s": 0.6503110000000003
+        },
+        {
+          "wall_s": 0.9509567380009685,
+          "cpu_s": 0.6745889999999992
+        }
+      ],
+      "median_wall_s": 0.6106297020014608,
+      "median_cpu_s": 0.5604279999999999,
+      "summary": {
+        "total_commits": 30,
+        "total_cost": 10.3412,
+        "total_cost_formatted": "$10.3412",
+        "total_hours_saved": 176.53,
+        "total_value_generated": 17652.8,
+        "average_roi": "\u221e",
+        "model": "claude-3.5-sonnet",
+        "mode": "local"
+      }
+    },
+    "pipeline": {
+      "samples": [
+        {
+          "wall_s": 2.0674956959992414,
+          "cpu_s": 1.1026310000000006
+        },
+        {
+          "wall_s": 1.3829124999901978,
+          "cpu_s": 1.0962429999999976
+        },
+        {
+          "wall_s": 1.3584664429945406,
+          "cpu_s": 1.042421000000001
+        },
+        {
+          "wall_s": 1.9298582069895929,
+          "cpu_s": 1.091196
+        },
+        {
+          "wall_s": 1.8955366579903057,
+          "cpu_s": 1.1439330000000005
+        },
+        {
+          "wall_s": 1.482944661998772,
+          "cpu_s": 1.096784000000003
+        },
+        {
+          "wall_s": 1.1833224939909996,
+          "cpu_s": 0.9523099999999936
+        },
+        {
+          "wall_s": 1.4094229259935673,
+          "cpu_s": 1.028487000000002
+        },
+        {
+          "wall_s": 1.347641950007528,
+          "cpu_s": 1.0342610000000008
+        }
+      ],
+      "median_wall_s": 1.4094229259935673,
+      "median_cpu_s": 1.091196,
+      "summary": {
+        "total_commits": 30,
+        "total_cost": 10.2846,
+        "total_cost_formatted": "$10.2846",
+        "total_hours_saved": 176.53,
+        "total_value_generated": 17652.8,
+        "average_roi": "\u221e",
+        "model": "claude-3.5-sonnet",
+        "mode": "local"
+      }
+    }
+  },
+  "peak_rss_bytes": 146591744
+}
