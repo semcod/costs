@@ -1,6 +1,6 @@
 # Archiwum aktualizacji zależności costs
 
-Historyczne dowody wydań costs i aktualizacji konsumentów pozostają w tym repozytorium. Kanoniczny [raport przekrojowy](https://github.com/subactor/docs/blob/5abed8d18b12e0cebb94754602c0af4bb8df4e1e/architecture/analysis/internal-dependencies.md) należy do `subactor/docs`; odnośnik wskazuje commit wersji 4, a bieżący stan publikacji jest dostępny w [PR #30](https://github.com/subactor/docs/pull/30). Właścicielem wykonawcy aktualizacji jest `semcod/goal`.
+Historyczne dowody wydań costs i aktualizacji konsumentów pozostają w tym repozytorium. Kanoniczny [raport przekrojowy](https://github.com/subactor/docs/blob/main/architecture/analysis/internal-dependencies.md) należy do `subactor/docs`; ten indeks prowadzi do jego bieżącej wersji. Dokładne rewizje i dowody znajdują się w raporcie, a starsze obserwacje zachowuje [historia Git dokumentu](https://github.com/subactor/docs/commits/main/architecture/analysis/internal-dependencies.md). Właścicielem wykonawcy aktualizacji jest `semcod/goal`.
 
 - [Raport wdrożenia z 2026-09-05](rollout-2026-09-05.md) — wykonane zmiany, wyniki kontroli i pozostały zakres.
 - [Dowody w JSON](rollout-2026-09-05.json) — wersje, SHA256 publikacji, commity, PR-y i uruchomienia CI.
