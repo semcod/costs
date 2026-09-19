@@ -27,7 +27,7 @@ tickets:
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -48,13 +48,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-002:
     id: DOC-002
     title: 'Remove empty section: [0.1.10] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -75,13 +76,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-003:
     id: DOC-003
     title: 'Remove empty section: [0.1.10] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -102,13 +104,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-004:
     id: DOC-004
     title: 'Remove empty section: [0.1.10] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -129,13 +132,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-005:
     id: DOC-005
     title: 'Remove empty section: [0.1.10] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -156,13 +160,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-006:
     id: DOC-006
     title: 'Remove empty section: [0.1.10] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -183,13 +188,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-007:
     id: DOC-007
     title: 'Remove empty section: [0.1.10] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -210,13 +216,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-008:
     id: DOC-008
     title: 'Remove empty section: [Unreleased]'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -237,13 +244,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-009:
     id: DOC-009
     title: 'Remove empty section: [0.1.48] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -264,6 +272,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-010:
     id: DOC-010
     title: 'Fix documentation issue: Docs'
@@ -288,13 +297,14 @@ tickets:
     - type: keep
       confidence: 0.0
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["60-64", "76-88", "202-205", "264-269", "282-288", "302-309", "310-314", "351-358", "372-376", "416-423"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-011:
     id: DOC-011
     title: 'Remove empty section: [0.1.47] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -315,13 +325,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-012:
     id: DOC-012
     title: 'Remove empty section: [0.1.46] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -342,13 +353,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-013:
     id: DOC-013
     title: 'Remove empty section: [0.1.45] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -369,13 +381,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-014:
     id: DOC-014
     title: 'Remove empty section: [0.1.44] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -396,13 +409,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-015:
     id: DOC-015
     title: 'Remove empty section: [0.1.43] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -423,6 +437,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-016:
     id: DOC-016
     title: 'Remove empty section: Other'
@@ -447,13 +462,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["50-52"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-017:
     id: DOC-017
     title: 'Remove empty section: [0.1.41] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -474,6 +490,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-018:
     id: DOC-018
     title: 'Fix documentation issue: Docs'
@@ -498,13 +515,14 @@ tickets:
     - type: keep
       confidence: 0.0
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["60-64", "76-88", "202-205", "264-269", "282-288", "302-309", "310-314", "351-358", "372-376", "416-423"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-019:
     id: DOC-019
     title: 'Remove empty section: [0.1.40] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -525,13 +543,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-020:
     id: DOC-020
     title: 'Remove empty section: [0.1.39] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -552,6 +571,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-021:
     id: DOC-021
     title: 'Fix documentation issue: Docs'
@@ -576,13 +596,14 @@ tickets:
     - type: keep
       confidence: 0.0
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["60-64", "76-88", "202-205", "264-269", "282-288", "302-309", "310-314", "351-358", "372-376", "416-423"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-022:
     id: DOC-022
     title: 'Remove empty section: [0.1.38] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -603,6 +624,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-023:
     id: DOC-023
     title: 'Remove empty section: Docs'
@@ -627,13 +649,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["44-46", "55-57"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-024:
     id: DOC-024
     title: 'Remove empty section: [0.1.37] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -654,13 +677,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-025:
     id: DOC-025
     title: 'Remove empty section: [0.1.36] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -681,13 +705,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-026:
     id: DOC-026
     title: 'Remove empty section: [0.1.35] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -708,13 +733,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-027:
     id: DOC-027
     title: 'Remove empty section: [0.1.34] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -735,6 +761,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-028:
     id: DOC-028
     title: 'Fix documentation issue: Docs'
@@ -759,11 +786,12 @@ tickets:
     - type: keep
       confidence: 0.0
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["60-64", "76-88", "202-205", "264-269", "282-288", "302-309", "310-314", "351-358", "372-376", "416-423"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-029:
     id: DOC-029
     title: 'Remove duplicate: Other'
     description: ~83% similar to /home/tom/github/semcod/costs/CHANGELOG.md:226
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -783,13 +811,14 @@ tickets:
     - type: delete
       confidence: 0.827893175074184
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-030:
     id: DOC-030
     title: 'Remove empty section: [0.1.33] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -810,6 +839,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-031:
     id: DOC-031
     title: 'Fix documentation issue: Docs'
@@ -834,13 +864,14 @@ tickets:
     - type: keep
       confidence: 0.0
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["60-64", "76-88", "202-205", "264-269", "282-288", "302-309", "310-314", "351-358", "372-376", "416-423"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-032:
     id: DOC-032
     title: 'Remove empty section: [0.1.32] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -861,13 +892,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-033:
     id: DOC-033
     title: 'Remove empty section: [0.1.31] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -888,6 +920,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-034:
     id: DOC-034
     title: 'Remove empty section: Docs'
@@ -912,13 +945,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["44-46", "55-57"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-035:
     id: DOC-035
     title: 'Remove empty section: [0.1.30] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -939,13 +973,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-036:
     id: DOC-036
     title: 'Remove empty section: [0.1.29] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -966,13 +1001,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-037:
     id: DOC-037
     title: 'Remove empty section: [0.1.28] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -993,6 +1029,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-038:
     id: DOC-038
     title: 'Fix documentation issue: Docs'
@@ -1017,13 +1054,14 @@ tickets:
     - type: keep
       confidence: 0.0
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["60-64", "76-88", "202-205", "264-269", "282-288", "302-309", "310-314", "351-358", "372-376", "416-423"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-039:
     id: DOC-039
     title: 'Remove empty section: [0.1.27] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1044,6 +1082,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-040:
     id: DOC-040
     title: 'Fix documentation issue: Docs'
@@ -1068,13 +1107,14 @@ tickets:
     - type: keep
       confidence: 0.0
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["60-64", "76-88", "202-205", "264-269", "282-288", "302-309", "310-314", "351-358", "372-376", "416-423"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-041:
     id: DOC-041
     title: 'Remove empty section: [0.1.26] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1095,6 +1135,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-042:
     id: DOC-042
     title: 'Remove empty section: Docs'
@@ -1119,13 +1160,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["44-46", "55-57"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-043:
     id: DOC-043
     title: 'Remove empty section: [0.1.25] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1146,11 +1188,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-044:
     id: DOC-044
     title: 'Remove duplicate: Other'
     description: ~93% similar to /home/tom/github/semcod/costs/CHANGELOG.md:294
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1170,13 +1213,14 @@ tickets:
     - type: delete
       confidence: 0.9298245614035088
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-045:
     id: DOC-045
     title: 'Remove empty section: [0.1.24] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1197,6 +1241,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-046:
     id: DOC-046
     title: 'Remove empty section: Docs'
@@ -1221,13 +1266,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["44-46", "55-57"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-047:
     id: DOC-047
     title: 'Remove empty section: [0.1.23] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1248,13 +1294,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-048:
     id: DOC-048
     title: 'Remove empty section: [0.1.22] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1275,6 +1322,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-049:
     id: DOC-049
     title: 'Remove empty section: Docs'
@@ -1299,6 +1347,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["44-46", "55-57"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-050:
     id: DOC-050
     title: 'Remove empty section: Other'
@@ -1323,13 +1372,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["50-52"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-051:
     id: DOC-051
     title: 'Remove empty section: [0.1.21] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1350,13 +1400,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-052:
     id: DOC-052
     title: 'Remove empty section: [0.1.20] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1377,13 +1428,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-053:
     id: DOC-053
     title: 'Remove empty section: [0.1.19] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1404,13 +1456,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-054:
     id: DOC-054
     title: 'Remove empty section: [0.1.18] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1431,13 +1484,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-055:
     id: DOC-055
     title: 'Remove empty section: [0.1.17] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1458,6 +1512,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-056:
     id: DOC-056
     title: 'Remove empty section: Docs'
@@ -1482,13 +1537,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["44-46", "55-57"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-057:
     id: DOC-057
     title: 'Remove empty section: [0.1.16] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1509,6 +1565,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-058:
     id: DOC-058
     title: 'Fix documentation issue: Docs'
@@ -1533,11 +1590,12 @@ tickets:
     - type: keep
       confidence: 0.0
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["60-64", "76-88", "202-205", "264-269", "282-288", "302-309", "310-314", "351-358", "372-376", "416-423"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-059:
     id: DOC-059
     title: 'Remove duplicate: Other'
     description: ~86% similar to /home/tom/github/semcod/costs/CHANGELOG.md:337
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1557,13 +1615,14 @@ tickets:
     - type: delete
       confidence: 0.8622754491017964
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-060:
     id: DOC-060
     title: 'Remove empty section: [0.1.15] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1584,13 +1643,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-061:
     id: DOC-061
     title: 'Remove empty section: [0.1.14] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1611,13 +1671,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-062:
     id: DOC-062
     title: 'Remove empty section: [0.1.13] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1638,13 +1699,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-063:
     id: DOC-063
     title: 'Remove empty section: [0.1.12] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1665,6 +1727,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-064:
     id: DOC-064
     title: 'Remove empty section: Docs'
@@ -1689,13 +1752,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["44-46", "55-57"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-065:
     id: DOC-065
     title: 'Remove empty section: [0.1.11] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1716,6 +1780,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-066:
     id: DOC-066
     title: 'Remove empty section: Docs'
@@ -1740,13 +1805,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["44-46", "55-57"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-067:
     id: DOC-067
     title: 'Remove empty section: [0.1.10] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1767,13 +1833,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-068:
     id: DOC-068
     title: 'Remove empty section: [0.1.9] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1794,13 +1861,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-069:
     id: DOC-069
     title: 'Remove empty section: [0.1.8] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1821,13 +1889,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-070:
     id: DOC-070
     title: 'Remove empty section: [0.1.7] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1848,13 +1917,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-071:
     id: DOC-071
     title: 'Remove empty section: [0.1.6] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1875,13 +1945,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-072:
     id: DOC-072
     title: 'Remove empty section: [0.1.5] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1902,13 +1973,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-073:
     id: DOC-073
     title: 'Remove empty section: [0.1.4] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1929,13 +2001,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-074:
     id: DOC-074
     title: 'Remove empty section: [0.1.3] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -1956,6 +2029,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-075:
     id: DOC-075
     title: 'Remove empty section: Docs'
@@ -1980,13 +2054,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["44-46", "55-57"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-076:
     id: DOC-076
     title: 'Remove empty section: [0.1.2] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2007,13 +2082,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-077:
     id: DOC-077
     title: 'Remove empty section: [0.1.1] - 2026-03-29'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2034,6 +2110,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-078:
     id: DOC-078
     title: 'Remove empty section: Docs'
@@ -2058,13 +2135,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["44-46", "55-57"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "CHANGELOG.md", "source_sha256": "7d645c32a8cca08f3f0a0fc2d18e9cbb66ce27164bf6db2c5a97fe9c7aba4782"}
   DOC-079:
     id: DOC-079
     title: 'Remove empty section: AI Cost Tracker'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2085,13 +2163,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-080:
     id: DOC-080
     title: 'Remove empty section: Quick Start'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2112,11 +2191,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-081:
     id: DOC-081
     title: 'Remove empty section: 1. Initialize Configuration'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2136,11 +2216,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-082:
     id: DOC-082
     title: 'Remove empty section: 2. Run Analysis'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2160,13 +2241,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-083:
     id: DOC-083
     title: 'Remove empty section: Three Usage Options (Zero Config Required)'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2187,11 +2269,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-084:
     id: DOC-084
     title: 'Remove empty section: Report Generation'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2211,11 +2294,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-085:
     id: DOC-085
     title: 'Remove empty section: Usage Examples'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2235,11 +2319,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-086:
     id: DOC-086
     title: 'Remove empty section: Initialize .env config'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2259,6 +2344,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-087:
     id: DOC-087
     title: 'Fix code reference: CSV Export Format'
@@ -2284,11 +2370,12 @@ tickets:
     - type: keep
       confidence: 0.5
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["325-341"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-088:
     id: DOC-088
     title: 'Remove empty section: Development'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2308,11 +2395,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-089:
     id: DOC-089
     title: 'Remove empty section: Install with poetry'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2332,13 +2420,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-090:
     id: DOC-090
     title: 'Remove empty section: Test will:'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2359,13 +2448,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-091:
     id: DOC-091
     title: 'Remove empty section: - Check if [tool.costs] is configured'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2386,13 +2476,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-092:
     id: DOC-092
     title: 'Remove empty section: - Run costs auto-badge'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2413,11 +2504,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-093:
     id: DOC-093
     title: 'Remove empty section: - Verify badge was updated'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2437,13 +2529,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-094:
     id: DOC-094
     title: 'Remove empty section: .github/workflows/ai-cost-badge.yml'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2464,11 +2557,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-095:
     id: DOC-095
     title: 'Remove empty section: Automatically updates badge on main branch'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2488,6 +2582,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-096:
     id: DOC-096
     title: 'Fix code reference: Environment Variables'
@@ -2512,11 +2607,12 @@ tickets:
     - type: keep
       confidence: 0.5
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["428-434"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "README.md", "source_sha256": "3c00f57155ffbda7255d18631d027a46471dc56d2fdeaef6f13a51b7301e690a"}
   DOC-097:
     id: DOC-097
     title: 'Fix documentation issue: TODO'
     description: Contains 1 TODO/FIXME marker(s)
-    status: open
+    status: done
     priority: normal
     sprint: doc-cleanup
     labels:
@@ -2536,6 +2632,7 @@ tickets:
     - type: keep
       confidence: 0.0
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "TODO.md", "source_sha256": "2abed0d0b0329916fc7293de511fb552c3cd6fc451ef6aa6e8fdd36ca08e214c"}
   DOC-098:
     id: DOC-098
     title: 'Fix code reference: Setup'
@@ -2560,13 +2657,14 @@ tickets:
     - type: keep
       confidence: 0.5
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["20-38"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "docs/AUTO_BADGE.md", "source_sha256": "d3094eced2ad2e78e67e655710ebbb4dca763eaf418b54f3b5dd42de91ad3aab"}
   DOC-099:
     id: DOC-099
     title: 'Remove empty section: Method 4: Package Scripts'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2587,13 +2685,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/AUTO_BADGE.md", "source_sha256": "d3094eced2ad2e78e67e655710ebbb4dca763eaf418b54f3b5dd42de91ad3aab"}
   DOC-100:
     id: DOC-100
     title: 'Remove empty section: Method 5: IDE Integration'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2614,13 +2713,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/AUTO_BADGE.md", "source_sha256": "d3094eced2ad2e78e67e655710ebbb4dca763eaf418b54f3b5dd42de91ad3aab"}
   DOC-101:
     id: DOC-101
     title: 'Remove empty section: Configuration Options'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2641,11 +2741,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/AUTO_BADGE.md", "source_sha256": "d3094eced2ad2e78e67e655710ebbb4dca763eaf418b54f3b5dd42de91ad3aab"}
   DOC-102:
     id: DOC-102
     title: 'Remove empty section: Enable/disable badge generation'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2665,13 +2766,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/AUTO_BADGE.md", "source_sha256": "d3094eced2ad2e78e67e655710ebbb4dca763eaf418b54f3b5dd42de91ad3aab"}
   DOC-103:
     id: DOC-103
     title: 'Remove empty section: Best Practices'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2692,11 +2794,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/AUTO_BADGE.md", "source_sha256": "d3094eced2ad2e78e67e655710ebbb4dca763eaf418b54f3b5dd42de91ad3aab"}
   DOC-104:
     id: DOC-104
     title: 'Remove empty section: 3. Hybrid Approach'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2716,13 +2819,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/AUTO_BADGE.md", "source_sha256": "d3094eced2ad2e78e67e655710ebbb4dca763eaf418b54f3b5dd42de91ad3aab"}
   DOC-105:
     id: DOC-105
     title: 'Remove empty section: .github/workflows/ai-cost-badge.yml - for production'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2743,11 +2847,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/AUTO_BADGE.md", "source_sha256": "d3094eced2ad2e78e67e655710ebbb4dca763eaf418b54f3b5dd42de91ad3aab"}
   DOC-106:
     id: DOC-106
     title: 'Remove empty section: .git/hooks/pre-commit - for local development'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2767,13 +2872,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/AUTO_BADGE.md", "source_sha256": "d3094eced2ad2e78e67e655710ebbb4dca763eaf418b54f3b5dd42de91ad3aab"}
   DOC-107:
     id: DOC-107
     title: 'Remove empty section: Troubleshooting'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2794,13 +2900,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/AUTO_BADGE.md", "source_sha256": "d3094eced2ad2e78e67e655710ebbb4dca763eaf418b54f3b5dd42de91ad3aab"}
   DOC-108:
     id: DOC-108
     title: 'Remove empty section: Example: Complete Setup'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2821,11 +2928,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/AUTO_BADGE.md", "source_sha256": "d3094eced2ad2e78e67e655710ebbb4dca763eaf418b54f3b5dd42de91ad3aab"}
   DOC-109:
     id: DOC-109
     title: 'Fix broken link: (preamble)'
     description: 'Internal link target not found: ./LICENSE'
-    status: open
+    status: done
     priority: critical
     sprint: doc-cleanup
     labels:
@@ -2845,13 +2953,14 @@ tickets:
     - type: fix
       confidence: 0.85
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/README.md", "source_sha256": "4c27897889d5af3d613b38184b99fcc323e624237e68395f592d06877f891095"}
   DOC-110:
     id: DOC-110
     title: 'Remove empty section: Installation'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2872,13 +2981,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/README.md", "source_sha256": "4c27897889d5af3d613b38184b99fcc323e624237e68395f592d06877f891095"}
   DOC-111:
     id: DOC-111
     title: 'Remove empty section: Quick Start'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2899,11 +3009,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/README.md", "source_sha256": "4c27897889d5af3d613b38184b99fcc323e624237e68395f592d06877f891095"}
   DOC-112:
     id: DOC-112
     title: 'Remove empty section: CLI Usage'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2923,11 +3034,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/README.md", "source_sha256": "4c27897889d5af3d613b38184b99fcc323e624237e68395f592d06877f891095"}
   DOC-113:
     id: DOC-113
     title: 'Remove empty section: Generate full documentation for your project'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2947,13 +3059,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/README.md", "source_sha256": "4c27897889d5af3d613b38184b99fcc323e624237e68395f592d06877f891095"}
   DOC-114:
     id: DOC-114
     title: 'Remove empty section: API Overview'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -2974,13 +3087,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/README.md", "source_sha256": "4c27897889d5af3d613b38184b99fcc323e624237e68395f592d06877f891095"}
   DOC-115:
     id: DOC-115
     title: 'Fix code reference: Project Structure'
     description: 'References 11 unknown code symbol(s): examples.01_basic_usage.run,
       examples.01_custom_pricing.run, examples.01_tokenizer_basic.run, examples.02_badge_generation.run,
       examples.02_custom_roi.run'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3000,11 +3114,12 @@ tickets:
     - type: keep
       confidence: 0.5
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/README.md", "source_sha256": "4c27897889d5af3d613b38184b99fcc323e624237e68395f592d06877f891095"}
   DOC-116:
     id: DOC-116
     title: 'Fix broken link: Contributing'
     description: 'Internal link target not found: ./CONTRIBUTING.md'
-    status: open
+    status: done
     priority: critical
     sprint: doc-cleanup
     labels:
@@ -3024,11 +3139,12 @@ tickets:
     - type: fix
       confidence: 0.85
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/README.md", "source_sha256": "4c27897889d5af3d613b38184b99fcc323e624237e68395f592d06877f891095"}
   DOC-117:
     id: DOC-117
     title: 'Remove empty section: Development Setup'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3048,11 +3164,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/README.md", "source_sha256": "4c27897889d5af3d613b38184b99fcc323e624237e68395f592d06877f891095"}
   DOC-118:
     id: DOC-118
     title: 'Remove empty section: Run tests'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3072,11 +3189,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/README.md", "source_sha256": "4c27897889d5af3d613b38184b99fcc323e624237e68395f592d06877f891095"}
   DOC-119:
     id: DOC-119
     title: 'Fix broken link: Documentation'
     description: 'Internal link target not found: ./examples'
-    status: open
+    status: done
     priority: critical
     sprint: doc-cleanup
     labels:
@@ -3096,6 +3214,7 @@ tickets:
     - type: fix
       confidence: 0.85
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/README.md", "source_sha256": "4c27897889d5af3d613b38184b99fcc323e624237e68395f592d06877f891095"}
   DOC-120:
     id: DOC-120
     title: 'Fix broken link: Generated Files'
@@ -3120,7 +3239,7 @@ tickets:
       Internal link target not found: ./examples
 
       References 3 unknown code symbol(s): README.md, CONTRIBUTING.md, mkdocs.yml'
-    status: open
+    status: done
     priority: critical
     sprint: doc-cleanup
     labels:
@@ -3151,11 +3270,12 @@ tickets:
     - type: fix
       confidence: 0.85
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "docs/README.md", "source_sha256": "4c27897889d5af3d613b38184b99fcc323e624237e68395f592d06877f891095"}
   DOC-121:
     id: DOC-121
     title: 'Remove empty section: Usage'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3175,11 +3295,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/01_basic_usage/README.md", "source_sha256": "beca63ce5a0f2c4137904bad46bafba29a50f7e03072f6b118ab0d09a7e1563a"}
   DOC-122:
     id: DOC-122
     title: 'Remove empty section: View the commands'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3199,13 +3320,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/01_basic_usage/README.md", "source_sha256": "beca63ce5a0f2c4137904bad46bafba29a50f7e03072f6b118ab0d09a7e1563a"}
   DOC-123:
     id: DOC-123
     title: 'Remove empty section: Commands Demonstrated'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3226,11 +3348,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/01_basic_usage/README.md", "source_sha256": "beca63ce5a0f2c4137904bad46bafba29a50f7e03072f6b118ab0d09a7e1563a"}
   DOC-124:
     id: DOC-124
     title: 'Remove empty section: Usage'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3250,11 +3373,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/01_tokenizer_basic/README.md", "source_sha256": "2a471681228674bcf063a5ce590189e711c8d512e5140fe6559c2a454225e778"}
   DOC-125:
     id: DOC-125
     title: 'Remove empty section: Run the example'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3274,11 +3398,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/01_tokenizer_basic/README.md", "source_sha256": "2a471681228674bcf063a5ce590189e711c8d512e5140fe6559c2a454225e778"}
   DOC-126:
     id: DOC-126
     title: 'Remove empty section: Or run directly'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3298,11 +3423,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/01_tokenizer_basic/README.md", "source_sha256": "2a471681228674bcf063a5ce590189e711c8d512e5140fe6559c2a454225e778"}
   DOC-127:
     id: DOC-127
     title: 'Remove empty section: Usage'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3322,11 +3448,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/02_badge_generation/README.md", "source_sha256": "71565fb819e204f1d37d27149bb77c7b22334a5884be0512e0ed03d0433a4332"}
   DOC-128:
     id: DOC-128
     title: 'Remove empty section: View the commands'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3346,13 +3473,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/02_badge_generation/README.md", "source_sha256": "71565fb819e204f1d37d27149bb77c7b22334a5884be0512e0ed03d0433a4332"}
   DOC-129:
     id: DOC-129
     title: 'Remove empty section: Commands Demonstrated'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3373,11 +3501,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/02_badge_generation/README.md", "source_sha256": "71565fb819e204f1d37d27149bb77c7b22334a5884be0512e0ed03d0433a4332"}
   DOC-130:
     id: DOC-130
     title: 'Remove empty section: Usage'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3397,11 +3526,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/03_diff_estimation/README.md", "source_sha256": "a07255f1d36a6362d6cf65de4f5912543184da96e7a0e4b88adae1c1f2eec717"}
   DOC-131:
     id: DOC-131
     title: 'Remove empty section: View the commands'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3421,13 +3551,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/03_diff_estimation/README.md", "source_sha256": "a07255f1d36a6362d6cf65de4f5912543184da96e7a0e4b88adae1c1f2eec717"}
   DOC-132:
     id: DOC-132
     title: 'Remove empty section: Commands Demonstrated'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3448,11 +3579,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/03_diff_estimation/README.md", "source_sha256": "a07255f1d36a6362d6cf65de4f5912543184da96e7a0e4b88adae1c1f2eec717"}
   DOC-133:
     id: DOC-133
     title: 'Remove empty section: 3. Compare models'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3472,11 +3604,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/03_diff_estimation/README.md", "source_sha256": "a07255f1d36a6362d6cf65de4f5912543184da96e7a0e4b88adae1c1f2eec717"}
   DOC-134:
     id: DOC-134
     title: 'Remove empty section: Save diff and compare'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3496,13 +3629,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/03_diff_estimation/README.md", "source_sha256": "a07255f1d36a6362d6cf65de4f5912543184da96e7a0e4b88adae1c1f2eec717"}
   DOC-135:
     id: DOC-135
     title: 'Remove empty section: Commands Demonstrated'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3523,11 +3657,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/03_diff_estimation/README.md", "source_sha256": "a07255f1d36a6362d6cf65de4f5912543184da96e7a0e4b88adae1c1f2eec717"}
   DOC-136:
     id: DOC-136
     title: 'Remove empty section: 3. Compare models'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3547,11 +3682,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/03_diff_estimation/README.md", "source_sha256": "a07255f1d36a6362d6cf65de4f5912543184da96e7a0e4b88adae1c1f2eec717"}
   DOC-137:
     id: DOC-137
     title: 'Remove empty section: Usage'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3571,11 +3707,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/03_multi_repo/README.md", "source_sha256": "dd9b337337e769b42d0f32825a30dc5eb852fb0ed7e78b48013b97231c8285fc"}
   DOC-138:
     id: DOC-138
     title: 'Remove empty section: Edit repos.txt with your repository paths'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3595,13 +3732,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/03_multi_repo/README.md", "source_sha256": "dd9b337337e769b42d0f32825a30dc5eb852fb0ed7e78b48013b97231c8285fc"}
   DOC-139:
     id: DOC-139
     title: 'Remove empty section: Quick Start'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3622,11 +3760,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/README.md", "source_sha256": "bb4fbce08ed21ecd338eadfeffafbbae899d3fe496d87d8105bfde6effa5c8b9"}
   DOC-140:
     id: DOC-140
     title: 'Remove empty section: API Examples'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3646,11 +3785,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/README.md", "source_sha256": "bb4fbce08ed21ecd338eadfeffafbbae899d3fe496d87d8105bfde6effa5c8b9"}
   DOC-141:
     id: DOC-141
     title: 'Remove empty section: Or run directly'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3670,11 +3810,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/README.md", "source_sha256": "bb4fbce08ed21ecd338eadfeffafbbae899d3fe496d87d8105bfde6effa5c8b9"}
   DOC-142:
     id: DOC-142
     title: 'Remove empty section: Integration Examples'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3694,6 +3835,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/README.md", "source_sha256": "bb4fbce08ed21ecd338eadfeffafbbae899d3fe496d87d8105bfde6effa5c8b9"}
   DOC-143:
     id: DOC-143
     title: 'Fix code reference: Setup'
@@ -3718,6 +3860,7 @@ tickets:
     - type: keep
       confidence: 0.5
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["25-32"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "examples/github-actions/README.md", "source_sha256": "77e94c979ddc2c7f96d6729f562f28aeae7009a76cf1f63e6520ebc8a4ce87ee"}
   DOC-144:
     id: DOC-144
     title: 'Fix code reference: Setup'
@@ -3742,13 +3885,14 @@ tickets:
     - type: keep
       confidence: 0.5
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["26-30"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "examples/gitlab-ci/README.md", "source_sha256": "1a4387b35c17ccb546eed23e363b69dd8cfec41e17a8189f555cd0d7d868949b"}
   DOC-145:
     id: DOC-145
     title: 'Remove empty section: Pipeline Jobs'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3769,6 +3913,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "examples/gitlab-ci/README.md", "source_sha256": "1a4387b35c17ccb546eed23e363b69dd8cfec41e17a8189f555cd0d7d868949b"}
   DOC-146:
     id: DOC-146
     title: 'Fix code reference: 🎯 Core Analysis Files'
@@ -3793,6 +3938,7 @@ tickets:
     - type: keep
       confidence: 0.5
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["9-15"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-147:
     id: DOC-147
     title: 'Fix code reference: 🤖 LLM-Ready Documentation'
@@ -3817,6 +3963,7 @@ tickets:
     - type: keep
       confidence: 0.5
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["16-22"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-148:
     id: DOC-148
     title: 'Fix code reference: 📊 Visualizations'
@@ -3841,13 +3988,14 @@ tickets:
     - type: keep
       confidence: 0.5
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["23-30"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-149:
     id: DOC-149
     title: 'Remove empty section: 🚀 Quick Start Commands'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3868,11 +4016,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-150:
     id: DOC-150
     title: 'Remove empty section: Basic Analysis'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3892,11 +4041,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-151:
     id: DOC-151
     title: 'Remove empty section: Quick health check (TOON format only)'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3916,11 +4066,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-152:
     id: DOC-152
     title: 'Remove empty section: Generate all formats (what created these files)'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3940,11 +4091,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-153:
     id: DOC-153
     title: 'Remove empty section: Performance Options'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3964,11 +4116,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-154:
     id: DOC-154
     title: 'Remove empty section: Refactoring Focus'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -3988,13 +4141,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-155:
     id: DOC-155
     title: 'Remove empty section: 📖 Understanding Each File'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4015,6 +4169,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-156:
     id: DOC-156
     title: 'Fix code reference: `prompt.txt` - Ready-to-Send LLM Prompt'
@@ -4040,11 +4195,12 @@ tickets:
     - type: keep
       confidence: 0.5
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["136-148"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-157:
     id: DOC-157
     title: 'Remove empty section: View the prompt'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4064,11 +4220,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-158:
     id: DOC-158
     title: 'Remove empty section: Use with Claude/ChatGPT for code analysis'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4088,6 +4245,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-159:
     id: DOC-159
     title: 'Fix code reference: Visualization Files (`*.mmd`, `*.png`)'
@@ -4112,13 +4270,14 @@ tickets:
     - type: keep
       confidence: 0.5
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["168-177"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-160:
     id: DOC-160
     title: 'Remove empty section: Edit in Mermaid Live Editor'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4139,11 +4298,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-161:
     id: DOC-161
     title: 'Remove empty section: Copy content of .mmd files to https://mermaid.live'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4163,13 +4323,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-162:
     id: DOC-162
     title: 'Remove empty section: 🔍 Common Analysis Patterns'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4190,11 +4351,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-163:
     id: DOC-163
     title: 'Remove empty section: 1. Code Health Assessment'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4214,11 +4376,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-164:
     id: DOC-164
     title: 'Remove empty section: 2. Refactoring Planning'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4238,11 +4401,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-165:
     id: DOC-165
     title: 'Remove empty section: 3. LLM Assistance'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4262,12 +4426,13 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-166:
     id: DOC-166
     title: 'Remove empty section: Use with Claude: "Based on this context, help me
       refactor the god modules"'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4287,11 +4452,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-167:
     id: DOC-167
     title: 'Remove empty section: 4. Team Documentation'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4311,13 +4477,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-168:
     id: DOC-168
     title: 'Remove empty section: 📊 Interpreting Metrics'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4338,13 +4505,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-169:
     id: DOC-169
     title: 'Remove empty section: 🛠️ Integration Examples'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4365,11 +4533,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-170:
     id: DOC-170
     title: 'Remove empty section: CI/CD Pipeline'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4389,11 +4558,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-171:
     id: DOC-171
     title: 'Remove empty section: Pre-commit Hook'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4413,11 +4583,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-172:
     id: DOC-172
     title: 'Remove empty section: Documentation Generation'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4437,6 +4608,7 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-173:
     id: DOC-173
     title: 'Fix code reference: 📚 Next Steps'
@@ -4462,13 +4634,14 @@ tickets:
     - type: keep
       confidence: 0.5
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": ["246-253"], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "still_reported", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-174:
     id: DOC-174
     title: 'Remove empty section: 🔧 Advanced Usage'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4489,11 +4662,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-175:
     id: DOC-175
     title: 'Remove empty section: Custom Analysis'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4513,11 +4687,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-176:
     id: DOC-176
     title: 'Remove empty section: Output Customization'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4537,13 +4712,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/README.md", "source_sha256": "95e5c63e0da0df57bbe656dbe4361aaae1eef5db78e36c01a4cdc2229704bd54"}
   DOC-177:
     id: DOC-177
     title: 'Remove empty section: System Architecture Analysis'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4564,13 +4740,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/context.md", "source_sha256": "75d0242b67d02c6ebd94110ba7ed2bb7369faf9578606fa03b80ed7107a275e3"}
   DOC-178:
     id: DOC-178
     title: 'Remove empty section: Architecture by Module'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4591,11 +4768,12 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/context.md", "source_sha256": "75d0242b67d02c6ebd94110ba7ed2bb7369faf9578606fa03b80ed7107a275e3"}
   DOC-179:
     id: DOC-179
     title: 'Remove empty section: src.costs.cli.main'
     description: Section has no meaningful content
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4615,13 +4793,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/context.md", "source_sha256": "75d0242b67d02c6ebd94110ba7ed2bb7369faf9578606fa03b80ed7107a275e3"}
   DOC-180:
     id: DOC-180
     title: 'Remove empty section: src.costs.tokenizers.Tokenizer.__init__'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4642,13 +4821,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/context.md", "source_sha256": "75d0242b67d02c6ebd94110ba7ed2bb7369faf9578606fa03b80ed7107a275e3"}
   DOC-181:
     id: DOC-181
     title: 'Remove empty section: project.install_hook'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4669,13 +4849,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/context.md", "source_sha256": "75d0242b67d02c6ebd94110ba7ed2bb7369faf9578606fa03b80ed7107a275e3"}
   DOC-182:
     id: DOC-182
     title: 'Remove empty section: Key Classes'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4696,13 +4877,14 @@ tickets:
     - type: delete
       confidence: 0.95
     sync: {}
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "project/context.md", "source_sha256": "75d0242b67d02c6ebd94110ba7ed2bb7369faf9578606fa03b80ed7107a275e3"}
   DOC-183:
     id: DOC-183
     title: 'Remove empty section: Usage'
     description: 'Section has no meaningful content
 
       Section contains only a heading with no body text'
-    status: open
+    status: done
     priority: high
     sprint: doc-cleanup
     labels:
@@ -4746,3 +4928,4 @@ metadata:
     duplicate: 3
     orphaned_code_ref: 13
     broken_link: 13
+    revalidation: {"head": "91b30fe78c214125e7a6e6f6950218ff8db78f41", "locations": [], "report_sha256": "2edfbc55887840c1368ad3553bf45ec25186d98576d7a141753a6e01175c4a18", "result": "superseded", "source": "services/badge-service/README.md", "source_sha256": "addbe89126ec5d93e449ebe00ab37b980ae730b4ee734ecbd376ed9123bc8232"}

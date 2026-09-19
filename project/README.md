@@ -52,7 +52,7 @@ code2llm ./ -f toon --refactor --smell god_function
 code2llm ./ -f flow --data-flow
 ```
 
-### `analysis.toon` - Health Diagnostics
+### `analysis.toon.yaml` - Health Diagnostics
 **Purpose**: Quick overview of code health issues
 **Key sections**:
 - **HEALTH**: Critical issues (🔴) and warnings (🟡)
@@ -65,10 +65,10 @@ code2llm ./ -f flow --data-flow
 **Example usage**:
 ```bash
 # View health issues
-cat analysis.toon | head -30
+cat analysis.toon.yaml | head -30
 
 # Check refactoring priorities
-grep "REFACTOR" analysis.toon
+grep "REFACTOR" analysis.toon.yaml
 ```
 
 ### `evolution.toon.yaml` - Refactoring Queue
@@ -181,7 +181,7 @@ xdg-open flow.png  # Linux
 
 # Quick health check
 code2llm ./ -f toon
-cat analysis.toon | grep -E "(HEALTH|REFACTOR)"
+cat analysis.toon.yaml | grep -E "(HEALTH|REFACTOR)"
 ```
 
 # Get refactoring queue
@@ -223,7 +223,7 @@ open docs/flow.png
 
 # Analyze code quality in CI
 code2llm ./ -f toon -o ./analysis
-if grep -q "🔴 GOD" ./analysis/analysis.toon; then
+if grep -q "🔴 GOD" ./analysis/analysis.toon.yaml; then
     echo "❌ God modules detected"
     exit 1
 fi
@@ -231,7 +231,7 @@ fi
 
 # .git/hooks/pre-commit
 code2llm ./ -f toon -o ./temp_analysis
-if grep -q "🔴" ./temp_analysis/analysis.toon; then
+if grep -q "🔴" ./temp_analysis/analysis.toon.yaml; then
     echo "⚠️  Critical issues found. Review before committing."
 fi
 rm -rf ./temp_analysis
@@ -245,7 +245,7 @@ cat docs/context.md >> README.md
 
 ## 📚 Next Steps
 
-1. **Review `analysis.toon`** - Identify critical issues
+1. **Review `analysis.toon.yaml`** - Identify critical issues
 2. **Check `evolution.toon.yaml`** - Plan refactoring priorities
 3. **Use `context.md`** - Get LLM assistance for complex changes
 4. **Reference visualizations** - Understand system architecture
