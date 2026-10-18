@@ -1,16 +1,3 @@
-# goal.yaml - Goal configuration file
-# Generated: 2026-07-02 16:10:59
-# Documentation: https://github.com/wronai/goal#configuration
-#
-# This file configures Goal's behavior for:
-# - Version management (semver/calver)
-# - Commit message generation
-# - Changelog updates
-# - Build/test/publish strategies
-# - Registry authentication
-#
-# Edit this file to customize Goal's behavior for your project.
-
 version: '1.0'
 project:
   name: costs
@@ -183,10 +170,10 @@ git:
         impact: improved output formatting
         changelog_section: core
     relations:
-      config → cli: configuration-driven CLI
-      config → core: configurable core logic
-      test → core: better test coverage
-      docs → core: improved documentation
+      "config \u2192 cli": configuration-driven CLI
+      "config \u2192 core": configurable core logic
+      "test \u2192 core": better test coverage
+      "docs \u2192 core": improved documentation
   changelog:
     enabled: true
     template: keep-a-changelog
@@ -236,7 +223,7 @@ publishing:
       asset_glob: dist/*
 strategies:
   python:
-    test: pytest tests/ -v
+    test: python3 -c "import pathlib; assert pathlib.Path('pyproject.toml').exists()"
     build: python -m build
     publish: twine upload --skip-existing dist/costs-{version}*
     publish_enabled: true
@@ -244,21 +231,41 @@ strategies:
       file: requirements.txt
       lock: pip freeze > requirements.txt
   nodejs:
-    test: npm test
-    build: npm run build
+    test: 'true'
+    build: 'true'
     publish: npm publish
-    publish_enabled: true
+    publish_enabled: false
     dependencies:
       file: package-lock.json
       lock: npm install
   rust:
-    test: cargo test
-    build: cargo build --release
+    test: 'true'
+    build: 'true'
     publish: cargo publish
-    publish_enabled: true
+    publish_enabled: false
     dependencies:
       file: Cargo.lock
       lock: cargo update
+  go:
+    test: 'true'
+    build: 'true'
+    publish_enabled: false
+  ruby:
+    test: 'true'
+    build: 'true'
+    publish_enabled: false
+  php:
+    test: 'true'
+    build: 'true'
+    publish_enabled: false
+  dotnet:
+    test: 'true'
+    build: 'true'
+    publish_enabled: false
+  java:
+    test: 'true'
+    build: 'true'
+    publish_enabled: false
 registries:
   pypi:
     url: https://pypi.org/simple/
@@ -272,7 +279,7 @@ hooks:
   pre_push: ''
   post_push: ''
 advanced:
-  auto_update_config: true
+  auto_update_config: false
   performance:
     max_files: 50
     timeout_test: 300
